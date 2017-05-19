@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>ToDo App</title>
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+	<script src="bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script>
+	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="bower_components/handlebars/handlebars.min.js" type="text/javascript"></script>
+
+	<script src="js/aa.js" type="text/javascript"></script>
+
+	<link rel="stylesheet" type="text/css" href="/css/spa.css">
+	<script src="js/home.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+</head>
+
+<body>
+	<nav class="navbar navbar-default" role="navigation">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			<a class="navbar-brand" href="#home">ToDo App</a>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse navbar-ex1-collapse">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#home">Home</a></li>
+				<li><a href="#Signin">Sign in</a></li>
+				<li><a href="#Signup">Sign up</a></li>
+			</ul>
+		</div>
+		<!-- /.navbar-collapse -->
+	</nav>
+</body>
+<div id="page-container"></div>
+
+<script id="home-page-template" type="text/x-handlebars-template">
+	<div id="home-page">
+		<p>
+			<h3 id="h3"><center>Welcome To ToDo App</center></h3>
+		</p>
+	</div>
+</script>
+
+<script id="signin-page-template" type="text/x-handlebars-template">
+	<div id="about-page" class="page">
+		/*<div class="col-sm-3">
+
+		</div>
+
+		<div class="col-sm-6" id="br1">
+
+			<div id="d1">
+				<form class="form-horizontal">
+					<h2><center>Sign In</center></h2>
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="Username">Email:</label>
+						<div class="col-sm-10">
+							<i class="glyphicon glyphicon-user"></i>
+							<input type="text" class="form-control" id="Username" placeholder="Enter Email">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="lpwd">Password:</label>
+						<div class="col-sm-10">
+							<i class="glyphicon glyphicon-lock"></i>
+							<input type="password" class="form-control" id="lpwd" placeholder="Enter password">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+							<button type="submit" class="btn btn-default" id="log">Sign In</button>
+							<a type="submit" class="btn btn-default" id="signup" href="#Signup">Sign up</a>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div> */
+<div class="login-page">
+  <div class="form">
+    
+    <form class="login-form">
+      <input type="text" placeholder="username" id="Username"/>
+      <input type="password" placeholder="password"id="lpwd"/>
+      <button type="submit"  id="log">Sign In</button>
+      
+      <p class="message">Not registered? <a href="#Signup">Create an account</a></p>
+    </form>
+  </div>
+</div>
+
+	</div>
+</script>
+<script id="signup-page-template" type="text/x-handlebars-template">
+	<div id="contact-page" class="page">
+		<div class="col-sm-3">
+
+		</div>
+		<div class="col-sm-6" id="br1">
+
+			<div id="d2">
+
+				<form class="form-horizontal">
+					<h2><center>Sign Up</center></h2>
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="Name">UserName:</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="name" placeholder="Enter Name">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="email">Email-Id</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="email" placeholder="Enter Email">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="pwd">Password:</label>
+						<div class="col-sm-10">
+							<input type="password" class="form-control" id="pwd" placeholder="Enter password">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="pwd"> Confirm Password:</label>
+						<div class="col-sm-10">
+							<input type="password" class="form-control" id="repwd" placeholder="Enter password again">
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+							<button type="submit" class="btn btn-default" id="reg">Sign up</button>
+						</div>
+					</div>
+
+
+				</form>
+			</div>
+		</div>
+	</div>
+</script>
+<script src="js/app.js" type="text/javascript"></script>
+<!-- <script src="bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="bower_components/handlebars/handlebars.min.js" type="text/javascript"></script>
+<script src="js/app.js" type="text/javascript"></script> -->
+
+</html>

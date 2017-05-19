@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="../js/aa.js"></script> -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script> -->
+    <script src="../bower_components/packery/dist/packery.pkgd.min.js"></script>
+    <script src="../bower_components/draggabilly/dist/draggabilly.pkgd.min.js"></script>
+
+
+    <script>
+        var flag = 0;
+        // $(document).on('click', "#menu", (function(e) {
+        //     e.preventDefault();
+        //     $("#wrapper").toggleClass("toggled");
+        // }));
+        $('#navbar').click('li.a', function() {
+            $('#navbar').collapse('hide');
+        });
+        // $(document).on('click', "#b1", (function(e) {
+        //     e.preventDefault();
+        //
+        //
+        //     if (flag % 2 == 0) {
+        //         $("#r1").css("margin-top", "150px");
+        //         // console.log(flag);
+        //
+        //     } else {
+        //         $("#r1").css("margin-top", "0px");
+        //
+        //     }
+        //     flag++;
+        // }));
+        $('#title').on('keyup', function() {
+            $(this).css('height', 'auto');
+            $(this).height(this.scrollHeight);
+        });
+
+
+        $('#take_note').on('keyup', function() {
+            $(this).css('height', 'auto');
+            $(this).height(this.scrollHeight);
+        });
+    </script>
+
+
+
+</head>
+
+<body >
+
+<div ng-controller="welcome_controller">
+    <nav id="n1" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"> -->
+                <button id="b1" type="button" class="navbar-toggle " data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+
+                <a class="navbar-brand" id="menu" ><img src="image/menu.png" ng-click="sidebar=!sidebar;menu()"></img>
+                </a>
+
+                <a id="home" class="active">Keep</a>
+                <input type="text" id="search" placeholder="search"></input>
+
+            </div>
+
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a id="refresh"><img id="ref" src="/image/ref.png"></img>
+                        </a>
+
+                    </li>
+                    <li>
+                        <a>    <span ng-show="view">
+                                  <img id="list" ng-click="view=!view" src="image/list.png">  </img>
+                                </span>
+                                <span ng-hide="view">
+                                <img id="grid" ng-click="view=!view"src="image/grid.png"></img>
+                                </span>
+
+                        </a>
+
+                    </li>
+                    <li>
+                        <a id="logout"><img id="l" ng-click="logout()" src="image/logout.png"></img>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="wrapper" ng-style="wrapper"class="toggled">
+        <div class="container-fluid">
+          <span ng-hide="sidebar" >
+            <div id="sidebar-wrapper" ng-style="side">
+                <ul class="sidebar-nav">
+                    <li class="sidebar-brand">
+                        <br>
+                    </li>
+                    <li class="sidebar-brand">
+                        <a><img src="image/note.png"></img>&nbsp&nbsp&nbspNotes</a>
+                    </li>
+                    <li class="sidebar-brand">
+                        <a><img src="image/remainder.png" id="remainder"></img>&nbsp&nbsp&nbspRemainder</a>
+                    </li>
+                    <li class="sidebar-brand">
+                        <a><img src="image/archive.png" id="archive"></img>&nbsp&nbsp&nbsp&nbspArchive</a>
+                    </li>
+                </ul>
+            </div>
+          </span>
+              <!-- <span ng-show="sidebar"></span> -->
+
+            <div id="page-content-wrapper" ng-style="content">
+                <div class="container-fluid" id="r1">
+                    <div class="row">
+                        <div class="col-lg-12" id="r2">
+                            <br><br><br><br>
+                        </div>
+                    </div>
+                    <div class="row" id="r3">
+
+                      <span ng-show="custom">
+                        <div id="div1" ng-click="custom=!custom">
+                          <input type="text" placeholder="Take a note" id="p1" ></input>
+                        </div>
+                      </span>
+                        <span ng-hide="custom">
+                        <div id="div2">
+                            <div content contenteditable="true"placeholder="Title" ng-model="task.title" id="title"></div><br>
+                            <div content  contenteditable="true" placeholder="Take a note" ng-model="task.take_note" id="take_note"></div>
+                            <div><a id="done" ng-click="custom=!custom;save()">Done</a></div>
+                        </div>
+                      </span>
+                        <span ng-show="custom"></span>
+
+
+                        </div>
+                    </div><br><br><br>
+
+                    <div id="cards"  class="row">
+                      <div ng-repeat="x in data_info" class="col-sm-4 col-md-4 "><pre id="innerbox" ><div id="title_div">{{x.title}}</div><div id="note_div">{{x.take_note}}</div><div><a ng-click="delete()">delete</a></div></pre></div></div>
+                    <div id="list_cards" class="row">
+                    </div>
+                  </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+          <div contenteditable="true" class="modal-title" placeholder="Title"></div>
+        </div>
+        <div class="modal-body">
+          <div contenteditable="true" placeholder="Take note" id="para"></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" id="update" class="btn btn-default" href="#" data-dismiss="modal">Done</button>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+<!-- </div> -->
+
+</div>
+</body>
+
+</html>

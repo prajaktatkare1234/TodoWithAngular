@@ -1,0 +1,50 @@
+<header>
+          <nav class="navbar navbar-default" id="n1">
+          <div class="container">
+              <div class="navbar-header">
+
+              </div>
+              <ul class="nav navbar-nav navbar-right">
+
+                  <!-- <li><a href="#signin">Sign In</a></li> -->
+                  <li><a href="#signup">Sign Up</a></li>
+
+              </ul>
+
+
+          </div>
+          </nav>
+      </header>
+
+
+        <div class="form">
+
+
+            <form ng-controller="signin_controller" name="myForm" novalidate>
+                    <!-- <h3><center>Sign In</center></h3> -->
+
+
+<p>
+<input placeholder="Email" class="form-control" type="email" name="uname" ng-model="uname" required>
+<span style="color:red" ng-show="myForm.uname.$dirty && myForm.uname.$invalid">
+<span ng-show="myForm.uname.$error.required">Email is required.</span>
+<span ng-show="myForm.uname.$error.email">Invalid email address.</span>
+</span>
+</p>
+<p>
+<input placeholder="Password"class="form-control" type="password" name="pass" ng-model="pass" required>
+<span style="color:red" ng-show="myForm.pass.$dirty && myForm.pass.$invalid">
+<span ng-show="myForm.pass.$error.required">Password is required.</span>
+</span>
+</p>
+
+
+<p>
+<input id="b1" class="btn btn-success" type="submit" ng-click="sign_in()"
+ng-disabled="myForm.$invalid">
+</p>
+    <p class="message">&nbsp&nbspNot registered? <a href="#signup">Create an account</a></p>
+
+
+</form>
+        </div>
