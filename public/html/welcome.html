@@ -35,16 +35,16 @@
         //     }
         //     flag++;
         // }));
-        $('#title').on('keyup', function() {
-            $(this).css('height', 'auto');
-            $(this).height(this.scrollHeight);
-        });
-
-
-        $('#take_note').on('keyup', function() {
-            $(this).css('height', 'auto');
-            $(this).height(this.scrollHeight);
-        });
+        // $('#title').on('keyup', function() {
+        //     $(this).css('height', 'auto');
+        //     $(this).height(this.scrollHeight);
+        // });
+        //
+        //
+        // $('#take_note').on('keyup', function() {
+        //     $(this).css('height', 'auto');
+        //     $(this).height(this.scrollHeight);
+        // });
     </script>
 
 
@@ -82,12 +82,13 @@
 
                     </li>
                     <li>
-                        <a>    <span ng-show="view">
-                                  <img id="list" ng-click="view=!view" src="image/list.png">  </img>
-                                </span>
-                                <span ng-hide="view">
-                                <img id="grid" ng-click="view=!view"src="image/grid.png"></img>
-                                </span>
+                         <a>
+                        <!-- <span ng-show="view"> -->
+                                  <img id="list" ng-style="list" ng-click="list_view()" src="image/list.png">  </img>
+                                <!-- </span> -->
+                                <!-- <span ng-hide="view"> -->
+                                <img id="grid" ng-style="grid" ng-click="grid_view()"src="image/grid.png"></img>
+                                <!-- </span> -->
 
                         </a>
 
@@ -139,8 +140,8 @@
                       </span>
                         <span ng-hide="custom">
                         <div id="div2">
-                            <div content contenteditable="true"placeholder="Title" ng-model="task.title" id="title"></div><br>
-                            <div content  contenteditable="true" placeholder="Take a note" ng-model="task.take_note" id="take_note"></div>
+                            <div content contenteditable="true"placeholder="Title" ng-model="title" id="title"></div><br>
+                            <div content  contenteditable="true" placeholder=" note" ng-model="take_note" id="take_note"></div>
                             <div><a id="done" ng-click="custom=!custom;save()">Done</a></div>
                         </div>
                       </span>
@@ -150,23 +151,27 @@
                         </div>
                     </div><br><br><br>
 
+                    <div ng-show="grid_v">
                     <div id="cards"  class="row">
-                      <div ng-repeat="x in data_info" class="col-sm-4 col-md-4 "><pre id="innerbox" ><div id="title_div">{{x.title}}</div><div id="note_div">{{x.take_note}}</div><div><a ng-click="delete()">delete</a></div></pre></div></div>
-                    <div id="list_cards" class="row">
+                      <div  ng-repeat="x in data_info" class="col-sm-4 col-md-4 col-xs-12 "><pre  id="innerbox" ><div ng-click="open(x.title,x.take_note,x._id)" id="title_div" ng-bind-html="x.title"></div><div ng-click="open(x.title,x.take_note,x._id)" id="note_div" ng-bind-html="x.take_note"></div><div><a ng-click="delete(x._id)">delete</a></div></pre></div></div>
                     </div>
-                  </div>
+                      <div ng-show="list_v">
+                        <div id="list_cards" class="row">
+                        <div ng-repeat="x in data_info" class="col-sm-12 col-md-12"><pre id="innerbox1" ><div id="title_div" ng-bind-html="x.title"></div><div id="note_div" ng-bind-html="x.take_note"></div><div><a ng-click="delete(x._id)">delete</a></div></pre></div></div>
+                      </div>
+                    </div>
             </div>
         </div>
 
     </div>
 
-    <div class="modal fade" id="myModal" role="dialog">
+    <!-- <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
 
-      <!-- Modal content-->
+
       <div class="modal-content">
         <div class="modal-header">
-          <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+
           <div contenteditable="true" class="modal-title" placeholder="Title"></div>
         </div>
         <div class="modal-body">
@@ -179,7 +184,8 @@
       </div>
 
     </div>
-  </div>
+  </div> -->
+
 
 <!-- </div> -->
 

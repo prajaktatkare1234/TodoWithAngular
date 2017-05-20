@@ -1,4 +1,4 @@
-App.controller('signin_controller', function($scope,$location, signin_service) {
+App.controller('signin_controller', function($scope,$state, signin_service) {
     console.log("gfghjfghfjgh");
 
     $scope.sign_in = function() {
@@ -17,15 +17,16 @@ App.controller('signin_controller', function($scope,$location, signin_service) {
           console.log(data.data.status,"sign_in");
           if(data.data.status==true)
           {
-            $location.path('/welcome');
-          }
+            // $location.path('/welcome');
+            $state.go('welcome');
+        }
           else{
             console.log("ghfhjhj");
-              $location.path('/signin');
+              $state.go('signin');
           }
 
         }).catch(function(error) {
-              $location.path('/signin');
+
         })
     }
 
@@ -33,12 +34,12 @@ App.controller('signin_controller', function($scope,$location, signin_service) {
 });
 
 
-App.service('signin_service', function($http) {
-    this.App = function(object) {
-        return $http({
-            url: "/sign_in",
-            method: "POST",
-            data: object
-        });
-    }
-});
+// App.service('signin_service', function($http) {
+//     this.App = function(object) {
+//         return $http({
+//             url: "/sign_in",
+//             method: "POST",
+//             data: object
+//         });
+//     }
+// });

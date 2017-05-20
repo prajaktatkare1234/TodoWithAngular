@@ -32,12 +32,12 @@ App.controller('signup_controller', function($scope, signup_service) {
     }
 
 });
-App.service('signup_service', function($http) {
-    this.App = function(object) {
-        return $http({
-            url: "http://localhost:8081/sign_up",
-            method: "POST",
-            data: object
-        });
-    }
-});
+// App.service('signup_service', function($http) {
+//     this.App = function(object) {
+//         return $http({
+//             url: "/sign_up",
+//             method: "POST",
+//             data: object
+//         });
+//     }
+// });

@@ -35,6 +35,7 @@ data_card_Schema.statics.save_data = function(req,d_no, cb) {
     data_card_detail.save(cb);
 };
 data_card_Schema.statics.update_data = function(data_id,req,cb) {
+  console.log(data_id,"datajkhjkhl");
 
     this.update({
         _id: req._id
