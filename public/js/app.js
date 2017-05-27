@@ -116,3 +116,26 @@ var App=angular.module('App',['ui.router','ngSanitize','ngStorage','ui.bootstrap
 //         }
 //     };
 // }]);
+
+// var mApp = angular.module('myApp', []);
+
+App.directive("datepicker", function () {
+  return {
+    restrict: "A",
+    require: "ngModel",
+    link: function (scope, elem, attrs, ngModelCtrl) {
+      var updateModel = function (dateText) {
+        scope.$apply(function () {
+          ngModelCtrl.$setViewValue(dateText);
+        });
+      };
+      var options = {
+        dateFormat: "dd/mm/yy",
+        onSelect: function (dateText) {
+          updateModel(dateText);
+        }
+      };
+      elem.datepicker(options);
+    }
+  }
+});

@@ -15,20 +15,33 @@ var data_card_Schema = Schema({
     },
     take_note:{
       type:String
+    },
+    created:{
+      type:Date
+    },
+    updated:{
+      type:Date
+    },
+    remind_at:{
+      type:Date
+
+    },
+    bgcolor:{
+      type:String
     }
+
 
 
 });
 var data_card_detail;
 data_card_Schema.statics.save_data = function(req,d_no, cb) {
-  // console.log("in save function cxvgfdg");
-    // console.log(req);
-    // console.log(d_no);
-    // console.log("completed");
+  var d = new Date();
     data_card_detail = new this({
         d_no:d_no._id,
         title:req.title,
-        take_note:req.take_note
+        take_note:req.take_note,
+        created:d,
+        updated:d
 
     });
 
@@ -36,20 +49,52 @@ data_card_Schema.statics.save_data = function(req,d_no, cb) {
 };
 data_card_Schema.statics.update_data = function(data_id,req,cb) {
   console.log(data_id,"datajkhjkhl");
-
+  var d = new Date();
     this.update({
         _id: req._id
     }, {
         $set: {
             take_note: req.take_note,
-            title:req.title
+            title:req.title,
+            updated:d
+        }
+    }, cb);
+};
+data_card_Schema.statics.remind = function(data_id,req,cb) {
+  console.log(data_id,"datajkhjk",req);
+  var d = new Date();
+    this.update({
+        _id: data_id
+    }, {
+        $set: {
+        remind_at:req.remind_at
         }
     }, cb);
 };
 
-data_card_Schema.statics.card_notes = function(data_id, cb) {
+data_card_Schema.statics.select_color = function(data_id,req,cb) {
+  console.log(data_id,"datajkhjk",req);
+  var d = new Date();
+    this.update({
+        _id: data_id
+    }, {
+        $set: {
+        bgcolor:req.bgcolor
+        }
+    }, cb);
+};
+
+
+
+data_card_Schema.statics.delete_reminder = function(data_id, cb) {
     // console.log(req);
-    this.find({_id:data_id},cb);
+    this.update({
+        _id: data_id
+    }, {
+        $unset: {
+        remind_at:""
+        }
+    }, cb);
 
 };
 data_card_Schema.statics.delete_data = function(data_id, cb) {

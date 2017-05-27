@@ -1,18 +1,15 @@
-body {
-    /*margin: 0;*/
-    /*background-color: #f5b400;*/
-    background-color: #f2f2f2;
-}
 
 #search {
     width: 400px;
     margin-top: 10px;
     height: 35px;
-    background-color: #f5b400;
+    /*background-color: #f5b400;*/
     border: none;
     font-size: 13px;
     margin-right: -49%;
     outline: none;
+    color: black
+
 }
 
 #home {
@@ -61,8 +58,11 @@ img {
     transition: all 0.5s ease;
 }
 
-#wrapper.toggled {
+/*#wrapper.toggled {
     padding-left: 250px;
+}*/
+body{
+  background-color: #e8e8e8;
 }
 
 #sidebar-wrapper {
@@ -86,24 +86,35 @@ img {
 }
 
 #page-content-wrapper {
-    padding: 15px;
+    /*padding: 15px;*/
     width: 100%;
 }
-
-#wrapper.toggled #page-content-wrapper {
+#ui-datepicker-div{
+  background: black;
+  margin-top: -200px
+}
+div#ui-datepicker-div{
+background-color: antiquewhite;
+box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.6), 0 2px 2px 0 rgba(0, 0, 0, 0.6);
+}
+.ui-state-default{
+  padding: 2px;
+}
+/*#wrapper.toggled #page-content-wrapper {
     position: absolute;
     margin-right: -250px;
 }
-
+*/
 .sidebar-nav {
     position: absolute;
-    top: 0;
-    margin: 0;
+    top: 23px;
+    margin: -22px;
     padding: 0;
     width: 250px;
     list-style: none;
     height:100%;
     background-color: white;
+    background: rgb(232, 232, 232);
 }
 
 .sidebar-nav li {
@@ -118,7 +129,7 @@ img {
 }
 
 .sidebar-nav li a:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background:white
     color: #fff;
     text-decoration: none;
 }
@@ -146,15 +157,15 @@ img {
 .sidebar-nav>.sidebar-brand a:hover {
     background: #bfbfbf;
     color: black;
-}*/
+}
 
 
-/*@media (max-width: 580px) {
+@media (max-width: 580px) {
     #wrapper {
         padding-left: 0px;
 
 }
-}*/
+}
 
 #content {
     transition: 0.5s;
@@ -162,7 +173,7 @@ img {
     height: 60px;
     outline: none;
     box-sizing: border-box;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.6), 0 2px 2px 0 rgba(0, 0, 0, 0.6);
 }
 
 #txt {
@@ -171,36 +182,33 @@ img {
     border: 0;
 }
 
-#r1 {
-    width: 100%;
-}
+/*.container-fluid {
+  padding-left: 0px;
+  padding-right: 0px
+}*/
 
 #div1 {
-    /*width: 35%;*/
-    width: 40%;
-    margin-left: 305px;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.2);
-    /*margin-left: 90px;*/
-    /*box-shadow: 0 1px 1px;*/
-    /*border:none*/
+width: 100%;
+
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.6), 0 2px 2px 0 rgba(0, 0, 0, 0.6);
+
     background-color: white;
+    margin-top: 70px;
 }
 
 #div2 {
-    width: 40%;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.2);
-    /*min-height: px;*/
-    /*display: none;*/
-    outline: none;
-    border: 0;
-    margin-left: 305px;
-    background-color: white;
+  width: 100%;
+
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.6), 0 2px 2px 0 rgba(0, 0, 0, 0.6);
+
+      background-color: white;
+      margin-top: 70px;
 }
 
 #p1 {
     outline: none;
     border: 0;
-    /*margin-top: 20px;*/
+
     height: 40px;
     width: 100%
 }
@@ -210,13 +218,12 @@ img {
     border: 0;
     overflow: hidden;
     resize: none;
-    /*min-height: 30px;*/
-    /*background-color: grey;*/
+
     border: 0px;
     outline: none;
 }
 #take_note {
-    /*min-height: 30px;;*/
+
     width: 100%;
     border: 0;
     overflow: hidden;
@@ -224,24 +231,31 @@ img {
     border: 0;
     outline: none;
     word-wrap: break-word;
+
 }
 
 #cards {
-    /*margin-left: 60px;*/
-    margin-left: 185px;
+margin-top: 60px;
+    /*margin-left: 145px;*/
     outline: none;
     border: 0;
-    width: 75%;
-    /*width: 80%;*/
+    /*width: 75%;*/
+
+}
+#innerbox:hover{
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.6), 0 2px 2px 0 rgba(0, 0, 0, 0.6);
+
 }
 
 #innerbox {
-    width: 96%;
+    /*width: 240px;*/
+
     outline: none;
     border: 0;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+    /*box-shadow:0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.2), 0 1px 5px 0 rgba(0,0,0,0.12);*/
     background-color: white;
-    word-wrap: break-word;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.6), 0 2px 2px 0 rgba(0, 0, 0, 0.6);
+    /*word-wrap: break-word;*/
     overflow: hidden;
     border-radius: 0px
 }
@@ -250,16 +264,16 @@ img {
     width: 65%;
     outline: none;
     border: 0;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.6), 0 2px 2px 0 rgba(0, 0, 0, 0.6);
     background-color: white;
-    margin-left: 120px;
+    /*margin-left: 120px;*/
     overflow: hidden;
 }
 
 #list_cards {
-    /*align-content: center;*/
 
-    margin-left: 100px;
+    margin-top: 60px;
+
 }
 #delete {
     text-decoration: none;
@@ -273,77 +287,69 @@ img {
     font-size: 22px;
     font-family: serif;
     overflow: hidden;
+    font-weight: bold;
+
+
 }
 #note_div {
-    font-size: 16px;
+    font-size: 18px;
     font-family: serif;
     overflow: hidden;
+
 }
 #b1{
   width:auto;
 }
-
+#outerbox,#outerbox1{
+  margin-bottom: 18px;
+}
+div{
+  padding-left: 3px
+}
+#paint{
+  position: absolute;
+  margin-top: -60px;
+  background-color: white;
+  /*display: block;*/
+  /*padding: 6px;*/
+  margin-left: 50px;
+}
 
 @media (min-width: 320px) {
-    #wrapper {
-        padding-left: 250px;
-        /*padding-left: 0;*/
-    }
-    #wrapper.toggled {
-        padding-left: 0;
-    }
-    #sidebar-wrapper {
-        width: 250px;
-    }
-    #wrapper.toggled #sidebar-wrapper {
-        width: 0;
-    }
-    #page-content-w col-xs-12rapper {
-        padding: 20px;
-    }
-    #wrapper.toggled #page-content-wrapper {
-        position: relative;
-        margin-right: 0;
-    }
-    /*#r1{
-      margin-top: 30px;
-    }*/
+
+
 }
 
 @media (max-width: 600px) {
-.sidebar-nav {
-  z-index: 1;
-}
+    .sidebar-nav {
+      z-index: 1;
+    }
     #wrapper {
         padding-left: 0px;
     }
 
-    #div1, #div2 {
-        width: 90%;
-        margin-left: auto;
+
+    #innerbox {
+      width: 100%;
+    }
+    #innerbox1 {
+      width: 96%;
+    }
+    #div1{
+      width:96%;
     }
 
-    #cards {
-        width: 100%;
-        margin-left: auto;
-    }
 
-    #list_cards {
-        width: 100%;
-        margin-left: -108px;
+    #search{
+      width: 170px;
     }
-
-    #innerbox, #innerbox1 {
-        width: 90%;
-    }
-
-    #r1, #r2, #r3 {
-        width: 100%
-    }
-  #search{
-    width: 170px;
-  }
 }
+/*@@media (max-width:980) {
+  r3{
+    margin-left: 100px;
+  }
+}*/
+
 #grid{
   display: none;
 }

@@ -1,32 +1,14 @@
-<!-- <div ng-controller="welcome_controller" class="modal fade" id="myModal" role="dialog" >
-<div class="modal-dialog">
+
+<div>
 
 
-  <div class="modal-content" id="pop">
-    <div class="modal-header">
-
-      <div contenteditable="true" class="modal-title" placeholder="Title">{{title}}</div>
-    </div>
-    <div class="modal-body">
-      <div contenteditable="true" placeholder="Take note" id="para">{{note}}</div>
-    </div>
-    <div class="modal-footer">
-      <button type="button" id="update" class="btn btn-default" href="#" data-dismiss="modal">Done</button>
-
-    </div>
-  </div>
-
+<div ng-style="paint_model" content contenteditable="true"class="modal-header"  ng-model="updated_title" >
 </div>
-</div> -->
-<!-- <div ng-controller="popup_controller"> -->
-
-
-<div content contenteditable="true"class="modal-header"  ng-model="updated_title" ng-bind-html="title">
-</div>
-<div content contenteditable="true"class="modal-body" ng-model="updated_note" ng-bind-html="note">
+<div content contenteditable="true"class="modal-body" ng-model="updated_note">
 
 </div>
 <div class="modal-footer">
+  <div content contenteditable="true">Updated On:{{updated_date | date:'dd-MM hh:mm'}}</div>
 <button class="btn btn-warning" type="button" ng-click="update(id)">Done</button>
 </div>
-<!-- </div> -->
+</div>

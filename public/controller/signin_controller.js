@@ -1,5 +1,26 @@
-App.controller('signin_controller', function($scope,$state, signin_service) {
+App.controller('signin_controller', function($scope,$state,signin_service,check_service) {
     console.log("gfghjfghfjgh");
+
+    $scope.check=function(){
+      console.log("inside check");
+      var obj = check_service.App();
+      obj.then(function(data) {
+        if(data.data.status==true)
+        {
+          $state.go('welcome');
+        }
+        else{
+            $state.go('signin');
+        }
+      }).catch(function(error) {
+
+      })
+
+    }
+    $scope.check();
+
+
+
 
     $scope.sign_in = function() {
         var email_id = $scope.uname;
@@ -29,17 +50,4 @@ App.controller('signin_controller', function($scope,$state, signin_service) {
 
         })
     }
-
-
-});
-
-
-// App.service('signin_service', function($http) {
-//     this.App = function(object) {
-//         return $http({
-//             url: "/sign_in",
-//             method: "POST",
-//             data: object
-//         });
-//     }
-// });
+  });

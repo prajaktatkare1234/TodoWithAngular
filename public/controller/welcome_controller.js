@@ -1,17 +1,119 @@
-App.controller('welcome_controller', function($scope,$uibModal,$state,$localStorage,data_service,get_service,delete_service,logout_service) {
+App.controller('welcome_controller', function($scope,$uibModal,$state,$localStorage,$rootScope,data_service,get_service,delete_service,logout_service,reminder_service,delete_reminder_service,color_service) {
+    // $scope.myDate = new Date();
     $scope.custom = true;
     $scope.sidebar = true;
     $scope.pop = true;
+    // $scope.current_date=new Date();
+    $scope.today="today";
+    $scope.tomorrow="tomorrow";
+    $scope.next="next";
+
+    $scope.bgcolor=[{
+        "color":"#ffffff",
+        "path":"../image/Ok-24.png"
+      },
+      {
+        "color":"#80f8ff",
+        "path":"../image/blue.png"
+      },
+      {
+        "color":"#ccff90",
+        "path":"../image/green.png"
+      },
+      {
+        "color":"#a7ffeb",
+        "path":"../image/light_blue.png"
+      },
+      {
+        "color":"#cfd8dc",
+        "path":"../image/grey.png"
+      },
+      {
+        "color":"#ffb366",
+        "path":"../image/yellow.png"
+      },
+      {
+        "color":"#ffff99",
+        "path":"../image/light_yellow.png"
+      }
+    ]
+    // console.log(bgcolor);
+
+    $scope.date_check=function(){
+    console.log($scope.datepicker);
+  };
+
+    $scope.select_color=function(id,color){
+
+    console.log(color,id);
+    // $scope.bgcolor="#"+color;
+    // console.log($scope.bgcolor);
+
+    var obj = color_service.App(id,color);
+    obj.then(function(data) {
+
+    }).catch(function(error) {
+
+    })
+      $scope.get_data();
+
+  };
 
 
-    $scope.open=function(title,note,id) {
-// $scope.open=function(id) {
-  // console.log(id);
-  console.log($scope.data_info);
+
+    $scope.remind = function(id,time) {
+      console.log(id);
+      // $scope.id=x._id
+      var date=new Date();
+      console.log("remind");
+      $scope.time=time;
+      if($scope.time=="today")
+      { var today_r= new Date(date);
+        today_r.setHours(20,00,00)
+          $scope.remind_at=new Date(today_r)
+        console.log($scope.remind_at,"today");
+      }
+      if($scope.time=="tomorrow")
+      {
+        var tomorrow_r= new Date(date);
+        tomorrow_r.setDate(tomorrow_r.getDate()+1);
+        tomorrow_r.setHours(20,00,00)
+        $scope.remind_at=new Date(tomorrow_r)
+        console.log( $scope.remind_at,"tomorrow");
+      }
+      if($scope.time=="next")
+      {
+        var next_r= new Date(date);
+        next_r.setDate(date.getDate()+7);
+        next_r.setHours(20,00,00)
+        $scope.remind_at=new Date(next_r)
+        console.log( $scope.remind_at,"next");
+      }
+
+        var obj = reminder_service.App(id,$scope.remind_at);
+        obj.then(function(data) {
+
+        }).catch(function(error) {
+
+        })
+                $scope.get_data();
+
+    }
+
+
+
+
+
+
+
+
+    $scope.open=function(x) {
+      console.log("x",x);
       var Data_object={
-        title:title,
-        note:note,
-        id:id
+        title:x.title,
+        note:x.take_note,
+        id:x._id,
+        updated:x.updated
 
       }
       console.log('opening pop up',$scope.data_info);
@@ -24,6 +126,9 @@ App.controller('welcome_controller', function($scope,$uibModal,$state,$localStor
     }
   }
   });
+  modalInstance.result.catch(function(error){
+    console.log(error);
+  })
   }
 
 
@@ -46,15 +151,39 @@ App.controller('welcome_controller', function($scope,$uibModal,$state,$localStor
         })
 
     }
+    $scope.copy= function(x){
+      var obj = data_service.App(x);
+      obj.then(function(data) {
 
+      }).catch(function(error) {
+
+      });
+        $scope.get_data();
+    }
+
+    $scope.delete_reminder= function(x){
+      console.log(x,"hgjhghghjg");
+      var obj = delete_reminder_service.App(x);
+      obj.then(function(data) {
+
+      }).catch(function(error) {
+
+      });
+        $scope.get_data();
+    }
 
 
 
 
 
     $scope.save = function() {
+      if($scope.title=="" && $scope.take_note=="")
+      {
+        return;
+      }
       var title=$scope.title;
       var take_note=$scope.take_note;
+
       console.log($scope.title);
       var object={
          title:title,
@@ -65,6 +194,8 @@ App.controller('welcome_controller', function($scope,$uibModal,$state,$localStor
 
         // var object = $scope.task;
         console.log("inside",object);
+        $scope.title=null;
+        $scope.take_note=null;
         var obj = data_service.App(object);
         obj.then(function(data) {
 
@@ -79,7 +210,7 @@ App.controller('welcome_controller', function($scope,$uibModal,$state,$localStor
 
 
 
-    $scope.get_data = function() {
+    $rootScope.get_data = function() {
 
 
         var obj = get_service.App();
@@ -89,7 +220,7 @@ App.controller('welcome_controller', function($scope,$uibModal,$state,$localStor
                 var cards = [];
                 for (var i = data.data.data_info.length - 1; i >= 0; i--) {
                     cards[cards.length] = data.data.data_info[i];
-                  // console.log(cards[i].);
+
 
                 }
 
@@ -113,7 +244,7 @@ App.controller('welcome_controller', function($scope,$uibModal,$state,$localStor
 
     $scope.menu = function() {
         console.log($scope.sidebar);
-        if(window.innerwidth>"600px"){
+        if(window.innerWidth > 600){
         if (!$scope.sidebar) {
             $scope.content = {
                 'margin-left': "100px",
