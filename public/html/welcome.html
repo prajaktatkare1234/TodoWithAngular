@@ -77,7 +77,7 @@
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
                         <li>
-                            <a id="refresh"><img id="ref" src="/image/ref.png"></img>
+                            <a id="refresh"><img id="ref" src="/image/ref.png" ng-click="reload()"></img>
                             </a>
 
                         </li>
@@ -199,7 +199,7 @@
                                             <img style="padding:4px" src="image/more.png" uib-dropdown-toggle ng-disabled="disabled"> </img>
                                             <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
                                               <li role="menuitem">
-                                                <a><img style="padding:4px" src="image/Delete-20.png" ng-click="delete(x._id)"></img></a>
+                                                <a><img style="padding:4px" src="image/Delete-20.png" ng-click="delete(x._id,$index)"></img></a>
                                               </li>
                                               <li role="menuitem">
                                                 <a ng-click=copy(x)>Make a copy</a>
@@ -232,83 +232,75 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-                    </div>
-                    <div ng-show="list_v">
-                        <div id="list_cards">
+                        <!-- list view -->
+                        <div ng-show="list_v">
+                          <div id="list_cards">
                             <div class="row" ng-repeat="x in data_info" id="outerbox1">
-                                <div class="col-sm-2 col-md-2 col-lg-2">
-                                </div>
-                                <div id="innerbox1" style="background-color:{{x.bgcolor}}" class="col-lg-4 col-sm-4 col-md-4" ng-mouseover="card_icon=true" ng-mouseleave="card_icon=false">
-                                    <div ng-click="open(x)" id="title_div" ng-bind-html="x.title"></div>
-                                    <div ng-click="open(x)" id="note_div" ng-bind-html="x.take_note"></div>
-                                    <div ng-show="card_icon">
+                              <div class="col-sm-2 col-md-2 col-lg-2">
+                              </div>
+                              <div id="innerbox1" style="background-color:{{x.bgcolor}}" class="col-lg-4 col-sm-4 col-md-4" ng-mouseover="card_icon=true" ng-mouseleave="card_icon=false">
+                                <div ng-click="open(x)" id="title_div" ng-bind-html="x.title"></div>
+                                <div ng-click="open(x)" id="note_div" ng-bind-html="x.take_note"></div>
 
+                                <!-- show on hover -->
+                                <div ng-show="card_icon">
 
-                                        <div class="btn-group" uib-dropdown dropdown-append-to-body="true">
-                                            <img style="padding:4px" src="image/Reminder-20.png" uib-dropdown-toggle ng-disabled="disabled"></img>
-                                            <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
-                                                <li role="menuitem"><a ng-click="remind(x._id,today)">Later today</a></li>
-                                                <li role="menuitem"><a ng-click="remind(x._id,tomorrow)">Tomorrow</a></li>
-                                                <li role="menuitem"><a ng-click="remind(x._id,next)">Next Week</a></li>
-                                                <li class="divider"></li>
-                                                <li role="menuitem"></li>
-                                            </ul>
-                                        </div>
-                                        <div class="btn-group" uib-dropdown dropdown-append-to-body="true">
-                                            <img style="padding:4px" src="image/Paint.png" uib-dropdown-toggle ng-disabled="disabled"></img>
-                                            <div class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
-                                                <a ng-repeat="y in bgcolor"><img ng-src="{{y.path}}" ng-click="select_color(x._id,y.color)" /></a>
+                                  <!-- reminder -->
+                                  <div class="btn-group" uib-dropdown dropdown-append-to-body="true">
+                                    <img style="padding:4px" src="image/Reminder-20.png" uib-dropdown-toggle ng-disabled="disabled"></img>
+                                    <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
+                                      <li role="menuitem"><a ng-click="remind(x._id,today)">Later today</a></li>
+                                      <li role="menuitem"><a ng-click="remind(x._id,tomorrow)">Tomorrow</a></li>
+                                      <li role="menuitem"><a ng-click="remind(x._id,next)">Next Week</a></li>
+                                      <li class="divider"></li>
+                                      <li role="menuitem"></li>
+                                    </ul>
+                                  </div>
 
-                                            </div>
-                                        </div>
-                                        <div class="btn-group" uib-dropdown dropdown-append-to-body="true">
-                                            <img style="padding:4px" src="image/more.png" uib-dropdown-toggle ng-disabled="disabled"> </img>
-                                            <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
-                                                <li role="menuitem">
-                                                    <a><img style="padding:4px" src="image/Delete-20.png" ng-click="delete(x._id)"></img>
-                                                    </a>
-                                                </li>
-                                                <li role="menuitem">
-                                                    <a ng-click=copy(x)>Make a copy</a>
-                                                </li>
-                                            </ul>
-                                        </div>
+                                  <!-- paint -->
+                                  <div class="btn-group" uib-dropdown dropdown-append-to-body="true">
+                                    <img style="padding:4px" src="image/Paint.png" uib-dropdown-toggle ng-disabled="disabled"></img>
+                                    <div class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
+                                      <a ng-repeat="y in bgcolor"><img ng-src="{{y.path}}" ng-click="select_color(x._id,y.color)" /></a>
                                     </div>
-                                    <div>
-                                        <div ng-if="x.remind_at" style="border-top:2px dashed;border-top-color:#e8e8e8;">
-                                            <span style="">
-                                            <span>{{x.remind_at | date:'dd-MMM, hh:mm a'}}</span>
-                                            <span class="glyphicon glyphicon-remove-circle" style="float:right;padding:2px;" ng-click="delete_reminder(x._id)" </span>
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <!-- <div  class="btn-group" > <a ng-click="delete(x._id)">delete</a> </div> -->
+                                  </div>
+
+                                  <!-- delete and copy -->
+                                  <div class="btn-group" uib-dropdown dropdown-append-to-body="true">
+                                    <img style="padding:4px" src="image/more.png" uib-dropdown-toggle ng-disabled="disabled"> </img>
+                                    <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
+                                      <li role="menuitem">
+                                        <a><img style="padding:4px" src="image/Delete-20.png" ng-click="delete(x._id)"></img></a>
+                                      </li>
+                                      <li role="menuitem">
+                                        <a ng-click=copy(x)>Make a copy</a>
+                                      </li>
+                                    </ul>
+                                  </div>
+
                                 </div>
 
+                                <!-- display reminder -->
+                                <div>
+                                  <div ng-if="x.remind_at" style="border-top:2px dashed;border-top-color:#e8e8e8;">
+                                    <span style="">
+                                      <span>{{x.remind_at | date:'dd-MMM, hh:mm a'}}</span>
+                                      <span class="glyphicon glyphicon-remove-circle" style="float:right;padding:2px;" ng-click="delete_reminder(x._id)" </span>
+                                      </span>
+                                    </div>
+                                  </div>
 
+                                </div>
+
+
+                              </div>
                             </div>
+                          </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <!-- </div><li role="menuitem"><a><img src="image/blue(#3498db).png"</img></a></li>
-            <li role="menuitem"><a><img src="image/green(#2ecc71).png"</img></a></li>
-            <li role="menuitem"><a><img src="image/purple(#9b59b6).png"</img></a></li>
-            <li role="menuitem"><a><img src="image/red(#e74c3c).png"</img></a></li>
-            <li role="menuitem"><a><img src="image/yellow(#f1c40f).png"</img></a></li>
-        </div> -->
-</body>
+                      </div>
 
-</html>
+                    </div>
+                  </div>
+                </body>
+
+                </html>

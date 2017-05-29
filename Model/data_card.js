@@ -41,7 +41,8 @@ data_card_Schema.statics.save_data = function(req,d_no, cb) {
         title:req.title,
         take_note:req.take_note,
         created:d,
-        updated:d
+        updated:d,
+        bgcolor:req.bgcolor
 
     });
 

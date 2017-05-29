@@ -6,7 +6,7 @@ var User = require('../Model/data_card.js');
 router.post('/:id', function(req, res) {
     var data_id=req.params.id;
     // console.log("req from front",req.body);
-    console.log("updateutttttttttttttttttuu");
+    console.log("updatFGHGFHGFDHu");
     User.update_data(data_id,req.body, function(err, result) {
 
 

@@ -1,5 +1,5 @@
-App.controller('welcome_controller', function($scope,$uibModal,$state,$localStorage,$rootScope,data_service,get_service,delete_service,logout_service,reminder_service,delete_reminder_service,color_service) {
-    // $scope.myDate = new Date();
+  App.controller('welcome_controller', function($scope,$uibModal,$state,$localStorage,$rootScope,todo_service) {
+
     $scope.custom = true;
     $scope.sidebar = true;
     $scope.pop = true;
@@ -39,17 +39,26 @@ App.controller('welcome_controller', function($scope,$uibModal,$state,$localStor
     ]
     // console.log(bgcolor);
 
-    $scope.date_check=function(){
-    console.log($scope.datepicker);
+  //   $scope.date_check=function(){
+  //   console.log($scope.datepicker);
+  // };
+  //
+
+  $scope.reload=function(){
+    $state.reload();
   };
 
     $scope.select_color=function(id,color){
 
     console.log(color,id);
-    // $scope.bgcolor="#"+color;
-    // console.log($scope.bgcolor);
 
-    var obj = color_service.App(id,color);
+
+    var bg_color_object={
+      bgcolor:color
+    }
+    var url= "/bgcolor/" + id + "";
+
+    var obj = todo_service.App(url,bg_color_object,id);
     obj.then(function(data) {
 
     }).catch(function(error) {
@@ -89,8 +98,12 @@ App.controller('welcome_controller', function($scope,$uibModal,$state,$localStor
         $scope.remind_at=new Date(next_r)
         console.log( $scope.remind_at,"next");
       }
+      var remind_at_Object={
+        remind_at:$scope.remind_at
+      }
+        var url="/reminder/" + id + "";
 
-        var obj = reminder_service.App(id,$scope.remind_at);
+        var obj = todo_service.App(url,remind_at_Object,id);
         obj.then(function(data) {
 
         }).catch(function(error) {
@@ -98,7 +111,7 @@ App.controller('welcome_controller', function($scope,$uibModal,$state,$localStor
         })
                 $scope.get_data();
 
-    }
+    };
 
 
 
@@ -113,14 +126,18 @@ App.controller('welcome_controller', function($scope,$uibModal,$state,$localStor
         title:x.title,
         note:x.take_note,
         id:x._id,
-        updated:x.updated
+        updated:x.updated,
+        bgcolor:x.bgcolor
 
       }
       console.log('opening pop up',$scope.data_info);
       var modalInstance = $uibModal.open({
+
       templateUrl: '../html/popup.html',
       controller: 'popup_controller',
+
       resolve: {
+
       object: function () {
       return Data_object;
     }
@@ -129,7 +146,7 @@ App.controller('welcome_controller', function($scope,$uibModal,$state,$localStor
   modalInstance.result.catch(function(error){
     console.log(error);
   })
-  }
+};
 
 
 
@@ -140,7 +157,8 @@ App.controller('welcome_controller', function($scope,$uibModal,$state,$localStor
     $scope.logout = function() {
 
       console.log("logout");
-        var obj = logout_service.App();
+        var url="/logout";
+        var obj = todo_service.App(url);
         obj.then(function(data) {
           if(data.data.status==false)
           {
@@ -150,27 +168,31 @@ App.controller('welcome_controller', function($scope,$uibModal,$state,$localStor
 
         })
 
-    }
+    };
+
+
     $scope.copy= function(x){
-      var obj = data_service.App(x);
+      var url=  "/data_card";
+      var obj = todo_service.App(url,x);
       obj.then(function(data) {
 
       }).catch(function(error) {
 
       });
         $scope.get_data();
-    }
+    };
 
-    $scope.delete_reminder= function(x){
-      console.log(x,"hgjhghghjg");
-      var obj = delete_reminder_service.App(x);
+    $scope.delete_reminder= function(id){
+
+        var url= "/delete_reminder/" + id + "";
+      var obj = todo_service.App(url);
       obj.then(function(data) {
 
       }).catch(function(error) {
 
       });
         $scope.get_data();
-    }
+    };
 
 
 
@@ -190,13 +212,11 @@ App.controller('welcome_controller', function($scope,$uibModal,$state,$localStor
         take_note:take_note
 
       }
-      // console.log( $scope.task);
-
-        // var object = $scope.task;
+    var url=  "/data_card";
         console.log("inside",object);
         $scope.title=null;
         $scope.take_note=null;
-        var obj = data_service.App(object);
+        var obj = todo_service.App(url,object);
         obj.then(function(data) {
 
 
@@ -206,14 +226,14 @@ App.controller('welcome_controller', function($scope,$uibModal,$state,$localStor
 
         })
         $scope.get_data();
-    }
+    };
 
 
 
     $rootScope.get_data = function() {
-
-
-        var obj = get_service.App();
+      console.log("hghjhgj");
+      var url="/get_data_card";
+        var obj = todo_service.App(url);
         obj.then(function(data) {
             console.log("data", data.data.data_info);
             if (data.data.status == true) {
@@ -239,7 +259,7 @@ App.controller('welcome_controller', function($scope,$uibModal,$state,$localStor
         }).catch(function(error) {
 
         })
-    }
+    };
 
 
     $scope.menu = function() {
@@ -262,7 +282,7 @@ App.controller('welcome_controller', function($scope,$uibModal,$state,$localStor
       }
 
 
-    }
+    };
 
     $scope.list_view = function() {
       $localStorage.view = "list";
@@ -275,7 +295,7 @@ App.controller('welcome_controller', function($scope,$uibModal,$state,$localStor
         'display':'block'
       }
 
-    }
+    };
     $scope.grid_view = function() {
     $localStorage.view = "grid";
       $scope.grid_v=true;
@@ -291,10 +311,12 @@ App.controller('welcome_controller', function($scope,$uibModal,$state,$localStor
       }
 
 
-    }
+    };
     $scope.delete = function(id) {
         console.log("xdfdgdrnggfhhgf");
-        var obj = delete_service.App(id);
+        var url="/delete_data_card/" + id + "";
+        console.log(url);
+        var obj = todo_service.App(url);
         obj.then(function(data) {
 
 
@@ -303,45 +325,8 @@ App.controller('welcome_controller', function($scope,$uibModal,$state,$localStor
 
         })
           $scope.get_data();
-    }
+    };
 
     $scope.get_data();
 
 });
-// App.service('data_service', function($http) {
-//     this.App = function(object) {
-//         return $http({
-//             url: "/data_card",
-//             method: "POST",
-//             data: object
-//         });
-//     }
-// });
-// App.service('get_service', function($http) {
-//     this.App = function(object) {
-//         return $http({
-//             url: "/get_data_card",
-//             method: "POST",
-//
-//         });
-//     }
-// });
-// App.service('delete_service', function($http) {
-//   // console.log(id);
-//     this.App = function(id) {
-//         return $http({
-//             url: "/delete_data_card/" + id + "",
-//             method: "POST",
-//
-//         });
-//     }
-// });
-// App.service('logout_service', function($http) {
-//     this.App = function(object) {
-//         return $http({
-//             url: "http://localhost:8081/logout",
-//             method: "POST",
-//             // data: object
-//         });
-//     }
-// });

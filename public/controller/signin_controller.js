@@ -1,9 +1,10 @@
-App.controller('signin_controller', function($scope,$state,signin_service,check_service) {
+App.controller('signin_controller', function($scope,$state,todo_service) {
     console.log("gfghjfghfjgh");
 
     $scope.check=function(){
       console.log("inside check");
-      var obj = check_service.App();
+         var url= "/user_info/";
+      var obj = todo_service.App(url);
       obj.then(function(data) {
         if(data.data.status==true)
         {
@@ -32,8 +33,9 @@ App.controller('signin_controller', function($scope,$state,signin_service,check_
             password: password
 
         }
+          var url= "/sign_in";
 
-        var obj = signin_service.App(object);
+        var obj = todo_service.App(url,object);
         obj.then(function(data) {
           console.log(data.data.status,"sign_in");
           if(data.data.status==true)

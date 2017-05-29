@@ -1,11 +1,12 @@
-App.controller('popup_controller', function($scope,$uibModalInstance,object,update_service) {
+App.controller('popup_controller', function($scope,$uibModalInstance,object,todo_service) {
   $scope.updated_title=object.title;
   $scope.updated_note=object.note;
   $scope.updated_date=object.updated;
+  $scope.updated_color=object.bgcolor;
   $scope.id=object.id;
 
 
-  // console.log("contr", $scope.title);
+  console.log("contr",object);
 $scope.update = function (id) {
 console.log(id);
 console.log("title",$scope.updated_title);
@@ -16,9 +17,9 @@ console.log("title",$scope.updated_title);
       _id:id
 
     }
+   var url="/update_data_card/" + id + "";
 
-    console.log("updated",updated_data);
-    var obj = update_service.App(updated_data,id);
+    var obj = todo_service.App(url,updated_data,id);
     obj.then(function(data) {
       $scope.get_data();
 
