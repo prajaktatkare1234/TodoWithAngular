@@ -158,7 +158,28 @@ box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.6), 0 2px 2px 0 rgba(0, 0, 0, 0.6);
     background: #bfbfbf;
     color: black;
 }
-
+#login-dp{
+  align:center;
+  width: 70px;
+      /* margin-top: 4px; */
+      height: 60px;
+      padding: 10px;
+}
+#drop_account{
+  width: 280px;
+      height: 155px;
+      color:black;
+}
+#drop_menu{
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    font-size: 25px;
+    color: white;
+    background-color: olive;
+    padding: 6px;
+}
+}
 
 @media (max-width: 580px) {
     #wrapper {
@@ -182,10 +203,10 @@ box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.6), 0 2px 2px 0 rgba(0, 0, 0, 0.6);
     border: 0;
 }
 
-/*.container-fluid {
+#r1 {
   padding-left: 0px;
   padding-right: 0px
-}*/
+}
 
 #div1 {
 width: 100%;
@@ -234,21 +255,25 @@ width: 100%;
 
 }
 
-#cards {
-margin-top: 60px;
+.grid_card {
+  margin-top: 60px;
     /*margin-left: 145px;*/
     outline: none;
     border: 0;
-    /*width: 75%;*/
+    width: 100%;
+
 
 }
-#innerbox:hover{
+.innerbox:hover{
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.6), 0 2px 2px 0 rgba(0, 0, 0, 0.6);
 
 }
+.a{
+  width:230px;
+}
 
-#innerbox {
-    /*width: 240px;*/
+.innerbox {
+    /*width: 24s0px;*/
 
     outline: none;
     border: 0;
@@ -260,8 +285,8 @@ margin-top: 60px;
     border-radius: 0px
 }
 
-#innerbox1 {
-    width: 65%;
+.innerbox1 {
+    width: 100%;
     outline: none;
     border: 0;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.6), 0 2px 2px 0 rgba(0, 0, 0, 0.6);
@@ -288,6 +313,7 @@ margin-top: 60px;
     font-family: serif;
     overflow: hidden;
     font-weight: bold;
+    word-break: break-all;
 
 
 }
@@ -295,14 +321,19 @@ margin-top: 60px;
     font-size: 18px;
     font-family: serif;
     overflow: hidden;
+        word-break: break-all;
 
 }
 #b1{
   width:auto;
 }
-#outerbox,#outerbox1{
+/*#outerbox,#outerbox1{
   margin-bottom: 18px;
+}*/
+.outerbox{
+    margin-bottom: 18px;
 }
+
 div{
   padding-left: 3px
 }
@@ -329,11 +360,11 @@ div{
     }
 
 
-    #innerbox {
+    .innerbox {
       width: 100%;
     }
-    #innerbox1 {
-      width: 96%;
+    .innerbox1 {
+      width: 100%;
     }
     #div1{
       width:96%;
@@ -349,7 +380,11 @@ div{
     margin-left: 100px;
   }
 }*/
-
 #grid{
   display: none;
+}
+#picker{
+  width: 180px;
+  position: absolute;
+  padding-right: 5px;
 }

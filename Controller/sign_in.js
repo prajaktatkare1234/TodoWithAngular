@@ -26,7 +26,8 @@ router.post('/', function(req, res) {
 
     User.login(req.body, function(err, result) {
 
-      // console.log(result);
+      console.log("loginsdfdsf",result);
+    
 
         if (err) {
 
@@ -48,7 +49,8 @@ router.post('/', function(req, res) {
                 res.send({
                     "status": true,
                     "message": "logged in Successfully",
-                    "token": token
+                    "token": token,
+                    "result":result
                 })
             } else {
                 res.send({

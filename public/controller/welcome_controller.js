@@ -8,6 +8,29 @@
     $scope.tomorrow="tomorrow";
     $scope.next="next";
 
+      $rootScope.check=function(){
+          console.log("inside check");
+             var url= "/user_info/";
+          var obj = todo_service.App(url);
+          obj.then(function(data) {
+            if(data.data.status==true)
+            { $scope.user_data=data.data.user_data;
+              console.log(data.data.user_data);
+              $state.go('welcome');
+            }
+            else{
+                $state.go('signin');
+            }
+          }).catch(function(error) {
+
+          })
+
+        }
+        $scope.check();
+
+
+
+
     $scope.bgcolor=[{
         "color":"#ffffff",
         "path":"../image/Ok-24.png"
@@ -71,7 +94,7 @@
 
 
     $scope.remind = function(id,time) {
-      console.log(id);
+      console.log(id,time,"hhgfgh");
       // $scope.id=x._id
       var date=new Date();
       console.log("remind");
@@ -82,7 +105,7 @@
           $scope.remind_at=new Date(today_r)
         console.log($scope.remind_at,"today");
       }
-      if($scope.time=="tomorrow")
+      else if($scope.time=="tomorrow")
       {
         var tomorrow_r= new Date(date);
         tomorrow_r.setDate(tomorrow_r.getDate()+1);
@@ -90,13 +113,17 @@
         $scope.remind_at=new Date(tomorrow_r)
         console.log( $scope.remind_at,"tomorrow");
       }
-      if($scope.time=="next")
+    else  if($scope.time=="next")
       {
         var next_r= new Date(date);
         next_r.setDate(date.getDate()+7);
         next_r.setHours(20,00,00)
         $scope.remind_at=new Date(next_r)
         console.log( $scope.remind_at,"next");
+      }
+      else{
+
+        $scope.remind_at=new Date(time);
       }
       var remind_at_Object={
         remind_at:$scope.remind_at
@@ -109,7 +136,7 @@
         }).catch(function(error) {
 
         })
-                $scope.get_data();
+        $scope.get_data();
 
     };
 
@@ -286,8 +313,12 @@
 
     $scope.list_view = function() {
       $localStorage.view = "list";
-        $scope.list_v=true;
-        $scope.grid_v=false;
+        // $scope.list_v=true;
+        // $scope.grid_v=false;
+        $scope.grid_show="grid_card";
+        $scope.innerbox="innerbox1";
+        $scope.view_change="col-sm-10 col-lg-9 col-xs-12 col-md-12 a";
+
       $scope.list={
         'display':'none'
       }
@@ -298,8 +329,12 @@
     };
     $scope.grid_view = function() {
     $localStorage.view = "grid";
-      $scope.grid_v=true;
-      $scope.list_v=false;
+      // $scope.grid_v=true;
+      // $scope.list_v=false;
+      $scope.grid_show="grid_card";
+      $scope.innerbox="innerbox ";
+      $scope.view_change=" col-sm-3 col-lg-3 col-xs-12 col-md-3 a";
+//
 
       console.log("hghj");
       $scope.grid={

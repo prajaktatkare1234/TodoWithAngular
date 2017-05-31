@@ -93,10 +93,70 @@
                             </a>
 
                         </li>
-                        <li>
+                        <!-- <li>
                             <a id="logout"><img id="l" ng-click="logout()" src="image/logout.png"></img>
                             </a>
-                        </li>
+
+                        </li> -->
+                        <!-- <li class="dropdown" style="background-color:#fb0;">
+      <a class="dropdown-toggle" data-toggle="dropdown" style="background-color:#fb0;color:black;">
+        <b><span class="glyphicon glyphicon-user" id="usernavbar" ></b>
+        <span class="caret" id="caret"></span></a>
+      <ul id="login-dp" class="dropdown-menu">
+        <li>
+          <div class="row">
+            <div class="col-md-12">
+
+              <div class="social-buttons" id="acbuttons">
+                <div>Name</div>
+                <div>Email</div>
+                <a style="background-color:#fb0"class="btn btn-warning"><span id="account">MyAccount</span></a>
+
+                <a style="background-color:#fb0" class="btn btn-warning" id="logOutId" ng-click="logout()" aria-hidden="true" ><span id="off">SignOut</span></a>
+              </div>
+
+            </div>
+          </div>
+        </li>
+      </ul>
+    </li> -->
+    <li>
+              <a style="background-color:#ffbb00;"class="dropdown-toggle" data-toggle="dropdown">
+                <!-- <img  class="circular--square1" src="image/Circled User Male Filled-100.png"/> -->
+                <div  id="drop_menu">
+                  {{user_data.name.charAt(0) | uppercase}}
+                </div>
+              </a>
+              <div  id="drop_account" class="dropdown-menu">
+                 <!-- <div class="profile1"> -->
+                    <img id="login-dp"class="circular--square" src="image/Circled User Male Filled-100.png" alt={{user_data.name.charAt(0)}} >
+                 <!-- </div> -->
+                 <a ng-click="profile_pic()">Change profile pic</a>
+                 <div  class="btn-group">
+                    <span >{{user_data.name}}
+                    </span><br>
+                    <span >{{user_data.email}}</span>
+                    <!-- <div class="profile3">
+                       <button class="btn btn-primary btn-lg accBtn" type="button" value="My Account" data-ng-click="hc.signout()">My Account
+                       </button>
+                    </div> -->
+                 </div>
+                 <!-- <hr> -->
+
+                    <div style="padding:14px">
+                       <button class="btn-group" style="background-color:white;" type="button" value="signout"  ng-click="logout()">Sign out
+                       </button>
+
+
+                       <button class="btn-group" style="float:right;background-color:white;" type="button" value="Add Account" data-ng-click="tdctl.logout()">Add account</button>
+                    </div>
+
+              </div>
+           </li>
+
+
+
+
                     </ul>
                 </div>
             </div>
@@ -128,7 +188,7 @@
                 <div class="container-fluid" id="r1">
                   <!-- div1 and div2 for input -->
                     <div class="row">
-                        <div class="col-lg-4 col-md-2 col-sm-3">
+                        <div class="col-lg-4 col-md-3 col-sm-3">
                         </div>
                         <div class="col-lg-4 col-sm-6  col-xs-12" id="r2">
                           <div class="row" id="r3">
@@ -156,13 +216,14 @@
 
 
                         <!-- grid view -->
-                      <div ng-show="grid_v">
-                          <div id="cards" class="row">
-                              <div class="col-sm-2 col-lg-2 col-md-2">
+                      <!-- <div ng-show="grid_v"> -->
+                          <div  ng-class="grid_show" class="row">
+                              <div class="col-sm-2 col-lg-2 col-md-3">
                               </div>
-                              <div class="col-sm-8 col-lg-8 col-md-8 col-sx-12">
-                                <div ng-repeat="x in data_info | filter:search" class="col-sm-4 col-lg-4 col-xs-12 col-md-3" id="outerbox1">
-                                  <div id="innerbox" style="background-color:{{x.bgcolor}}" ng-mouseover="card_icon=true" ng-mouseleave="card_icon=false">
+                              <div class="col-sm-10 col-lg-10 col-md-9 col-sx-12">
+                                <!-- col-sm-8    -->
+                                <div style="margin-bottom:18px;" ng-repeat="x in data_info | filter:search" ng-class="view_change" testpackery >
+                                  <div ng-class="innerbox" style="background-color:{{x.bgcolor}}" ng-mouseover="card_icon=true" ng-mouseleave="card_icon=false">
                                     <div ng-click="open(x)" id="title_div" ng-bind-html="x.title"></div>
                                     <div ng-click="open(x)" id="note_div" ng-bind-html="x.take_note"> </div>
                                       <div style="height:40px">
@@ -172,16 +233,30 @@
                                           <!-- reminder -->
                                           <div class="btn-group" uib-dropdown dropdown-append-to-body="true">
                                             <img style="padding:4px" src="image/Reminder-20.png" uib-dropdown-toggle ng-disabled="disabled"></img>
-                                            <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
+                                            <ul id="picker" class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
                                               <li role="menuitem"><a ng-click="remind(x._id,today)">Later today</a></li>
                                               <li role="menuitem"><a ng-click="remind(x._id,tomorrow)">Tomorrow</a></li>
                                               <li role="menuitem"><a ng-click="remind(x._id,next)">Next Week</a></li>
                                               <li class="divider"></li>
                                               <li role="menuitem">
-                                                <div>
-                                                  <p>{{datePicker || "00/00/0000"}}</p>
-                                                  <input type="text" ng-model="datePicker" ng-click="date_check()" datepicker />
+                                                <div class="dropdown" >
+  													                       <a class="dropdown-toggle" id="dropdown2" role="button" data-toggle="dropdown" >
+  													                          <div class="input-group">
+                                                        <input type="text" class="form-control" data-ng-model="toDo.remainder" name="remainder" placeholder="Pick date & time">
+                                                        <span class="input-group-addon">
+                                                          <i class="glyphicon glyphicon-calendar"></i>
+                                                        </span>
+
+                                                      </div>
+                                                      <a style="padding-left:5px;"ng-click="remind(x._id,toDo.remainder)">Save</a>
+                                                      </a>
+                                                  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                                  <datetimepicker data-ng-model="toDo.remainder" data-datetimepicker-config="{ dropdownSelector: '#dropdown2' }"/>
+                                                  </ul>
                                                 </div>
+
+
+
                                               </li>
                                             </ul>
                                           </div>
@@ -214,7 +289,7 @@
                                         <div>
                                           <div ng-if="x.remind_at" style="border-top:2px dashed;border-top-color:#e8e8e8;padding-top:10px;">
                                             <span>
-                                              <span>{{x.remind_at | date:'dd-MMM, hh:mm a'}}</span>
+                                              <span>{{x.remind_at | date:' EEE dd-MMM, hh:mm a'}}</span>
                                               <span class="glyphicon glyphicon-remove-circle" style="float:right;padding:2px;" ng-click="delete_reminder(x._id)" </span>
                                               </span>
                                             </div>
@@ -225,15 +300,15 @@
 
                           </div>
 
-                          <div class="col-sm-2 col-lg-2 col-md-2">
-                          </div>
+                          <!-- <div class="col-sm-2 col-lg-2 col-md-2">
+                          </div> -->
 
-                        </div>
+                        <!-- </div> -->
 
 
 
                         <!-- list view -->
-                        <div ng-show="list_v">
+                        <!-- <div ng-show="list_v">
                           <div id="list_cards">
                             <div class="row" ng-repeat="x in data_info" id="outerbox1">
                               <div class="col-sm-2 col-md-2 col-lg-2">
@@ -242,11 +317,11 @@
                                 <div ng-click="open(x)" id="title_div" ng-bind-html="x.title"></div>
                                 <div ng-click="open(x)" id="note_div" ng-bind-html="x.take_note"></div>
 
-                                <!-- show on hover -->
-                                <div ng-show="card_icon">
+                                <!- show on hover -->
+                                <!-- <div ng-show="card_icon"> -->
 
                                   <!-- reminder -->
-                                  <div class="btn-group" uib-dropdown dropdown-append-to-body="true">
+                                  <!-- <div class="btn-group" uib-dropdown dropdown-append-to-body="true">
                                     <img style="padding:4px" src="image/Reminder-20.png" uib-dropdown-toggle ng-disabled="disabled"></img>
                                     <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
                                       <li role="menuitem"><a ng-click="remind(x._id,today)">Later today</a></li>
@@ -255,18 +330,18 @@
                                       <li class="divider"></li>
                                       <li role="menuitem"></li>
                                     </ul>
-                                  </div>
+                                  </div> -->
 
                                   <!-- paint -->
-                                  <div class="btn-group" uib-dropdown dropdown-append-to-body="true">
+                                  <!-- <div class="btn-group" uib-dropdown dropdown-append-to-body="true">
                                     <img style="padding:4px" src="image/Paint.png" uib-dropdown-toggle ng-disabled="disabled"></img>
                                     <div class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
                                       <a ng-repeat="y in bgcolor"><img ng-src="{{y.path}}" ng-click="select_color(x._id,y.color)" /></a>
                                     </div>
-                                  </div>
+                                  </div> -->
 
                                   <!-- delete and copy -->
-                                  <div class="btn-group" uib-dropdown dropdown-append-to-body="true">
+                                  <!-- <div class="btn-group" uib-dropdown dropdown-append-to-body="true">
                                     <img style="padding:4px" src="image/more.png" uib-dropdown-toggle ng-disabled="disabled"> </img>
                                     <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
                                       <li role="menuitem">
@@ -278,10 +353,10 @@
                                     </ul>
                                   </div>
 
-                                </div>
+                                </div> -->
 
                                 <!-- display reminder -->
-                                <div>
+                                <!-- <div>
                                   <div ng-if="x.remind_at" style="border-top:2px dashed;border-top-color:#e8e8e8;">
                                     <span style="">
                                       <span>{{x.remind_at | date:'dd-MMM, hh:mm a'}}</span>
@@ -294,8 +369,8 @@
 
 
                               </div>
-                            </div>
-                          </div>
+                            </div> -->
+                          <!-- </div>  -->
                         </div>
                       </div>
 

@@ -8,6 +8,7 @@ App.controller('signin_controller', function($scope,$state,todo_service) {
       obj.then(function(data) {
         if(data.data.status==true)
         {
+          // console.log(data.data.user_data);
           $state.go('welcome');
         }
         else{
@@ -40,6 +41,7 @@ App.controller('signin_controller', function($scope,$state,todo_service) {
           console.log(data.data.status,"sign_in");
           if(data.data.status==true)
           {
+            // console.log(data.data);
             // $location.path('/welcome');
             $state.go('welcome');
         }
