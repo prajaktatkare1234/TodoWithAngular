@@ -93,34 +93,8 @@
                             </a>
 
                         </li>
-                        <!-- <li>
-                            <a id="logout"><img id="l" ng-click="logout()" src="image/logout.png"></img>
-                            </a>
 
-                        </li> -->
-                        <!-- <li class="dropdown" style="background-color:#fb0;">
-      <a class="dropdown-toggle" data-toggle="dropdown" style="background-color:#fb0;color:black;">
-        <b><span class="glyphicon glyphicon-user" id="usernavbar" ></b>
-        <span class="caret" id="caret"></span></a>
-      <ul id="login-dp" class="dropdown-menu">
-        <li>
-          <div class="row">
-            <div class="col-md-12">
-
-              <div class="social-buttons" id="acbuttons">
-                <div>Name</div>
-                <div>Email</div>
-                <a style="background-color:#fb0"class="btn btn-warning"><span id="account">MyAccount</span></a>
-
-                <a style="background-color:#fb0" class="btn btn-warning" id="logOutId" ng-click="logout()" aria-hidden="true" ><span id="off">SignOut</span></a>
-              </div>
-
-            </div>
-          </div>
-        </li>
-      </ul>
-    </li> -->
-    <li>
+    <li ng-controller="profile_pic_controller">
               <a style="background-color:#ffbb00;"class="dropdown-toggle" data-toggle="dropdown">
                 <!-- <img  class="circular--square1" src="image/Circled User Male Filled-100.png"/> -->
                 <div  id="drop_menu">
@@ -129,7 +103,10 @@
               </a>
               <div  id="drop_account" class="dropdown-menu">
                  <!-- <div class="profile1"> -->
-                    <img id="login-dp"class="circular--square" src="image/Circled User Male Filled-100.png" alt={{user_data.name.charAt(0)}} >
+                    <img id="login-dp" class="circular--square" src="{{img}}" alt="{{user_data.name.charAt(0) | uppercase}}"/>
+                    <!-- <div>{{img}}
+
+                    </div> -->
                  <!-- </div> -->
                  <a ng-click="profile_pic()">Change profile pic</a>
                  <div  class="btn-group">
@@ -212,6 +189,23 @@
                         </div>
                       </div>
 
+<!-- <div style="margin-top:30px;"ng-class="pinup" class ="row">
+  <div class="col-sm-2 col-lg-2 col-md-3">
+  </div>
+  <div class="col-sm-10 col-lg-10 col-md-9 col-sx-12">
+    <!-- col-sm-8    -->
+    <!-- <div style="margin-bottom:18px;" ng-if="!x.archive && x.pinned" ng-repeat="x in data_info | filter:search as results track by $index" ng-class="view_change" testpackery >
+      <div  ng-class="innerbox" style="background-color:{{x.bgcolor}}" ng-mouseover="card_icon=true" ng-mouseleave="card_icon=false">
+        <div ng-show="card_icon">
+          <img id="pin" src="image/Unpin Filled-20.png" ng-click="unpin(x._id)" />
+        </div>
+        <div ng-click="open(x)" id="title_div" ng-bind-html="x.title"></div>
+        <div ng-click="open(x)" id="note_div" ng-bind-html="x.take_note"> </div>
+
+          </div>
+        </div>
+    </div>
+</div> --> -->
 
 
 
@@ -221,9 +215,26 @@
                               <div class="col-sm-2 col-lg-2 col-md-3">
                               </div>
                               <div class="col-sm-10 col-lg-10 col-md-9 col-sx-12">
-                                <!-- col-sm-8    -->
-                                <div style="margin-bottom:18px;" ng-repeat="x in data_info | filter:search" ng-class="view_change" testpackery >
-                                  <div ng-class="innerbox" style="background-color:{{x.bgcolor}}" ng-mouseover="card_icon=true" ng-mouseleave="card_icon=false">
+
+
+<div style="border:2px solid green">
+  <div style="margin-bottom:18px;" ng-if="!x.archive && x.pinned" ng-repeat="x in data_info | filter:search as results track by $index" ng-class="view_change" testpackery >
+    <div  ng-class="innerbox" style="background-color:{{x.bgcolor}}" ng-mouseover="card_icon=true" ng-mouseleave="card_icon=false">
+      <div ng-show="card_icon">
+        <img id="pin" src="image/Unpin Filled-20.png" ng-click="unpin(x._id)" />
+      </div>
+      <div ng-click="open(x)" id="title_div" ng-bind-html="x.title"></div>
+      <div ng-click="open(x)" id="note_div" ng-bind-html="x.take_note"> </div>
+
+        </div>
+      </div>
+</div>
+
+                                <div style="margin-bottom:18px;" ng-if="!x.archive && !x.pinned" ng-repeat="x in data_info | filter:search as results track by $index" ng-class="view_change" testpackery >
+                                  <div  ng-class="innerbox" style="background-color:{{x.bgcolor}}" ng-mouseover="card_icon=true" ng-mouseleave="card_icon=false">
+                                    <div ng-show="card_icon">
+                                      <img id="pin" src="image/Pin Filled-20.png" ng-click="pinup(x._id)" />
+                                    </div>
                                     <div ng-click="open(x)" id="title_div" ng-bind-html="x.title"></div>
                                     <div ng-click="open(x)" id="note_div" ng-bind-html="x.take_note"> </div>
                                       <div style="height:40px">
@@ -268,6 +279,12 @@
                                               <a ng-repeat="y in bgcolor"><img ng-src="{{y.path}}" ng-click="select_color(x._id,y.color)" /></a>
                                             </div>
                                           </div>
+
+                                          <div class="btn-group" >
+                                            <a ><img style="height:15px;width:15px;" src="image/archive.png" ng-click="archive(x._id)" /></a>
+                                          </div>
+
+
 
                                           <!-- delete and copy -->
                                           <div class="btn-group" uib-dropdown dropdown-append-to-body="true">

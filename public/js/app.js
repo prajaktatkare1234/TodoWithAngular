@@ -1,4 +1,4 @@
-var App=angular.module('App',['ui.router','ngSanitize','ngStorage','ui.bootstrap','ui.bootstrap.datetimepicker']);
+var App=angular.module('App',['ui.router','ngSanitize','ngStorage','ui.bootstrap','ui.bootstrap.datetimepicker','ngImgCrop']);
     App.config(function($stateProvider,$urlRouterProvider){
 
         $urlRouterProvider.otherwise('/signin');

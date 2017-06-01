@@ -13,6 +13,9 @@ router.use('/get_card_notes',require('./get_card_notes'));
 router.use('/reminder',require('./reminder'));
 router.use('/delete_reminder',require('./delete_reminder'));
 router.use('/bgcolor',require('./bgcolor'));
+router.use('/archive',require('./archive'));
+router.use('/pinup',require('./pinup'));
+router.use('/unpin',require('./unpin'));
 
 
 

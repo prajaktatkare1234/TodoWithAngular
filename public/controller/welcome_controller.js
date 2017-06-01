@@ -140,6 +140,27 @@
 
     };
 
+    $scope.profile_pic=function() {
+      console.log("sadKDSFG");
+
+      var modalInstance = $uibModal.open({
+
+      templateUrl: '../html/profile_pic.html',
+      controller: 'profile_pic_controller',
+
+      resolve: {
+
+      object: function () {
+      // return Data_object;
+    }
+  }
+  });
+  modalInstance.result.catch(function(error){
+    console.log(error);
+  })
+};
+
+
 
 
 
@@ -170,10 +191,55 @@
     }
   }
   });
+
   modalInstance.result.catch(function(error){
     console.log(error);
   })
 };
+
+$scope.archive=function(id)
+{
+  var url="/archive/" + id + "";
+  var obj = todo_service.App(url);
+  obj.then(function(data) {
+    // $scope.get_data();
+    $state.reload();
+
+  }).catch(function(error) {
+
+  })
+};
+
+
+
+$scope.pinup=function(id)
+{
+  var url="/pinup/" + id + "";
+  var obj = todo_service.App(url);
+  obj.then(function(data) {
+    $scope.get_data();
+    // $state.reload();
+
+  }).catch(function(error) {
+
+  })
+
+};
+$scope.unpin=function(id)
+{
+  var url="/unpin/" + id + "";
+  var obj = todo_service.App(url);
+  obj.then(function(data) {
+    $scope.get_data();
+    // $state.reload();
+
+  }).catch(function(error) {
+
+  })
+
+};
+
+
 
 
 
@@ -334,6 +400,8 @@
       $scope.grid_show="grid_card";
       $scope.innerbox="innerbox ";
       $scope.view_change=" col-sm-3 col-lg-3 col-xs-12 col-md-3 a";
+
+
 //
 
       console.log("hghj");

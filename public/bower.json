@@ -22,6 +22,7 @@
     "angular": "^1.6.4",
     "jquery-ui": "^1.12.1",
     "ngstorage": "^0.3.11",
-    "angularjs-datepicker": "^2.1.19"
+    "angularjs-datepicker": "^2.1.19",
+    "ng-img-crop": "ngImgCrop#^0.3.2"
   }
 }

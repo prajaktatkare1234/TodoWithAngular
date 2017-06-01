@@ -25,6 +25,11 @@ img {
     height: 25px;
 
 }
+#pin{
+width: 18px;
+height:18px;
+float:right;
+}
 
 #l {
     width: 20px;
@@ -162,8 +167,9 @@ box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.6), 0 2px 2px 0 rgba(0, 0, 0, 0.6);
   align:center;
   width: 70px;
       /* margin-top: 4px; */
-      height: 60px;
+      height: 65px;
       padding: 10px;
+      border-radius: 50%
 }
 #drop_account{
   width: 280px;
@@ -387,4 +393,10 @@ div{
   width: 180px;
   position: absolute;
   padding-right: 5px;
+}
+.cropArea {
+  background: #E4E4E4;
+  overflow: hidden;
+  width:500px;
+  height:350px;
 }

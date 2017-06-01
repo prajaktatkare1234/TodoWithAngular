@@ -28,6 +28,12 @@ var data_card_Schema = Schema({
     },
     bgcolor:{
       type:String
+    },
+    archive:{
+      type:Boolean
+    },
+    pinned:{
+      type:Boolean
     }
 
 
@@ -75,7 +81,7 @@ data_card_Schema.statics.remind = function(data_id,req,cb) {
 
 data_card_Schema.statics.select_color = function(data_id,req,cb) {
   console.log(data_id,"datajkhjk",req);
-  var d = new Date();
+  // var d = new Date();
     this.update({
         _id: data_id
     }, {
@@ -84,6 +90,40 @@ data_card_Schema.statics.select_color = function(data_id,req,cb) {
         }
     }, cb);
 };
+data_card_Schema.statics.mark_as_archived = function(data_id,cb) {
+  // console.log(data_id,"datajkhjk",req);
+  // var d = new Date();
+    this.update({
+        _id: data_id
+    }, {
+        $set: {
+        archive:true
+        }
+    }, cb);
+};
+data_card_Schema.statics.pinned = function(data_id,cb) {
+  // console.log(data_id,"datajkhjk",req);
+  // var d = new Date();
+    this.update({
+        _id: data_id
+    }, {
+        $set: {
+        pinned:true
+        }
+    }, cb);
+};
+data_card_Schema.statics.unpin = function(data_id,cb) {
+  // console.log(data_id,"datajkhjk",req);
+  // var d = new Date();
+    this.update({
+        _id: data_id
+    }, {
+        $set: {
+        pinned:false
+        }
+    }, cb);
+};
+
 
 
 
