@@ -1,0 +1,98 @@
+<div  ng-class="grid_show" class="row">
+
+    <div class="col-sm-2 col-lg-2 col-md-3">
+    </div>
+
+    <div id="inner_grid_show"class="col-sm-10 col-lg-10 col-md-9 col-sx-12">
+
+  <div style="margin-left:15px;">Others</div>
+
+
+
+      <div style="margin-bottom:18px;" ng-if="!x.pinned && !x.archived" ng-repeat="x in data_info | filter:search as results track by $index" ng-class="view_change"  >
+        <div  ng-class="innerbox" style="background-color:{{x.bgcolor}}" ng-mouseover="card_icon=true" ng-mouseleave="card_icon=false">
+          <div ng-show="card_icon">
+            <img id="pin" src="image/Pin Filled-20.png" ng-click="pinup(x._id,'true')" />
+          </div>
+          <div ng-click="open(x)" id="title_div" ng-bind-html="x.title"></div>
+          <div ng-click="open(x)" id="note_div" ng-bind-html="x.take_note"> </div>
+            <div style="height:40px">
+              <div ng-show="card_icon">
+
+                <!-- shown On hover -->
+                <!-- reminder -->
+                <div class="btn-group" uib-dropdown dropdown-append-to-body="true">
+                  <img style="padding:4px" src="image/Reminder-20.png" uib-dropdown-toggle ng-disabled="disabled"></img>
+                  <ul id="picker" class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
+                    <li role="menuitem"><a ng-click="remind(x._id,today)">Later today</a></li>
+                    <li role="menuitem"><a ng-click="remind(x._id,tomorrow)">Tomorrow</a></li>
+                    <li role="menuitem"><a ng-click="remind(x._id,next)">Next Week</a></li>
+                    <li class="divider"></li>
+                    <li role="menuitem">
+                      <div class="dropdown" >
+                         <a class="dropdown-toggle" id="dropdown2" role="button" data-toggle="dropdown" >
+                            <div class="input-group">
+                              <input type="text" class="form-control" data-ng-model="toDo.remainder" name="remainder" placeholder="Pick date & time">
+                              <span class="input-group-addon">
+                                <i class="glyphicon glyphicon-calendar"></i>
+                              </span>
+
+                            </div>
+                            <a style="padding-left:5px;"ng-click="remind(x._id,toDo.remainder)">Save</a>
+                            </a>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                        <datetimepicker data-ng-model="toDo.remainder" data-datetimepicker-config="{ dropdownSelector: '#dropdown2' }"/>
+                        </ul>
+                      </div>
+
+
+
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- paint -->
+                <div class="btn-group" uib-dropdown dropdown-append-to-body="true">
+                  <img style="padding:4px" src="image/Paint.png" uib-dropdown-toggle ng-disabled="disabled"></img>
+                  <div class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
+                    <a ng-repeat="y in bgcolor"><img ng-src="{{y.path}}" ng-click="select_color(x._id,y.color)" /></a>
+                  </div>
+                </div>
+
+                <div class="btn-group" >
+                  <a ><img style="height:15px;width:15px;" src="image/archive.png" ng-click="archive(x._id)" /></a>
+                </div>
+
+
+
+                <!-- delete and copy -->
+                <div class="btn-group" uib-dropdown dropdown-append-to-body="true">
+                  <img style="padding:4px" src="image/more.png" uib-dropdown-toggle ng-disabled="disabled"> </img>
+                  <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
+                    <li role="menuitem">
+                      <a><img style="padding:4px" src="image/Delete-20.png" ng-click="delete(x._id,$index)"></img></a>
+                    </li>
+                    <li role="menuitem">
+                      <a ng-click=copy(x)>Make a copy</a>
+                    </li>
+                  </ul>
+                </div>
+
+                </div>
+              </div>
+
+              <!-- display reminder -->
+              <div>
+                <div ng-if="x.remind_at" style="border-top:2px dashed;border-top-color:#e8e8e8;padding-top:10px;">
+                  <span>
+                    <span>{{x.remind_at | date:' EEE dd-MMM, hh:mm a'}}</span>
+                    <span class="glyphicon glyphicon-remove-circle" style="float:right;padding:2px;" ng-click="delete_reminder(x._id)" </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+</div>

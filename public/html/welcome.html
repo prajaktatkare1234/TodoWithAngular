@@ -70,7 +70,7 @@
                     </a>
 
                     <a id="home" class="active">Keep</a>
-                    <input type="text" id="search" placeholder="search" ng-model="search"></input>
+                    <input type="text" id="search" placeholder="Search" ng-model="search"></input>
 
                 </div>
 
@@ -140,7 +140,7 @@
         </nav>
 
         <div id="wrapper" ng-style="wrapper" class="toggled">
-          <div class="container-fluid">
+          <div id="inside_wrapper" class="container-fluid">
                 <span ng-hide="sidebar">
             <div id="sidebar-wrapper" ng-style="side">
                 <ul class="sidebar-nav">
@@ -154,7 +154,7 @@
                         <a><img src="image/remainder.png" id="remainder"></img>&nbsp&nbsp&nbspRemainder</a>
                     </li>
                     <li class="sidebar-brand">
-                        <a><img src="image/archive.png" id="archive"></img>&nbsp&nbsp&nbsp&nbspArchive</a>
+                        <a><img src="image/archive.png" id="archive" ui-sref="archive" ></img>&nbsp&nbsp&nbsp&nbspArchive</a>
                     </li>
                 </ul>
             </div>
@@ -180,57 +180,33 @@
                             <span ng-hide="custom">
                               <div id="div2">
                                 <div content contenteditable="true"placeholder="Title" ng-model="title" id="title"></div><br>
-                                <div content  contenteditable="true" placeholder=" note" ng-model="take_note" id="take_note"></div>
-                                <div><a id="done" ng-click="custom=!custom;save()">Done</a></div>
+                                <div content  contenteditable="true" placeholder=" note" ng-model="take_note" id="take_note"></div><br>
+                                <div><a style="float:right;margin-top:-18px;text-decoration:none;color:black;" ng-click="custom=!custom;save()">Done</a></div>
                               </div>
                             </span>
                             <span ng-show="custom"></span>
                           </div>
                         </div>
                       </div>
+<div ng-include="'html/pinup.html'"></div>
+<div ng-include="'html/view.html'"></div>
 
-<!-- <div style="margin-top:30px;"ng-class="pinup" class ="row">
-  <div class="col-sm-2 col-lg-2 col-md-3">
-  </div>
-  <div class="col-sm-10 col-lg-10 col-md-9 col-sx-12">
-    <!-- col-sm-8    -->
-    <!-- <div style="margin-bottom:18px;" ng-if="!x.archive && x.pinned" ng-repeat="x in data_info | filter:search as results track by $index" ng-class="view_change" testpackery >
-      <div  ng-class="innerbox" style="background-color:{{x.bgcolor}}" ng-mouseover="card_icon=true" ng-mouseleave="card_icon=false">
-        <div ng-show="card_icon">
-          <img id="pin" src="image/Unpin Filled-20.png" ng-click="unpin(x._id)" />
-        </div>
-        <div ng-click="open(x)" id="title_div" ng-bind-html="x.title"></div>
-        <div ng-click="open(x)" id="note_div" ng-bind-html="x.take_note"> </div>
-
-          </div>
-        </div>
-    </div>
-</div> --> -->
 
 
 
                         <!-- grid view -->
                       <!-- <div ng-show="grid_v"> -->
-                          <div  ng-class="grid_show" class="row">
+                          <!-- <div  ng-class="grid_show" class="row">
+
                               <div class="col-sm-2 col-lg-2 col-md-3">
                               </div>
-                              <div class="col-sm-10 col-lg-10 col-md-9 col-sx-12">
+
+                              <div id="inner_grid_show"class="col-sm-10 col-lg-10 col-md-9 col-sx-12">
 
 
-<div style="border:2px solid green">
-  <div style="margin-bottom:18px;" ng-if="!x.archive && x.pinned" ng-repeat="x in data_info | filter:search as results track by $index" ng-class="view_change" testpackery >
-    <div  ng-class="innerbox" style="background-color:{{x.bgcolor}}" ng-mouseover="card_icon=true" ng-mouseleave="card_icon=false">
-      <div ng-show="card_icon">
-        <img id="pin" src="image/Unpin Filled-20.png" ng-click="unpin(x._id)" />
-      </div>
-      <div ng-click="open(x)" id="title_div" ng-bind-html="x.title"></div>
-      <div ng-click="open(x)" id="note_div" ng-bind-html="x.take_note"> </div>
 
-        </div>
-      </div>
-</div>
 
-                                <div style="margin-bottom:18px;" ng-if="!x.archive && !x.pinned" ng-repeat="x in data_info | filter:search as results track by $index" ng-class="view_change" testpackery >
+                                <div style="margin-bottom:18px;" ng-if="!x.pinned && !x.archived" ng-repeat="x in data_info | filter:search as results track by $index" ng-class="view_change" testpackery >
                                   <div  ng-class="innerbox" style="background-color:{{x.bgcolor}}" ng-mouseover="card_icon=true" ng-mouseleave="card_icon=false">
                                     <div ng-show="card_icon">
                                       <img id="pin" src="image/Pin Filled-20.png" ng-click="pinup(x._id)" />
@@ -242,7 +218,7 @@
 
                                           <!-- shown On hover -->
                                           <!-- reminder -->
-                                          <div class="btn-group" uib-dropdown dropdown-append-to-body="true">
+                                          <!-- <div class="btn-group" uib-dropdown dropdown-append-to-body="true">
                                             <img style="padding:4px" src="image/Reminder-20.png" uib-dropdown-toggle ng-disabled="disabled"></img>
                                             <ul id="picker" class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
                                               <li role="menuitem"><a ng-click="remind(x._id,today)">Later today</a></li>
@@ -270,10 +246,10 @@
 
                                               </li>
                                             </ul>
-                                          </div>
+                                          </div> -->
 
                                           <!-- paint -->
-                                          <div class="btn-group" uib-dropdown dropdown-append-to-body="true">
+                                          <!-- <div class="btn-group" uib-dropdown dropdown-append-to-body="true">
                                             <img style="padding:4px" src="image/Paint.png" uib-dropdown-toggle ng-disabled="disabled"></img>
                                             <div class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
                                               <a ng-repeat="y in bgcolor"><img ng-src="{{y.path}}" ng-click="select_color(x._id,y.color)" /></a>
@@ -283,11 +259,11 @@
                                           <div class="btn-group" >
                                             <a ><img style="height:15px;width:15px;" src="image/archive.png" ng-click="archive(x._id)" /></a>
                                           </div>
-
+ -->
 
 
                                           <!-- delete and copy -->
-                                          <div class="btn-group" uib-dropdown dropdown-append-to-body="true">
+                                          <!-- <div class="btn-group" uib-dropdown dropdown-append-to-body="true">
                                             <img style="padding:4px" src="image/more.png" uib-dropdown-toggle ng-disabled="disabled"> </img>
                                             <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
                                               <li role="menuitem">
@@ -300,10 +276,10 @@
                                           </div>
 
                                           </div>
-                                        </div>
+                                        </div> -->
 
                                         <!-- display reminder -->
-                                        <div>
+                                        <!-- <div>
                                           <div ng-if="x.remind_at" style="border-top:2px dashed;border-top-color:#e8e8e8;padding-top:10px;">
                                             <span>
                                               <span>{{x.remind_at | date:' EEE dd-MMM, hh:mm a'}}</span>
@@ -313,81 +289,12 @@
                                           </div>
                                         </div>
                                       </div>
-                                    </div>
 
-                          </div>
+                                    </div> -->
 
-                          <!-- <div class="col-sm-2 col-lg-2 col-md-2">
-                          </div> -->
-
-                        <!-- </div> -->
+                          <!-- </div> -->
 
 
-
-                        <!-- list view -->
-                        <!-- <div ng-show="list_v">
-                          <div id="list_cards">
-                            <div class="row" ng-repeat="x in data_info" id="outerbox1">
-                              <div class="col-sm-2 col-md-2 col-lg-2">
-                              </div>
-                              <div id="innerbox1" style="background-color:{{x.bgcolor}}" class="col-lg-4 col-sm-4 col-md-4" ng-mouseover="card_icon=true" ng-mouseleave="card_icon=false">
-                                <div ng-click="open(x)" id="title_div" ng-bind-html="x.title"></div>
-                                <div ng-click="open(x)" id="note_div" ng-bind-html="x.take_note"></div>
-
-                                <!- show on hover -->
-                                <!-- <div ng-show="card_icon"> -->
-
-                                  <!-- reminder -->
-                                  <!-- <div class="btn-group" uib-dropdown dropdown-append-to-body="true">
-                                    <img style="padding:4px" src="image/Reminder-20.png" uib-dropdown-toggle ng-disabled="disabled"></img>
-                                    <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
-                                      <li role="menuitem"><a ng-click="remind(x._id,today)">Later today</a></li>
-                                      <li role="menuitem"><a ng-click="remind(x._id,tomorrow)">Tomorrow</a></li>
-                                      <li role="menuitem"><a ng-click="remind(x._id,next)">Next Week</a></li>
-                                      <li class="divider"></li>
-                                      <li role="menuitem"></li>
-                                    </ul>
-                                  </div> -->
-
-                                  <!-- paint -->
-                                  <!-- <div class="btn-group" uib-dropdown dropdown-append-to-body="true">
-                                    <img style="padding:4px" src="image/Paint.png" uib-dropdown-toggle ng-disabled="disabled"></img>
-                                    <div class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
-                                      <a ng-repeat="y in bgcolor"><img ng-src="{{y.path}}" ng-click="select_color(x._id,y.color)" /></a>
-                                    </div>
-                                  </div> -->
-
-                                  <!-- delete and copy -->
-                                  <!-- <div class="btn-group" uib-dropdown dropdown-append-to-body="true">
-                                    <img style="padding:4px" src="image/more.png" uib-dropdown-toggle ng-disabled="disabled"> </img>
-                                    <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
-                                      <li role="menuitem">
-                                        <a><img style="padding:4px" src="image/Delete-20.png" ng-click="delete(x._id)"></img></a>
-                                      </li>
-                                      <li role="menuitem">
-                                        <a ng-click=copy(x)>Make a copy</a>
-                                      </li>
-                                    </ul>
-                                  </div>
-
-                                </div> -->
-
-                                <!-- display reminder -->
-                                <!-- <div>
-                                  <div ng-if="x.remind_at" style="border-top:2px dashed;border-top-color:#e8e8e8;">
-                                    <span style="">
-                                      <span>{{x.remind_at | date:'dd-MMM, hh:mm a'}}</span>
-                                      <span class="glyphicon glyphicon-remove-circle" style="float:right;padding:2px;" ng-click="delete_reminder(x._id)" </span>
-                                      </span>
-                                    </div>
-                                  </div>
-
-                                </div>
-
-
-                              </div>
-                            </div> -->
-                          <!-- </div>  -->
                         </div>
                       </div>
 

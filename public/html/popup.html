@@ -1,14 +1,14 @@
 
-<div style="background-color:{{updated_color}}">
+<div style="margin-left:-4px;background-color:{{updated_color}}">
 
 
-<div ng-style="paint_model" content contenteditable="true"class="modal-header"  ng-model="updated_title" >
+<div style="outline:none;"ng-style="paint_model" content contenteditable="true"class="modal-header"  ng-model="updated_title" >
 </div>
-<div content contenteditable="true"class="modal-body" ng-model="updated_note">
+<div style="outline:none;"content contenteditable="true"class="modal-body" ng-model="updated_note">
 
 </div>
 <div class="modal-footer">
-  <div content contenteditable="true">Updated On:{{updated_date | date:'dd-MM hh:mm'}}</div>
+  <div  style="outline:none;"content contenteditable="true">Updated On:{{updated_date | date:'dd-MM hh:mm'}}</div>
 <button class="btn btn-warning" type="button" ng-click="update(id)">Done</button>
 </div>
 </div>

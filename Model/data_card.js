@@ -101,25 +101,14 @@ data_card_Schema.statics.mark_as_archived = function(data_id,cb) {
         }
     }, cb);
 };
-data_card_Schema.statics.pinned = function(data_id,cb) {
+data_card_Schema.statics.pinned = function(data_id,req,cb) {
   // console.log(data_id,"datajkhjk",req);
-  // var d = new Date();
+  console.log(req);
     this.update({
         _id: data_id
     }, {
         $set: {
-        pinned:true
-        }
-    }, cb);
-};
-data_card_Schema.statics.unpin = function(data_id,cb) {
-  // console.log(data_id,"datajkhjk",req);
-  // var d = new Date();
-    this.update({
-        _id: data_id
-    }, {
-        $set: {
-        pinned:false
+        pinned:req.value
         }
     }, cb);
 };

@@ -23,6 +23,14 @@ var App=angular.module('App',['ui.router','ngSanitize','ngStorage','ui.bootstrap
             //     console.log('inside table');
             // }
         })
+        .state('archive',{
+            url : '/archive',
+            templateUrl : 'html/archive.html',
+            controller : 'archive_controller',
+            // onEnter : function(){
+            //     console.log('inside table');
+            // }
+        })
 
 
     });
@@ -113,17 +121,6 @@ App.directive('testpackery', ['$rootScope', '$timeout',
               // $rootScope.packery.reloadItems();
             }, 200);
           });
-
-          //
-          // var orderItems = function() {
-          //   var itemElems = $rootScope.packery.getItemElements();
-          //   $(itemElems).each(function(i, itemElem) {
-          //     $(itemElem).text(i + 1);
-          //   });
-          // };
-          //
-          // $rootScope.packery.on('layoutComplete', orderItems);
-          // $rootScope.packery.on('dragItemPositioned', orderItems);
 
 
         } else {

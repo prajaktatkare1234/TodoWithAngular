@@ -212,23 +212,15 @@ $scope.archive=function(id)
 
 
 
-$scope.pinup=function(id)
+$scope.pinup=function(id,data)
 {
+  console.log(data,"gjkfgj");
+  // var value="true";
   var url="/pinup/" + id + "";
-  var obj = todo_service.App(url);
-  obj.then(function(data) {
-    $scope.get_data();
-    // $state.reload();
-
-  }).catch(function(error) {
-
-  })
-
-};
-$scope.unpin=function(id)
-{
-  var url="/unpin/" + id + "";
-  var obj = todo_service.App(url);
+  var obj={
+    value:data
+  }
+  var obj = todo_service.App(url,obj);
   obj.then(function(data) {
     $scope.get_data();
     // $state.reload();
@@ -392,6 +384,7 @@ $scope.unpin=function(id)
         'display':'block'
       }
 
+
     };
     $scope.grid_view = function() {
     $localStorage.view = "grid";
@@ -399,10 +392,10 @@ $scope.unpin=function(id)
       // $scope.list_v=false;
       $scope.grid_show="grid_card";
       $scope.innerbox="innerbox ";
-      $scope.view_change=" col-sm-3 col-lg-3 col-xs-12 col-md-3 a";
+      $scope.view_change=" col-sm-4 col-lg-4 col-xs-12 col-md-4 a";
 
 
-//
+
 
       console.log("hghj");
       $scope.grid={
