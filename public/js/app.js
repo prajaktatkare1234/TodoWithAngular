@@ -25,12 +25,13 @@ var App=angular.module('App',['ui.router','ngSanitize','ngStorage','ui.bootstrap
         })
         .state('archive',{
             url : '/archive',
-            templateUrl : 'html/archive.html',
+            templateUrl : 'html/welcome.html',
             controller : 'archive_controller',
             // onEnter : function(){
             //     console.log('inside table');
             // }
         })
+
 
 
     });

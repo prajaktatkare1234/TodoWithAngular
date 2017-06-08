@@ -10,7 +10,10 @@ router.post('/',function(req,res){
     obj={
       user_id:data._id,
       name:data.name,
-      email:data.email
+      email:data.email,
+      profile_pic:data.profile_pic,
+      original_pic:data.original_pic
+
     }
       res.send({"user_data":obj,"status":true})
     }

@@ -30,6 +30,12 @@ var userSchema = Schema({
         validate: validators.isAlphanumeric(),
         minlength: 5,
         // maxlength: 8
+    },
+    profile_pic:{
+      type:String
+    },
+    original_pic:{
+      type:String
     }
 });
 userSchema.plugin(unique_val);
@@ -69,6 +75,20 @@ var encPass =encrypt_data(req.password)
         password:encPass
     }, cb);
 }
+userSchema.statics.change_profile_pic = function(req,url,cb) {
+  // console.log(data_id,"datajkhjk",req);
+  // var d = new Date();
+    this.update({
+        name: req.name
+    }, {
+        $set: {
+        profile_pic:url.profile_pic,
+        original_pic:url.original_pic
+
+        }
+    }, cb);
+};
+
 userSchema.statics.profile=function(req,cb){
     // console.log("hjgsdf");
   this.findOne({_id:req._id},cb);

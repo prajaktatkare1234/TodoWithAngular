@@ -1,25 +1,27 @@
-App.controller('signin_controller', function($scope,$state,todo_service) {
+App.controller('signin_controller', function($scope,$state,todo_service,$rootScope) {
     console.log("gfghjfghfjgh");
 
-    $scope.check=function(){
-      console.log("inside check");
-         var url= "/user_info/";
-      var obj = todo_service.App(url);
-      obj.then(function(data) {
-        if(data.data.status==true)
-        {
-          // console.log(data.data.user_data);
-          $state.go('welcome');
-        }
-        else{
-            $state.go('signin');
-        }
-      }).catch(function(error) {
+    $rootScope.check=function(){
+        console.log("inside check");
+           var url= "/user_info/";
+        var obj = todo_service.App(url);
+        obj.then(function(data) {
+          if(data.data.status==true)
+          { $rootScope.user_data=data.data.user_data;
+            // console.log($rootScope.user_data,"dggadsfgfd");
+            $rootScope.myImage=data.data.user_data.original_pic;
+            console.log("hgsajfsdaf",data.data.user_data);
+            $state.go('welcome');
+          }
+          else{
+              $state.go('signin');
+          }
+        }).catch(function(error) {
 
-      })
+        })
 
-    }
-    $scope.check();
+      }
+      $scope.check();
 
 
 

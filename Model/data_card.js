@@ -90,14 +90,15 @@ data_card_Schema.statics.select_color = function(data_id,req,cb) {
         }
     }, cb);
 };
-data_card_Schema.statics.mark_as_archived = function(data_id,cb) {
+data_card_Schema.statics.mark_as_archived = function(data_id,req,cb) {
   // console.log(data_id,"datajkhjk",req);
   // var d = new Date();
     this.update({
         _id: data_id
     }, {
         $set: {
-        archive:true
+        archive:req.archive,
+        pinned:req.pinned
         }
     }, cb);
 };
@@ -108,7 +109,8 @@ data_card_Schema.statics.pinned = function(data_id,req,cb) {
         _id: data_id
     }, {
         $set: {
-        pinned:req.value
+        pinned:req.pin,
+        archive:req.archive
         }
     }, cb);
 };

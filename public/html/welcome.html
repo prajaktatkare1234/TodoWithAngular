@@ -18,9 +18,9 @@
         //     e.preventDefault();
         //     $("#wrapper").toggleClass("toggled");
         // }));
-        $('#navbar').click('li.a', function() {
-            $('#navbar').collapse('hide');
-        });
+        // $('#navbar').click('li.a', function() {
+        //     $('#navbar').collapse('hide');
+        // });
         // $(document).on('click', "#b1", (function(e) {
         //     e.preventDefault();
         //
@@ -53,8 +53,8 @@
 
 <body style="background-color:#e8e8e8;">
 
-    <div ng-controller="welcome_controller">
-        <nav id="n1" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div>
+        <nav ng-style="archive_style" id="n1" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"> -->
@@ -66,70 +66,66 @@
                 </button>
 
 
-                    <a class="navbar-brand" id="menu"><img src="image/menu.png" ng-click="sidebar=!sidebar;menu()"></img>
+                    <a style="padding-right:30px;" class="navbar-brand" id="menu"><img style="width:30px;height:30px; margin-top:-5px; " src="image/menu.svg" ng-click="sidebar=!sidebar;menu()"></img>
                     </a>
 
-                    <a id="home" class="active">Keep</a>
-                    <input type="text" id="search" placeholder="Search" ng-model="search"></input>
+                    <a id="home" class="active"><img id="google" src="image/google.svg" /><span style="padding-left:10px;padding-right:20px;">Keep</span></a>
+                    <input ng-style="search_archive" type="text" id="search" ng-model="search">
+                    <!-- <img style="margin-left:-90px;" src="/image/search.svg" ></img> -->
+                    </input>
 
                 </div>
 
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
                         <li>
-                            <a id="refresh"><img id="ref" src="/image/ref.png" ng-click="reload()"></img>
+                            <a id="refresh"><img id="ref" src="/image/refresh.svg" ng-click="reload()"></img>
                             </a>
 
                         </li>
                         <li>
                             <a>
                                 <!-- <span ng-show="view"> -->
-                                <img id="list" ng-style="list" ng-click="list_view()" src="image/list.png"> </img>
+                                <img id="list" ng-style="list" ng-click="list_view()" src="image/list.svg"> </img>
                                 <!-- </span> -->
                                 <!-- <span ng-hide="view"> -->
-                                <img id="grid" ng-style="grid" ng-click="grid_view()" src="image/grid.png"></img>
+                                <img id="grid" ng-style="grid" ng-click="grid_view()" src="image/grid.svg"></img>
                                 <!-- </span> -->
 
                             </a>
 
                         </li>
 
-    <li ng-controller="profile_pic_controller">
-              <a style="background-color:#ffbb00;"class="dropdown-toggle" data-toggle="dropdown">
-                <!-- <img  class="circular--square1" src="image/Circled User Male Filled-100.png"/> -->
-                <div  id="drop_menu">
-                  {{user_data.name.charAt(0) | uppercase}}
-                </div>
-              </a>
-              <div  id="drop_account" class="dropdown-menu">
-                 <!-- <div class="profile1"> -->
-                    <img id="login-dp" class="circular--square" src="{{img}}" alt="{{user_data.name.charAt(0) | uppercase}}"/>
-                    <!-- <div>{{img}}
+                        <li ng-controller="profile_pic_controller">
+                            <a ng-style="archive_style" style="background-color:#ffbb00;" class="dropdown-toggle" data-toggle="dropdown">
 
-                    </div> -->
-                 <!-- </div> -->
-                 <a ng-click="profile_pic()">Change profile pic</a>
-                 <div  class="btn-group">
-                    <span >{{user_data.name}}
-                    </span><br>
-                    <span >{{user_data.email}}</span>
-                    <!-- <div class="profile3">
-                       <button class="btn btn-primary btn-lg accBtn" type="button" value="My Account" data-ng-click="hc.signout()">My Account
-                       </button>
-                    </div> -->
-                 </div>
-                 <!-- <hr> -->
+                                <img id="drop_menu" ng-src="{{user_data.profile_pic}}" alt="{{user_data.name.charAt(0) | uppercase}}">
 
-                    <div style="padding:14px">
-                       <button class="btn-group" style="background-color:white;" type="button" value="signout"  ng-click="logout()">Sign out
+                                </img>
+                            </a>
+                            <div id="drop_account" class="dropdown-menu">
+
+                                <img id="login-dp" class="circular--square" ng-src="{{user_data.profile_pic}}" alt="{{user_data.name.charAt(0) | uppercase}}" />
+
+
+                                <a style="text-decoration:none;" ng-click="profile_pic()"><b>Change profile pic</b></a>
+                                <div class="btn-group">
+                                    <span style="padding:4px;"><b>{{user_data.name}}
+                    </b></span><br>
+                                    <span style="padding:4px;"><b>{{user_data.email}}</b></span>
+
+                                </div>
+
+                                <div style="padding:14px">
+                                    <button class="btn-group" style="background-color:white;" type="button" value="signout" ng-click="logout()">Sign out
                        </button>
 
 
-                       <button class="btn-group" style="float:right;background-color:white;" type="button" value="Add Account" data-ng-click="tdctl.logout()">Add account</button>
-                    </div>
+                                    <button class="btn-group" style="float:right;background-color:white;" type="button" value="Add Account" data-ng-click="tdctl.logout()">Add account</button>
+                                </div>
 
-              </div>
-           </li>
+                            </div>
+                        </li>
 
 
 
@@ -140,7 +136,7 @@
         </nav>
 
         <div id="wrapper" ng-style="wrapper" class="toggled">
-          <div id="inside_wrapper" class="container-fluid">
+            <div id="inside_wrapper" class="container-fluid">
                 <span ng-hide="sidebar">
             <div id="sidebar-wrapper" ng-style="side">
                 <ul class="sidebar-nav">
@@ -148,158 +144,65 @@
                         <br>
                     </li>
                     <li class="sidebar-brand">
-                        <a><img src="image/note.png"></img>&nbsp&nbsp&nbspNotes</a>
-                    </li>
-                    <li class="sidebar-brand">
-                        <a><img src="image/remainder.png" id="remainder"></img>&nbsp&nbsp&nbspRemainder</a>
-                    </li>
-                    <li class="sidebar-brand">
-                        <a><img src="image/archive.png" id="archive" ui-sref="archive" ></img>&nbsp&nbsp&nbsp&nbspArchive</a>
-                    </li>
+                        <a ui-sref="welcome"><img src="image/bulb.svg"></img><span style="padding-left:30px";>Notes</span></a>
+                </li>
+                <li class="sidebar-brand">
+                    <a><img src="image/Reminder.svg" id="remainder"></img><span style="padding-left:30px" ;>Reminder</span></a>
+                </li>
+                <li class="sidebar-brand">
+                    <a ui-sref="archive"><img src="image/archive.svg" id="archive" ui-sref="archive"></img><span style="padding-left:30px" ;>Archive</span></a>
+                </li>
                 </ul>
             </div>
-          </span>
-                <!-- <span ng-show="sidebar"></span> -->
+            </span>
+            <!-- <span ng-show="sidebar"></span> -->
 
             <div id="page-content-wrapper" ng-style="content">
                 <div class="container-fluid" id="r1">
-                  <!-- div1 and div2 for input -->
-                    <div class="row">
+                    <!-- div1 and div2 for input -->
+                    <div ng-show="input_div" class="row">
                         <div class="col-lg-4 col-md-3 col-sm-3">
                         </div>
                         <div class="col-lg-4 col-sm-6  col-xs-12" id="r2">
-                          <div class="row" id="r3">
+                            <div class="row" id="r3">
 
-                            <span ng-show="custom">
+                                <span ng-show="custom">
                               <div id="div1" ng-click="custom=!custom">
                                 <input type="text" placeholder="Take a note" id="p1" ></input>
                               </div>
                             </span>
 
 
-                            <span ng-hide="custom">
+                                <span ng-hide="custom">
                               <div id="div2">
                                 <div content contenteditable="true"placeholder="Title" ng-model="title" id="title"></div><br>
                                 <div content  contenteditable="true" placeholder=" note" ng-model="take_note" id="take_note"></div><br>
                                 <div><a style="float:right;margin-top:-18px;text-decoration:none;color:black;" ng-click="custom=!custom;save()">Done</a></div>
                               </div>
                             </span>
-                            <span ng-show="custom"></span>
-                          </div>
+                                <span ng-show="custom"></span>
+                            </div>
                         </div>
-                      </div>
-<div ng-include="'html/pinup.html'"></div>
-<div ng-include="'html/view.html'"></div>
-
-
-
-
-                        <!-- grid view -->
-                      <!-- <div ng-show="grid_v"> -->
-                          <!-- <div  ng-class="grid_show" class="row">
-
-                              <div class="col-sm-2 col-lg-2 col-md-3">
-                              </div>
-
-                              <div id="inner_grid_show"class="col-sm-10 col-lg-10 col-md-9 col-sx-12">
-
-
-
-
-                                <div style="margin-bottom:18px;" ng-if="!x.pinned && !x.archived" ng-repeat="x in data_info | filter:search as results track by $index" ng-class="view_change" testpackery >
-                                  <div  ng-class="innerbox" style="background-color:{{x.bgcolor}}" ng-mouseover="card_icon=true" ng-mouseleave="card_icon=false">
-                                    <div ng-show="card_icon">
-                                      <img id="pin" src="image/Pin Filled-20.png" ng-click="pinup(x._id)" />
-                                    </div>
-                                    <div ng-click="open(x)" id="title_div" ng-bind-html="x.title"></div>
-                                    <div ng-click="open(x)" id="note_div" ng-bind-html="x.take_note"> </div>
-                                      <div style="height:40px">
-                                        <div ng-show="card_icon">
-
-                                          <!-- shown On hover -->
-                                          <!-- reminder -->
-                                          <!-- <div class="btn-group" uib-dropdown dropdown-append-to-body="true">
-                                            <img style="padding:4px" src="image/Reminder-20.png" uib-dropdown-toggle ng-disabled="disabled"></img>
-                                            <ul id="picker" class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
-                                              <li role="menuitem"><a ng-click="remind(x._id,today)">Later today</a></li>
-                                              <li role="menuitem"><a ng-click="remind(x._id,tomorrow)">Tomorrow</a></li>
-                                              <li role="menuitem"><a ng-click="remind(x._id,next)">Next Week</a></li>
-                                              <li class="divider"></li>
-                                              <li role="menuitem">
-                                                <div class="dropdown" >
-  													                       <a class="dropdown-toggle" id="dropdown2" role="button" data-toggle="dropdown" >
-  													                          <div class="input-group">
-                                                        <input type="text" class="form-control" data-ng-model="toDo.remainder" name="remainder" placeholder="Pick date & time">
-                                                        <span class="input-group-addon">
-                                                          <i class="glyphicon glyphicon-calendar"></i>
-                                                        </span>
-
-                                                      </div>
-                                                      <a style="padding-left:5px;"ng-click="remind(x._id,toDo.remainder)">Save</a>
-                                                      </a>
-                                                  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                                                  <datetimepicker data-ng-model="toDo.remainder" data-datetimepicker-config="{ dropdownSelector: '#dropdown2' }"/>
-                                                  </ul>
-                                                </div>
-
-
-
-                                              </li>
-                                            </ul>
-                                          </div> -->
-
-                                          <!-- paint -->
-                                          <!-- <div class="btn-group" uib-dropdown dropdown-append-to-body="true">
-                                            <img style="padding:4px" src="image/Paint.png" uib-dropdown-toggle ng-disabled="disabled"></img>
-                                            <div class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
-                                              <a ng-repeat="y in bgcolor"><img ng-src="{{y.path}}" ng-click="select_color(x._id,y.color)" /></a>
-                                            </div>
-                                          </div>
-
-                                          <div class="btn-group" >
-                                            <a ><img style="height:15px;width:15px;" src="image/archive.png" ng-click="archive(x._id)" /></a>
-                                          </div>
- -->
-
-
-                                          <!-- delete and copy -->
-                                          <!-- <div class="btn-group" uib-dropdown dropdown-append-to-body="true">
-                                            <img style="padding:4px" src="image/more.png" uib-dropdown-toggle ng-disabled="disabled"> </img>
-                                            <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
-                                              <li role="menuitem">
-                                                <a><img style="padding:4px" src="image/Delete-20.png" ng-click="delete(x._id,$index)"></img></a>
-                                              </li>
-                                              <li role="menuitem">
-                                                <a ng-click=copy(x)>Make a copy</a>
-                                              </li>
-                                            </ul>
-                                          </div>
-
-                                          </div>
-                                        </div> -->
-
-                                        <!-- display reminder -->
-                                        <!-- <div>
-                                          <div ng-if="x.remind_at" style="border-top:2px dashed;border-top-color:#e8e8e8;padding-top:10px;">
-                                            <span>
-                                              <span>{{x.remind_at | date:' EEE dd-MMM, hh:mm a'}}</span>
-                                              <span class="glyphicon glyphicon-remove-circle" style="float:right;padding:2px;" ng-click="delete_reminder(x._id)" </span>
-                                              </span>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-
-                                    </div> -->
-
-                          <!-- </div> -->
-
-
-                        </div>
-                      </div>
-
                     </div>
+                    <div class="row">
+                      <div class="col-lg-2 col-md-2 col-sm-2">
+                      </div>
+                          <div class="col-lg-8 col-md-8 col-sm-8">
+                    <div ng-show="input_div" ng-include="'html/pinup.html'"></div>
+                    <div ng-show="input_div" ng-include="'html/view.html'"></div>
+                    <div ng-show="!input_div" ng-include="'html/archive.html'"></div>
                   </div>
-                </body>
 
-                </html>
+
+
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

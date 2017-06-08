@@ -1,8 +1,7 @@
-App.controller('profile_pic_controller', function($scope,$rootScope) {
+App.controller('profile_pic_controller', function($scope,$rootScope,todo_service) {
   console.log("ssdjafhds");
-    $scope.myImage='';
+    $scope.myImage=$rootScope.myImage;
     $scope.myCroppedImage='';
-
     var handleFileSelect=function(evt) {
       var file=evt.currentTarget.files[0];
       var reader = new FileReader();
@@ -18,27 +17,25 @@ App.controller('profile_pic_controller', function($scope,$rootScope) {
 
     $scope.done = function (image) {
     console.log("hhhg");
-    $rootScope.img=image;
-    // console.log("title",$scope.updated_title);
-    //
-    //     var updated_data={
-    //       title:$scope.updated_title,
-    //       take_note:$scope.updated_note,
-    //       _id:id
-    //
-    //     }
-    //    var url="/update_data_card/" + id + "";
-    //
-    //     var obj = todo_service.App(url,updated_data,id);
-    //     obj.then(function(data) {
-    //       $scope.get_data();
-    //
-    //
-    //     }).catch(function(error) {
-    //         console.log("err");
-    //
-    //     })
-    //    $uibModalInstance.dismiss('Done');
+    // $rootScope.img=image;
+    console.log("jedgjhd",$rootScope.user_data);
+    image_object={
+      big_image:$scope.myImage,
+      croped_image:$scope.myCroppedImage,
+      name:$rootScope.user_data.name
+    }
+
+  var url="/profile_pic";
+    var obj = todo_service.App(url,image_object);
+    obj.then(function(data) {
+
+
+
+    }).catch(function(error) {
+        console.log("err");
+
+    });
+
       };
 
   });

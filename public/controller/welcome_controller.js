@@ -3,10 +3,11 @@
     $scope.custom = true;
     $scope.sidebar = true;
     $scope.pop = true;
-    // $scope.current_date=new Date();
+    $scope.input_div=true;
     $scope.today="today";
     $scope.tomorrow="tomorrow";
     $scope.next="next";
+console.log( $scope.input_div);
 
       $rootScope.check=function(){
           console.log("inside check");
@@ -14,9 +15,21 @@
           var obj = todo_service.App(url);
           obj.then(function(data) {
             if(data.data.status==true)
-            { $scope.user_data=data.data.user_data;
-              console.log(data.data.user_data);
-              $state.go('welcome');
+            { $rootScope.user_data=data.data.user_data;
+              $rootScope.myImage=data.data.user_data.original_pic;
+              var str=window.location.hash;
+                console.log(hash);
+                var hash=hash.split("/");
+                  // console.log(hash);
+                  if(hash[1]=="welcome")
+                  {
+                   $state.go('welcome');
+                  }
+                  if(hash[1]=="archive")
+                  {
+                   $state.go('archive');
+                  }
+
             }
             else{
                 $state.go('signin');
@@ -197,10 +210,15 @@
   })
 };
 
-$scope.archive=function(id)
+$scope.archive=function(id,archive,pin)
 {
+  var archive_obj={
+
+    archive:archive,
+    pinned:pin
+  }
   var url="/archive/" + id + "";
-  var obj = todo_service.App(url);
+  var obj = todo_service.App(url,archive_obj);
   obj.then(function(data) {
     // $scope.get_data();
     $state.reload();
@@ -212,14 +230,16 @@ $scope.archive=function(id)
 
 
 
-$scope.pinup=function(id,data)
+$scope.pinup=function(id,pin,archive)
 {
-  console.log(data,"gjkfgj");
+  // console.log(data,"gjkfgj");
   // var value="true";
   var url="/pinup/" + id + "";
   var obj={
-    value:data
+    pin:pin,
+    archive:archive
   }
+
   var obj = todo_service.App(url,obj);
   obj.then(function(data) {
     $scope.get_data();
@@ -376,6 +396,7 @@ $scope.pinup=function(id,data)
         $scope.grid_show="grid_card";
         $scope.innerbox="innerbox1";
         $scope.view_change="col-sm-10 col-lg-9 col-xs-12 col-md-12 a";
+        $scope.pin_view="col-sm-10 col-lg-9 col-xs-12 col-md-12 a"
 
       $scope.list={
         'display':'none'
@@ -392,7 +413,8 @@ $scope.pinup=function(id,data)
       // $scope.list_v=false;
       $scope.grid_show="grid_card";
       $scope.innerbox="innerbox ";
-      $scope.view_change=" col-sm-4 col-lg-4 col-xs-12 col-md-4 a";
+      $scope.view_change="col-sm-8 col-lg-4 col-xs-12 col-md-4 a";
+      $scope.pin_view="col-sm-8 col-lg-4 col-xs-12 col-md-4 a"
 
 
 
