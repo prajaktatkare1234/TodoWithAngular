@@ -18,8 +18,9 @@
         //     e.preventDefault();
         //     $("#wrapper").toggleClass("toggled");
         // }));
-        // $('#navbar').click('li.a', function() {
+        // $('#navbar').click('#view_on_toggle', function() {
         //     $('#navbar').collapse('hide');
+
         // });
         // $(document).on('click', "#b1", (function(e) {
         //     e.preventDefault();
@@ -63,72 +64,55 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-                </button>
-
-
-                    <a style="padding-right:30px;" class="navbar-brand" id="menu"><img style="width:30px;height:30px; margin-top:-5px; " src="image/menu.svg" ng-click="sidebar=!sidebar;menu()"></img>
+                    </button>
+                    <a style="padding-right:30px;" class="navbar-brand" id="menu">
+                        <img style="width:30px;height:30px; margin-top:-5px; " src="image/menu.svg" ng-click="sidebar=!sidebar;menu()"></img>
                     </a>
-
-                    <a id="home" class="active"><img id="google" src="image/google.svg" /><span style="padding-left:10px;padding-right:20px;">Keep</span></a>
-                    <input ng-style="search_archive" type="text" id="search" ng-model="search">
-                    <!-- <img style="margin-left:-90px;" src="/image/search.svg" ></img> -->
-                    </input>
-
+                    <a id="home" class="active">
+                        <img ng-show="input_div && reminder_div"id="google" src="image/google.svg" />
+                        <span ng-show="input_div && reminder_div"style="padding-left:10px;padding-right:20px;font-size:20;">Keep</span>
+                        <span ng-show="!input_div" style="padding-right:20px;font-size:25px">Archive</span>
+                          <span ng-show="!reminder_div" style="padding-right:20px;font-size:25px">Reminder</span>
+                    </a>
+                    <input ng-style="search_archive" type="text" id="search" ng-model="search"></input>
                 </div>
 
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a id="refresh"><img id="ref" src="/image/refresh.svg" ng-click="reload()"></img>
-                            </a>
 
-                        </li>
                         <li>
-                            <a>
-                                <!-- <span ng-show="view"> -->
+                            <a id="refresh">
+                                <img id="ref" src="/image/refresh.svg" ng-click="reload()"></img>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a id="view_on_toggle">
                                 <img id="list" ng-style="list" ng-click="list_view()" src="image/list.svg"> </img>
-                                <!-- </span> -->
-                                <!-- <span ng-hide="view"> -->
                                 <img id="grid" ng-style="grid" ng-click="grid_view()" src="image/grid.svg"></img>
-                                <!-- </span> -->
-
                             </a>
-
                         </li>
 
-                        <li ng-controller="profile_pic_controller">
+
+                        <li >
                             <a ng-style="archive_style" style="background-color:#ffbb00;" class="dropdown-toggle" data-toggle="dropdown">
-
                                 <img id="drop_menu" ng-src="{{user_data.profile_pic}}" alt="{{user_data.name.charAt(0) | uppercase}}">
-
                                 </img>
                             </a>
                             <div id="drop_account" class="dropdown-menu">
-
                                 <img id="login-dp" class="circular--square" ng-src="{{user_data.profile_pic}}" alt="{{user_data.name.charAt(0) | uppercase}}" />
-
-
                                 <a style="text-decoration:none;" ng-click="profile_pic()"><b>Change profile pic</b></a>
                                 <div class="btn-group">
-                                    <span style="padding:4px;"><b>{{user_data.name}}
-                    </b></span><br>
+                                    <span style="padding:4px;"><b>{{user_data.name}}</b></span><br>
                                     <span style="padding:4px;"><b>{{user_data.email}}</b></span>
-
                                 </div>
-
                                 <div style="padding:14px">
                                     <button class="btn-group" style="background-color:white;" type="button" value="signout" ng-click="logout()">Sign out
-                       </button>
-
-
+                                    </button>
                                     <button class="btn-group" style="float:right;background-color:white;" type="button" value="Add Account" data-ng-click="tdctl.logout()">Add account</button>
                                 </div>
-
                             </div>
                         </li>
-
-
-
 
                     </ul>
                 </div>
@@ -137,64 +121,72 @@
 
         <div id="wrapper" ng-style="wrapper" class="toggled">
             <div id="inside_wrapper" class="container-fluid">
+
                 <span ng-hide="sidebar">
-            <div id="sidebar-wrapper" ng-style="side">
-                <ul class="sidebar-nav">
+                <div id="sidebar-wrapper" ng-style="side">
+                  <ul class="sidebar-nav">
                     <li class="sidebar-brand">
-                        <br>
+                      <br>
                     </li>
                     <li class="sidebar-brand">
-                        <a ui-sref="welcome"><img src="image/bulb.svg"></img><span style="padding-left:30px";>Notes</span></a>
+                      <a ui-sref="welcome">
+                        <img src="image/bulb.svg"></img>
+                        <span style="padding-left:30px";>Notes</span>
+                </a>
                 </li>
                 <li class="sidebar-brand">
-                    <a><img src="image/Reminder.svg" id="remainder"></img><span style="padding-left:30px" ;>Reminder</span></a>
+                    <a ui-sref="reminder">
+                        <img src="image/Reminder.svg" id="remainder" ></img>
+                        <span style="padding-left:30px" ;>Reminder</span>
+                    </a>
                 </li>
                 <li class="sidebar-brand">
-                    <a ui-sref="archive"><img src="image/archive.svg" id="archive" ui-sref="archive"></img><span style="padding-left:30px" ;>Archive</span></a>
+                    <a ui-sref="archive">
+                        <img src="image/archive.svg" id="archive" ui-sref="archive"></img>
+                        <span style="padding-left:30px;" >Archive</span></a>
                 </li>
+              
                 </ul>
             </div>
             </span>
-            <!-- <span ng-show="sidebar"></span> -->
+
+
 
             <div id="page-content-wrapper" ng-style="content">
                 <div class="container-fluid" id="r1">
                     <!-- div1 and div2 for input -->
-                    <div ng-show="input_div" class="row">
-                        <div class="col-lg-4 col-md-3 col-sm-3">
-                        </div>
+                    <div ng-show="input_div && reminder_div" class="row">
+                        <div class="col-lg-4 col-md-3 col-sm-3"> </div>
                         <div class="col-lg-4 col-sm-6  col-xs-12" id="r2">
                             <div class="row" id="r3">
 
                                 <span ng-show="custom">
-                              <div id="div1" ng-click="custom=!custom">
-                                <input type="text" placeholder="Take a note" id="p1" ></input>
-                              </div>
-                            </span>
-
+                            <div id="div1" ng-click="custom=!custom">
+                              <input type="text" placeholder="Take a note" id="p1" ></input>
+                            </div>
+                          </span>
 
                                 <span ng-hide="custom">
-                              <div id="div2">
-                                <div content contenteditable="true"placeholder="Title" ng-model="title" id="title"></div><br>
-                                <div content  contenteditable="true" placeholder=" note" ng-model="take_note" id="take_note"></div><br>
-                                <div><a style="float:right;margin-top:-18px;text-decoration:none;color:black;" ng-click="custom=!custom;save()">Done</a></div>
-                              </div>
-                            </span>
+                            <div id="div2">
+                              <div content contenteditable="true"placeholder="Title" ng-model="title" id="title"></div><br>
+                              <div content  contenteditable="true" placeholder=" note" ng-model="take_note" id="take_note"></div><br>
+                              <div><a style="float:right;margin-top:-18px;text-decoration:none;color:#999999;" ng-click="custom=!custom;save()">Done</a></div>
+                            </div>
+                          </span>
                                 <span ng-show="custom"></span>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                      <div class="col-lg-2 col-md-2 col-sm-2">
-                      </div>
-                          <div class="col-lg-8 col-md-8 col-sm-8">
-                    <div ng-show="input_div" ng-include="'html/pinup.html'"></div>
-                    <div ng-show="input_div" ng-include="'html/view.html'"></div>
-                    <div ng-show="!input_div" ng-include="'html/archive.html'"></div>
-                  </div>
 
-
-
+                    <div id="row_for_views" class="row">
+                        <div class="col-lg-2 col-md-2 col-sm-2"> </div>
+                        <div id="inner_div_for_views" class="col-lg-8 col-md-8 col-sm-8">
+                            <div ng-show="input_div && reminder_div" ng-include="'html/pinup.html'"></div>
+                            <div ng-show="input_div && reminder_div" ng-include="'html/view.html'"></div>
+                            <div ng-show="!input_div" ng-include="'html/archive.html'"></div>
+                            <div ng-show="!reminder_div" ng-include="'html/reminder.html'"></div>
+                        </div>
+                    </div>
 
 
                 </div>
@@ -202,7 +194,8 @@
 
         </div>
     </div>
-    </div>
+
 </body>
+
 
 </html>

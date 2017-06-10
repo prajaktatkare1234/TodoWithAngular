@@ -1,13 +1,16 @@
-<div ng-class="grid_show" class="row">
-<div style="margin-top:-30px;margin-left:16px;font-size:20px;"><b>Others</b></div>
 
 
-<div id="outerbox" style="margin-bottom:18px;" ng-if="!x.archive && !x.pinned " ng-repeat="x in data_info | filter:search as results track by $index" ng-class="view_change" testpackery  >
-  <div  ng-class="innerbox" style="background-color:{{x.bgcolor}}" ng-mouseover="card_icon=true" ng-mouseleave="card_icon=false">
 
-    <div ng-show="card_icon">
+<div id="show" ng-class="grid_show"  class="row">
+  <!-- <div style="margin-top:-20px;margin-left:15px;"><b>pinned</b></div> -->
 
-            <img   id="pin" src="image/pin.svg" ng-click="pinup(x._id,'true','false')" />
+
+
+      <div id="outerbox" style="margin-bottom:18px;"ng-if="x.remind_at "  ng-repeat="x in data_info | filter:search as results track by $index" ng-class="view_change"   >
+        <div  ng-class="innerbox" style="background-color:{{x.bgcolor}}" ng-mouseover="card_icon=true" ng-mouseleave="card_icon=false">
+          <div ng-show="card_icon">
+            <img ng-if="x.pinned"  id="pin" src="image/unpin.svg" ng-click="pinup(x._id,'false','false')" />
+              <img ng-if="!x.pinned"  id="pin" src="image/pin.svg" ng-click="pinup(x._id,'true','false')" />
           </div>
           <div ng-click="open(x)" id="title_div" ng-bind-html="x.title"></div>
           <div ng-click="open(x)" id="note_div" ng-bind-html="x.take_note"> </div>
@@ -51,15 +54,15 @@
                  <div class="btn-group" uib-dropdown dropdown-append-to-body="true">
                   <img style="padding:4px" src="image/paint.svg" uib-dropdown-toggle ng-disabled="disabled"></img>
                   <div class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
-                    <a ng-repeat="y in bgcolor">
-                    <li class="btn-group" style="border-radius:50%;background-color:{{y.color}};border:none;height:25px;width:25px;" ng-click="select_color(x._id,y.color)">
+                    <a ng-repeat="y in bgcolor"><  <li class="btn-group" style="border-radius:50%;background-color:{{y.color}};border:none;height:25px;width:25px;" ng-click="select_color(x._id,y.color)">
 
                     </li></a>
                   </div>
                 </div>
-                <!-- <img ng-src="{{y.path}}" ng-click="select_color(x._id,y.color)" /> -->
+
                 <div class="btn-group" >
-                  <a ><img id="arc" src="image/archive.svg" ng-click="archive(x._id,'true','false')" /></a>
+                  <a ng-if="x.archive"><img id="arc" src="image/un_archive.svg" ng-click="archive(x._id,'false')" /></a>
+                  <a ng-if="!x.archive" ><img id="arc" src="image/archive.svg" ng-click="archive(x._id,'true')" /></a>
                 </div>
 
 
@@ -94,6 +97,4 @@
 
             </div>
 </div>
-
-
-<!-- </div> -->
+</div>

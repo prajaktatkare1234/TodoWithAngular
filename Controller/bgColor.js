@@ -6,7 +6,7 @@ console.log("in get cardgfdgh;f'gldhd;'fglhd;gdf'");
 router.post('/:id', function(req, res) {
     var data_id=req.params.id;
     console.log("asfsadf",req.body);
-    User.pinned(data_id,req.body,function(err, result) {
+    User.select_color(data_id,req.body,function(err, result) {
 
 
       if(err){
@@ -20,7 +20,7 @@ router.post('/:id', function(req, res) {
       else{
         res.send({
                   "status": true,
-                  "message": "pinned",
+                  "message": result,
 
 
       })

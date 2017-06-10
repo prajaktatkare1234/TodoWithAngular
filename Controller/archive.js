@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var User = require('../Model/data_card.js');
+var User = require('../Model/dataCard.js');
 console.log("in get cardgfdgh;f'gldhd;'fglhd;gdf'");
 
 router.post('/:id', function(req, res) {

@@ -1,4 +1,4 @@
-var App=angular.module('App',['ui.router','ngSanitize','ngStorage','ui.bootstrap','ui.bootstrap.datetimepicker','ngImgCrop']);
+var App=angular.module('App',['ui.router','ngSanitize','ngStorage','ui.bootstrap','ui.bootstrap.datetimepicker','ngImgCrop','ngNotify']);
     App.config(function($stateProvider,$urlRouterProvider){
 
         $urlRouterProvider.otherwise('/signin');
@@ -6,19 +6,19 @@ var App=angular.module('App',['ui.router','ngSanitize','ngStorage','ui.bootstrap
         $stateProvider.state('signin',{
             url:'/signin',
             templateUrl:'html/signin.html',
-            controller:'signin_controller',
+            controller:'signinController',
 
         })
         .state('signup',{
             url : '/signup',
             templateUrl : 'html/signup.html',
-            controller : 'signup_controller',
+            controller : 'signupController',
 
         })
         .state('welcome',{
             url : '/welcome',
             templateUrl : 'html/welcome.html',
-            controller : 'welcome_controller',
+            controller : 'welcomeController',
             // onEnter : function(){
             //     console.log('inside table');
             // }
@@ -26,7 +26,15 @@ var App=angular.module('App',['ui.router','ngSanitize','ngStorage','ui.bootstrap
         .state('archive',{
             url : '/archive',
             templateUrl : 'html/welcome.html',
-            controller : 'archive_controller',
+            controller : 'archiveController',
+            // onEnter : function(){
+            //     console.log('inside table');
+            // }
+        })
+        .state('reminder',{
+            url : '/reminder',
+            templateUrl : 'html/welcome.html',
+            controller : 'reminderController',
             // onEnter : function(){
             //     console.log('inside table');
             // }

@@ -1,11 +1,13 @@
 var express = require('express');
 var app = express();
+var morgan=require('morgan');
 
 var bodyParser = require('body-parser');
 var validator=require('express-validator');
 var config=require('./Config/config.js');
 var p = process.env.PORT || 8081
 // app.use(cors());
+app.use(morgan("dev"));
 app.use(bodyParser.json({limit: '10mb'}));
 app.use(bodyParser.urlencoded({extended:true,limit: '10mb'}));
 app.use(express.static('./public'));
