@@ -1,7 +1,8 @@
 var express = require('express');
 var router = express.Router();
 var User = require('../Model/dataCard.js');
-console.log("in get cardgfdgh;f'gldhd;'fglhd;gdf'");
+var winston=require('winston');
+
 
 router.post('/:id', function(req, res) {
     var data_id=req.params.id;
@@ -10,6 +11,7 @@ router.post('/:id', function(req, res) {
 
 
       if(err){
+        winston.error("failed to set reminder");
         res.send({
                 "status": false,
                 "message": err
@@ -18,6 +20,7 @@ router.post('/:id', function(req, res) {
       })
     }
       else{
+        winston.info("reminder set Successfully");
         res.send({
                   "status": true,
                   "message": result,

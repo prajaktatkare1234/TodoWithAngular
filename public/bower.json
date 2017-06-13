@@ -15,15 +15,12 @@
     "tests"
   ],
   "dependencies": {
-    "angular-bootstrap": "angular-ui-bootstrap-bower#^2.5.0",
-    "angular-material": "^1.1.4",
-    "angular-sanitize": "^1.6.4",
-    "angular-ui-router": "^1.0.3",
-    "angular": "^1.6.4",
-    "jquery-ui": "^1.12.1",
-    "ngstorage": "^0.3.11",
-    "angularjs-datepicker": "^2.1.19",
-    "ng-img-crop": "ngImgCrop#^0.3.2",
-    "ng-notify": "^0.8.0"
+    "angular-animate": "^1.6.4",
+    "bootstrap": "~3.3.5",
+    "draggabilly": "^2.1.1",
+    "handlebars": "~3.0.3",
+    "moment": ">=2.10.5",
+    "packery": "^2.1.1",
+    "satellizer": "^0.15.5"
   }
 }

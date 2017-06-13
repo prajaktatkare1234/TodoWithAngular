@@ -5,13 +5,15 @@ var jwt = require('jsonwebtoken');
 var conf = require('../Config/config.js');
 var config=require('../Config/index.js')
 var User = require('../Model/index.js');
+var winston=require('winston');
+
 // console.log("in controller");
 
 router.post('/', function(req, res) {
   var result1 = {};
  result1.status = false;
   try {
-    // console.log(config.validationSchema.sign_in);
+  
      req.check(config.validationSchema.sign_in);
      req.getValidationResult().then(function(isValid) {
        try {
@@ -30,7 +32,7 @@ router.post('/', function(req, res) {
 
 
         if (err) {
-
+          winston.error("login failed");
             res.send({
                 "status": false,
                 "message": "login failed"
@@ -38,6 +40,7 @@ router.post('/', function(req, res) {
             });
         } else {
             if (result) {
+              winston.info("logged in successfully");
                 // console.log("r", result);
                 var token = jwt.sign({
                     _id: result._id

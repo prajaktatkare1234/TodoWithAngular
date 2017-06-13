@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var User = require('../Model/dataCard.js');
 // console.log("in controller");
+var winston=require('winston');
 
 router.post('/:id',function(req, res) {
     var data_id=req.params.id;
@@ -10,6 +11,8 @@ router.post('/:id',function(req, res) {
 
 
       if(err){
+        winston.error("reminder deleted Successfully");
+
         res.send({
                 "status": false,
                 "message": err
@@ -18,9 +21,10 @@ router.post('/:id',function(req, res) {
       })
     }
       else{
+          winston.error("failed to delete reminder");
         res.send({
                   "status": true,
-                  "message": "reminder set Successfully",
+                  "message": "reminder deleted Successfully",
 
 
       })

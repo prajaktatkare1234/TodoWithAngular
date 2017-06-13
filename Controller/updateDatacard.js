@@ -1,16 +1,16 @@
 var express = require('express');
 var router = express.Router();
 var User = require('../Model/dataCard.js');
-// console.log("in controller");
+var winston=require('winston');
 
 router.post('/:id', function(req, res) {
     var data_id=req.params.id;
-    // console.log("req from front",req.body);
-    console.log("updatFGHGFHGFDHu");
+
     User.update_data(data_id,req.body, function(err, result) {
 
 
       if(err){
+        winston.error("failed to update data card");
         res.send({
                 "status": false,
                 "message": err
@@ -19,6 +19,7 @@ router.post('/:id', function(req, res) {
       })
     }
       else{
+          winston.info("updated data card successfully");
         res.send({
                   "status": true,
                   "message": result,

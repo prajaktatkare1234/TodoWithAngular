@@ -2,7 +2,8 @@ var express = require('express');
 var router = express.Router();
 var User = require('../Model/index.js');
 var fs=require("fs");
-// console.log("in controller");
+var winston=require('winston');
+
 
 router.post('/', function(req, res) {
   // console.log(req.body);
@@ -36,17 +37,16 @@ router.post('/', function(req, res) {
 
 
         if (err) {
-
+  winston.error("failed to upload profile pic");
             res.send({
+
                 "status": false,
                 "message": " pic not uploaded"
 
             });
         } else {
             if (result) {
-                // console.log("r", result);
-
-
+                winston.info("uploaded profile pic successfully" );
 
                 res.send({
                     "status": true,
@@ -54,6 +54,7 @@ router.post('/', function(req, res) {
 
                 })
             } else {
+                winston.error("failed to upload profile pic");
                 res.send({
                     "status": false,
                     "message": "pic not uploaded"

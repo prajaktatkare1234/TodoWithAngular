@@ -2,6 +2,8 @@ var express = require('express');
 var router = express.Router();
 var User = require('../Model/dataCard.js');
 // console.log("in controller");
+var winston=require('winston');
+
 
 router.post('/', function(req, res) {
 
@@ -11,8 +13,9 @@ router.post('/', function(req, res) {
 
 
         if (err) {
-
+          winston.error("failed to save data card");
             res.send({
+
                 "status": false,
                 "message": "data cant be Saved"
 
@@ -22,13 +25,14 @@ router.post('/', function(req, res) {
                 // console.log("r", result);
 
 
-
+                winston.info(" data card saved Successfully");
                 res.send({
                     "status": true,
                     "message": "data saved  Successfully",
 
                 })
             } else {
+                winston.error("failed to save data card");
                 res.send({
                     "status": false,
                     "message": "saving failed"

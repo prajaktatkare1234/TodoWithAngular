@@ -136,7 +136,7 @@ data_card_Schema.statics.delete_data = function(data_id, cb) {
 
 };
 data_card_Schema.statics.get_data = function(req, cb) {
-    // console.log(req._id,"in get function");
+    
     this.find({d_no:req._id},cb);
 };
 

@@ -1,15 +1,16 @@
 var express = require('express');
 var router = express.Router();
 var User = require('../Model/dataCard.js');
-console.log("in get cardgfdgh;f'gldhd;'fglhd;gdf'");
+var winston=require('winston');
 
 router.post('/:id', function(req, res) {
     var data_id=req.params.id;
-    console.log("asfsadf",req.body);
+
     User.pinned(data_id,req.body,function(err, result) {
 
 
       if(err){
+        winston.error("failed to pin the card");
         res.send({
                 "status": false,
                 "message": err
@@ -18,6 +19,7 @@ router.post('/:id', function(req, res) {
       })
     }
       else{
+          winston.info("pinned data card");
         res.send({
                   "status": true,
                   "message": "pinned",

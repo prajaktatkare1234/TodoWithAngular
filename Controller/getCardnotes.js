@@ -1,11 +1,11 @@
 var express = require('express');
 var router = express.Router();
 var User = require('../Model/dataCard.js');
-// console.log("in get card");
+
 
 router.post('/:id', function(req, res) {
     var data_id=req.params.id;
-    // console.log("asfsadf",data_id);
+
     User.card_notes(data_id, function(err, result) {
 
 

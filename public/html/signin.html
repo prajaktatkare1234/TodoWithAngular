@@ -7,7 +7,7 @@
               <ul class="nav navbar-nav navbar-right">
 
                   <!-- <li><a href="#signin">Sign In</a></li> -->
-                  <li><a ui-sref="signup">Sign Up</a></li>
+                  <li><a ui-sref="signup">SIGN UP</a></li>
 
               </ul>
 
@@ -44,7 +44,11 @@
 ng-disabled="myForm.$invalid">
 </p>
     <p class="message">&nbsp&nbspNot registered? <a  ui-sref="signup">Create an account</a></p>
-
+<div class="">
+  <br><br><button  ng-click="authenticate('facebook')">Sign in with Facebook</button>
+  <br><br>
+  <button ng-click="authenticate('google')">Sign in with Google</button>
+</div>
 
 </form>
         </div>

@@ -3,7 +3,7 @@ var express = require('express');
 var router = express.Router();
 var User = require('../Model/index.js');
 var config=require('../Config/index.js')
-// console.log("in controller");
+var winston=require('winston');
 
 
 router.post('/', function(req, res) {
@@ -27,16 +27,16 @@ router.post('/', function(req, res) {
 
 
            if (err) {
-
+             winston.error("Registration failed ");
                res.send({
                    "status": false,
                    "message": err
                });
            } else {
-
+             winston.info("Registered successfully");
                res.send({
                    "status": true,
-                   "message": "Registration Successfull"
+                   "message": "Registered Successfully"
                });
            }
 

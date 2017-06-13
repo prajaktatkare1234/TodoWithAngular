@@ -1,22 +1,24 @@
 var express = require('express');
 var router = express.Router();
+var winston=require('winston');
 var User = require('../Model/dataCard.js');
-// console.log("in get card");
+
+
 
 router.post('/', function(req, res) {
 
-// console.log("req.decode",req.decode);
     User.get_data(req.decode, function(err, result) {
 
     if(result)
       {
-      // console.log("in fdsgdfg",result);
 
+        winston.info("Getting card data");
         res.send({"data_info":result,"status":true})
       }
       else
       {
         res.send({message:"err","status":false})
+        logger.error("error while getting data card");
       }
 
 

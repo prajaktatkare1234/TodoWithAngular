@@ -36,7 +36,16 @@ var userSchema = Schema({
     },
     original_pic:{
       type:String
-    }
+    },
+  //   fb: {
+  //      id: String,
+  //      access_token: String,
+  //      firstName: String,
+  //      lastName: String,
+  //      email: String,
+  //      gender: String,
+  //      profile: String
+  //  }
 });
 userSchema.plugin(unique_val);
 

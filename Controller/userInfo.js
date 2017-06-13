@@ -2,11 +2,11 @@ var express=require('express');
 router=express.Router();
 var User = require('../Model/index.js');
 router.post('/',function(req,res){
-// console.log("user_info");
+var winston=require('winston');
   User.profile(req.decode,function(err,data){
     if(data)
     {
-    console.log("in user_info",data);
+  winston.info("user info ");
     obj={
       user_id:data._id,
       name:data.name,
@@ -19,6 +19,7 @@ router.post('/',function(req,res){
     }
     else
     {
+      winston.error("failed to get user info");
       res.send({message:"err","status":false})
     }
 

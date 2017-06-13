@@ -1,6 +1,28 @@
 var express = require('express');
 var app = express();
 var morgan=require('morgan');
+var winston=require('winston');
+var passport = require('passport');
+
+
+
+
+
+winston.configure({
+   transports: [
+     new (winston.transports.File)({
+       name: 'info-file',
+       filename: 'filelog-info.log',
+       level: 'info'
+     }),
+     new (winston.transports.File)({
+       name: 'error-file',
+       filename: 'filelog-error.log',
+       level: 'error'
+     })
+   ]
+ });
+
 
 var bodyParser = require('body-parser');
 var validator=require('express-validator');
@@ -8,10 +30,15 @@ var config=require('./Config/config.js');
 var p = process.env.PORT || 8081
 // app.use(cors());
 app.use(morgan("dev"));
+
 app.use(bodyParser.json({limit: '10mb'}));
 app.use(bodyParser.urlencoded({extended:true,limit: '10mb'}));
 app.use(express.static('./public'));
 app.use(validator());
+
+app.use(passport.initialize());
+app.use(passport.session());
+
 app.use(require('./Controller'));
 var server = app.listen(p, function() {
     var host = server.address().address

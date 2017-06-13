@@ -1,5 +1,5 @@
-App.controller('signinController', function($scope,$state,todo_service,$rootScope) {
-    console.log("gfghjfghfjgh");
+App.controller('signinController', function($scope,$state,todo_service,$rootScope,$auth) {
+
 
     $rootScope.check=function(){
         console.log("inside check");
@@ -23,6 +23,28 @@ App.controller('signinController', function($scope,$state,todo_service,$rootScop
       }
       $scope.check();
 
+      // $scope.authenticate = function(provider) {
+      //     $auth.authenticate(provider);
+      //   };
+      $scope.authenticate = function(provider) {
+        $auth.authenticate(provider)
+       .then(function() {
+        //  toastr.success('You have successfully signed in with ' + provider + '!');
+         $state.go('/');
+        console.log("logged in");
+       })
+       .catch(function(error) {
+         if (error.message) {
+           // Satellizer promise reject error.
+          //  toastr.error(error.message);
+         } else if (error.data) {
+           // HTTP response error from server
+          //  toastr.error(error.data.message, error.status);
+         } else {
+          //  toastr.error(error);
+         }
+       });
+   };
 
 
 
