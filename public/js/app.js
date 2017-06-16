@@ -39,38 +39,46 @@ App.config(function($stateProvider, $urlRouterProvider, $authProvider) {
             //     console.log('inside table');
             // }
         })
+        // .state('', {
+        //     url: '/reminder',
+        //     templateUrl: 'html/welcome.html',
+        //     controller: 'reminderController',
+        //     // onEnter : function(){
+        //     //     console.log('inside table');
+        //     // }
+        // })
         $authProvider.facebook({
             name: 'facebook',
-            clientId: '1783193788658916',
-            responseType:'token',
-            url: '/auth/facebook',
-            authorizationEndpoint: 'https://www.facebook.com/dialog/oauth',
-            redirectUri: window.location.origin || window.location.protocol + '//' + window.location.host + '/',
-            scope: 'email',
-            scopeDelimiter: ',',
-            requiredUrlParams: ['display', 'scope'],
-            display: 'popup',
-            type: '2.0',
-            popupOptions: {
-                width: 481,
-                height: 269
-            }
+            clientId: '1783193788658916'
+            // responseType:'token',
+            // url: '/auth/facebook',
+            // authorizationEndpoint: 'https://www.facebook.com/dialog/oauth',
+            // redirectUri: window.location.origin || window.location.protocol + '//' + window.location.host + '/',
+            // scope: 'email',
+            // scopeDelimiter: ',',
+            // requiredUrlParams: ['display', 'scope'],
+            // display: 'popup',
+            // type: '2.0',
+            // popupOptions: {
+            //     width: 481,
+            //     height: 269
+            // }
 
         });
         $authProvider.google({
             clientId: '564021516839-4er0mlf724d67r6kf7j5lmkgp2dnq9e5.apps.googleusercontent.com',
             responseType:'token',
-            url: '/auth/google',
-            authorizationEndpoint: 'https://accounts.google.com/o/oauth2/auth',
-            redirectUri: window.location.origin || window.location.protocol + '//' + window.location.host,
-            scope: ['profile', 'email'],
-            scopePrefix: 'openid',
-            scopeDelimiter: ' ',
-            requiredUrlParams: ['scope'],
-            optionalUrlParams: ['display'],
-            display: 'popup',
-            type: '2.0',
-            popupOptions: { width: 452, height: 633 }
+            // url: '/auth/google',
+            // authorizationEndpoint: 'https://accounts.google.com/o/oauth2/auth',
+            // redirectUri: window.location.origin || window.location.protocol + '//' + window.location.host,
+            // scope: ['profile', 'email'],
+            // scopePrefix: 'openid',
+            // scopeDelimiter: ' ',
+            // requiredUrlParams: ['scope'],
+            // optionalUrlParams: ['display'],
+            // display: 'popup',
+            // type: '2.0',
+            // popupOptions: { width: 452, height: 633 }
               });
 
 

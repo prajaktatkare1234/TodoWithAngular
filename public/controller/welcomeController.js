@@ -1,5 +1,5 @@
-  App.controller('welcomeController', function($scope,$uibModal, $interval,$state,$localStorage,$rootScope,todo_service,ngNotify) {
-
+  App.controller('welcomeController', function($scope,$uibModal, $interval,$state,$localStorage,$rootScope,todo_service,ngNotify,$auth) {
+console.log("in welcomeController");
     $scope.custom = true;
     $scope.sidebar = true;
     $scope.pop = true;
@@ -37,26 +37,28 @@ console.log( $scope.input_div);
              var url= "/userInfo/";
           var obj = todo_service.App(url);
           obj.then(function(data) {
+            console.log(data,"data");
             if(data.data.status==true)
             { $rootScope.user_data=data.data.user_data;
               $rootScope.myImage=data.data.user_data.original_pic;
-              var str=window.location.hash;
-                console.log(hash);
-                var hash=hash.split("/");
-                  // console.log(hash);
-                  if(hash[1]=="welcome")
-                  {
-
+              // var str=window.location.hash;
+              //   console.log(hash);
+              //   var hash=hash.split("/");
+              //     // console.log(hash);
+              //     if(hash[1]=="welcome")
+              //     {
+              //
                    $state.go('welcome');
-                  }
-                  if(hash[1]=="archive")
-                  {
-                   $state.go('archive');
-                  }
+              //     }
+              //     if(hash[1]=="archive")
+              //     {
+              //      $state.go('archive');
+              //     }
 
             }
             else{
-                $state.go('signin');
+              // console.log(datas);
+                // $state.go('signin');
             }
           }).catch(function(error) {
 
@@ -296,17 +298,24 @@ $scope.pinup=function(id,pin,archive)
 
     $scope.logout = function() {
 
-      console.log("logout");
+      // console.log("logout");
         var url="/logout";
         var obj = todo_service.App(url);
         obj.then(function(data) {
           if(data.data.status==false)
           {
+            console.log("logout");
             $state.go('signin');
           }
         }).catch(function(error) {
 
         })
+        if (!$auth.isAuthenticated()) { return; }
+        $auth.logout()
+          .then(function() {
+            console.log('You have been logged out');
+            $state.go('/');
+          });
 
     };
 
@@ -339,6 +348,7 @@ $scope.pinup=function(id,pin,archive)
 
 
     $scope.save = function() {
+      console.log("sakDFSAJFKASF");
       if($scope.title=="" && $scope.take_note=="")
       {
         return;
@@ -375,7 +385,7 @@ $scope.pinup=function(id,pin,archive)
       var url="/getDatacard";
         var obj = todo_service.App(url);
         obj.then(function(data) {
-            console.log("data", data.data.data_info);
+            // console.log("data", data.data.data_info);
             if (data.data.status == true) {
                 var cards = [];
                 for (var i = data.data.data_info.length - 1; i >= 0; i--) {

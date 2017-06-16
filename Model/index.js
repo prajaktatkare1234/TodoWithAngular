@@ -11,43 +11,45 @@ var config = require('../Config/config.js');
 var Schema = mongoose.Schema;
 
 var userSchema = Schema({
-    name: {
-        type: String,
-        required: true,
-        validate: validators.isAlpha(),
-        minlength: 2,
-        maxlength: 8
+    local:{
+      name: {
+          type: String,
+          // required: true,
+          validate: validators.isAlpha(),
+          minlength: 2,
+          maxlength: 8
+      },
+      email: {
+          type: String,
+          unique: true,
+          // required: true,
+          validate: validators.isEmail()
+      },
+      password: {
+          type: String,
+          // required: true,
+          validate: validators.isAlphanumeric(),
+          minlength: 5,
+          // maxlength: 8
+      },
+      profile_pic:{
+        type:String
+      },
+      original_pic:{
+        type:String
+      }
+
     },
-    email: {
-        type: String,
-        unique: true,
-        required: true,
-        validate: validators.isEmail()
-    },
-    password: {
-        type: String,
-        required: true,
-        validate: validators.isAlphanumeric(),
-        minlength: 5,
-        // maxlength: 8
-    },
-    profile_pic:{
-      type:String
-    },
-    original_pic:{
-      type:String
-    },
-  //   fb: {
-  //      id: String,
-  //      access_token: String,
-  //      firstName: String,
-  //      lastName: String,
-  //      email: String,
-  //      gender: String,
-  //      profile: String
-  //  }
+    facebook:{
+      displayName: String,
+      picture: String,
+      facebook: String,
+      fbemail:String 
+    }
+
+
+
 });
-userSchema.plugin(unique_val);
 
 
 
@@ -56,17 +58,10 @@ userSchema.statics.save_user = function(req, cb) {
 
     var encrypt = encrypt_data(pwd);
     var user_Detail = new this({
-        name: req.body.name,
-        email: req.body.email,
-        password: encrypt
+        'local.name': req.body.name,
+        'local.email': req.body.email,
+        'local.password': encrypt
     });
-    // user_Detail.save(function(err) {
-    //     if (err)
-    //         cb(err, null);
-    //     else
-    //         cb(null, "Saved");
-    // });
-
 
 
     user_Detail.save(cb);
@@ -80,26 +75,26 @@ function encrypt_data(pwd) {
 userSchema.statics.login = function(req, cb) {
 var encPass =encrypt_data(req.password)
     this.findOne({
-        email: req.email,
-        password:encPass
+        'local.email': req.email,
+        'local.password':encPass
     }, cb);
 }
 userSchema.statics.change_profile_pic = function(req,url,cb) {
   // console.log(data_id,"datajkhjk",req);
   // var d = new Date();
     this.update({
-        name: req.name
+      'local.name': req.name
     }, {
         $set: {
-        profile_pic:url.profile_pic,
-        original_pic:url.original_pic
+        'local.profile_pic':url.profile_pic,
+        'local.original_pic':url.original_pic
 
         }
     }, cb);
 };
 
 userSchema.statics.profile=function(req,cb){
-    // console.log("hjgsdf");
+    console.log("hjgsdf",req);
   this.findOne({_id:req._id},cb);
   //{
  //   if(user){

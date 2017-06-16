@@ -10,10 +10,10 @@ var winston=require('winston');
 // console.log("in controller");
 
 router.post('/', function(req, res) {
-  var result1 = {};
+var result1 = {};
  result1.status = false;
   try {
-  
+
      req.check(config.validationSchema.sign_in);
      req.getValidationResult().then(function(isValid) {
        try {
@@ -44,7 +44,7 @@ router.post('/', function(req, res) {
                 // console.log("r", result);
                 var token = jwt.sign({
                     _id: result._id
-                }, conf.secret, {
+                }, conf.TOKEN_SECRET, {
                     expiresIn: 60 * 60 * 24
                 });
 

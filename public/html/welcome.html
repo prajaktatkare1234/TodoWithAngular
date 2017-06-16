@@ -96,15 +96,15 @@
 
                         <li >
                             <a ng-style="archive_style" style="background-color:#ffbb00;" class="dropdown-toggle" data-toggle="dropdown">
-                                <img id="drop_menu" ng-src="{{user_data.profile_pic}}" alt="{{user_data.name.charAt(0) | uppercase}}">
+                                <img id="drop_menu" ng-src="{{user_data.local.profile_pic || user_data.facebook.picture}}" alt="{{user_data.name.charAt(0) | uppercase}}">
                                 </img>
                             </a>
                             <div id="drop_account" class="dropdown-menu">
-                                <img id="login-dp" class="circular--square" ng-src="{{user_data.profile_pic}}" alt="{{user_data.name.charAt(0) | uppercase}}" />
+                                <img id="login-dp" class="circular--square" ng-src="{{user_data.local.profile_pic || user_data.facebook.picture}}" alt="{{user_data.name.charAt(0) | uppercase}}" />
                                 <a style="text-decoration:none;" ng-click="profile_pic()"><b>Change profile pic</b></a>
                                 <div class="btn-group">
-                                    <span style="padding:4px;"><b>{{user_data.name}}</b></span><br>
-                                    <span style="padding:4px;"><b>{{user_data.email}}</b></span>
+                                    <span style="padding:4px;"><b>{{user_data.local.name || user_data.facebook.displayName}}</b></span><br>
+                                    <span style="padding:4px;"><b>{{user_data.email || user_data.facebook.fbemail}}</b></span>
                                 </div>
                                 <div style="padding:14px">
                                     <button class="btn-group" style="background-color:white;" type="button" value="signout" ng-click="logout()">Sign out

@@ -2,13 +2,15 @@ var express = require('express');
 
 var router = express.Router();
 var jwt = require("jsonwebtoken");
+// var jwt = require('jwt-simple');
+
 var config = require("../Config/config.js");
 
 router.use(function(req, res, next) {
     var token = req.headers.cookie;
 // console.log(req.headers.cookie,"in auth");
     try{
-      // console.log(token);
+      console.log("in authen api",token);
       token=token.substr(7);
 
     }
@@ -21,8 +23,10 @@ router.use(function(req, res, next) {
     }
 
     if (token) {
-        console.log("auth", token,config.secret);
-        jwt.verify(token, config.secret, function(err, decode) {
+        console.log("auth", token,config.TOKEN_SECRET);
+        jwt.verify(token, config.TOKEN_SECRET, function(err, decode)
+        //  jwt.decode(token, conf.TOKEN_SECRET,function(err,decode)
+        {
             if (err) {
                 // console.log("failed",token);
 
@@ -31,9 +35,9 @@ router.use(function(req, res, next) {
                     message: 'athentication failed'
                 });
             } else {
-                // console.log(req.decode);
-                req.decode = decode;
-                // console.log(req.decode);
+
+                  req.decode = decode;
+            console.log(req.decode,"decoded");
 
                 // return res.json({ success: false,message:req.decode});
                 next();

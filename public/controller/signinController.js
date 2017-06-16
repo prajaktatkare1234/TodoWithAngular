@@ -8,10 +8,10 @@ App.controller('signinController', function($scope,$state,todo_service,$rootScop
         obj.then(function(data) {
           if(data.data.status==true)
           { $rootScope.user_data=data.data.user_data;
-            // console.log($rootScope.user_data,"dggadsfgfd");
             $rootScope.myImage=data.data.user_data.original_pic;
             console.log("hgsajfsdaf",data.data.user_data);
             $state.go('welcome');
+
           }
           else{
               $state.go('signin');
@@ -30,8 +30,9 @@ App.controller('signinController', function($scope,$state,todo_service,$rootScop
         $auth.authenticate(provider)
        .then(function() {
         //  toastr.success('You have successfully signed in with ' + provider + '!');
-         $state.go('/');
-        console.log("logged in");
+              console.log("logged in");
+         $state.go('welcome');
+
        })
        .catch(function(error) {
          if (error.message) {
