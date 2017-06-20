@@ -1,11 +1,11 @@
 
 
 <div ng-class="grid_show"  class="row">
-<div style="margin-top:-30px;margin-left:16px;font-size:20px;"><b>Pinned</b></div>
+<div style="margin-top:-30px;margin-left:16px;font-size:20px;" ng-show="pin"><b>Pinned</b></div>
 
 
 
-<div id="outerbox" style="margin-bottom:18px;"ng-if="x.pinned && !x.archive" ng-repeat="x in data_info | filter:search as results track by $index" ng-class="view_change"   >
+<div id="outerbox" style="margin-bottom:18px;"ng-if="x.pinned && !x.archive && x.isDeleted!==true" ng-repeat="x in data_info | filter:search as results track by $index" ng-class="view_change"   >
 <div  ng-class="innerbox" style="background-color:{{x.bgcolor}}" ng-mouseover="card_icon=true" ng-mouseleave="card_icon=false">
   <div ng-show="card_icon">
     <img   id="pin" src="image/unpin.svg" ng-click="pinup(x._id,'false','false')" />

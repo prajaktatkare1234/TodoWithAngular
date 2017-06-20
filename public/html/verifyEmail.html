@@ -1,0 +1,36 @@
+<header>
+          <nav class="navbar navbar-default" id="n1">
+          <div class="container">
+              <div class="navbar-header">
+
+              </div>
+              <ul class="nav navbar-nav navbar-right">
+
+
+              </ul>
+
+
+          </div>
+          </nav>
+      </header>
+
+
+<div ng-controller="resetpasswordController" class="form">
+  <h3>Enter registered email</h3>
+
+
+    <form >
+
+
+<p>
+<input placeholder="Email" class="form-control" type="email" ng-model="verifyEmail" >
+</p>
+
+<p>
+<input id="b1" class="btn btn-success" type="submit" ng-click="resetPassword()"
+ng-disabled="myForm.$invalid">
+</p>
+
+
+</form>
+</div>

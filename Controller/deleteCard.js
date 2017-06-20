@@ -7,8 +7,8 @@ var winston=require('winston');
 
 router.post('/:id',function(req, res) {
     var data_id=req.params.id;
-    console.log("asfsadf",data_id);
-    User.delete_data(data_id, function(err, result) {
+    console.log("asfsadf",data_id,req.body);
+    User.delete_data(data_id,req.body, function(err, result) {
 
 
       if(err){

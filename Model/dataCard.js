@@ -34,6 +34,10 @@ var data_card_Schema = Schema({
     },
     pinned:{
       type:Boolean
+    },
+    isDeleted:{
+      type:Boolean,
+      default:false
     }
 
 
@@ -58,7 +62,8 @@ data_card_Schema.statics.update_data = function(data_id,req,cb) {
   console.log(data_id,"datajkhjkhl");
   var d = new Date();
     this.update({
-        _id: req._id
+        _id: req._id,
+        isDeleted:false
     }, {
         $set: {
             take_note: req.take_note,
@@ -129,14 +134,51 @@ data_card_Schema.statics.delete_reminder = function(data_id, cb) {
     }, cb);
 
 };
-data_card_Schema.statics.delete_data = function(data_id, cb) {
+data_card_Schema.statics.delete_data = function(data_id,req, cb) {
+if(req.delete=='delete')
+{
+  console.log("permanent delete");
+   this.remove({_id:data_id},cb)
+}
+else if(req.delete=='restore')
+{
+  console.log("restore");
+  this.update({
+      _id: data_id
+
+  }, {
+      $set: {
+      isDeleted:false,
+      pinned:false,
+      reminder:false,
+      archive:true
 
 
-        this.remove({_id:data_id},cb)
+      }
+  }, cb);
+
+}
+else{
+
+  this.update({
+      _id: data_id
+
+  }, {
+      $set: {
+      isDeleted:true,
+      pinned:false,
+      reminder:false
+
+
+      }
+  }, cb);
+        // this.remove({_id:data_id},cb)
+}
+
 
 };
 data_card_Schema.statics.get_data = function(req, cb) {
-    
+
     this.find({d_no:req._id},cb);
 };
 

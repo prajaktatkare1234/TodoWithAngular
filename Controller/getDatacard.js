@@ -7,6 +7,7 @@ var User = require('../Model/dataCard.js');
 
 router.post('/', function(req, res) {
 
+  req.decode.isDeleted=false;
     User.get_data(req.decode, function(err, result) {
 
     if(result)

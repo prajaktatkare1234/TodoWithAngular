@@ -18,7 +18,10 @@ router.use('/pinup',require('./pinup'));
 router.use('/profilePic',require('./profilePic'));
 
 router.use('/auth/facebook',require('./fb'));
-// router.use('/auth/google',require('./google'));
+router.use('/auth/google',require('./google'));
+router.use('/verifyEmail',require('./verifyEmail'));
+
+
 
 
 

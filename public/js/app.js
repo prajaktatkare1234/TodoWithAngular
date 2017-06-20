@@ -39,6 +39,30 @@ App.config(function($stateProvider, $urlRouterProvider, $authProvider) {
             //     console.log('inside table');
             // }
         })
+        .state('bin', {
+            url: '/bin',
+            templateUrl: 'html/welcome.html',
+            controller: 'binController',
+            // onEnter : function(){
+            //     console.log('inside table');
+            // }
+        })
+        .state('verifyEmail', {
+            url: '/verifyEmail',
+            templateUrl: 'html/verifyEmail.html',
+            controller: 'resetpasswordController',
+            // onEnter : function(){
+            //     console.log('inside table');
+            // }
+        })
+        .state('changePassword', {
+            url: '/changePassword',
+            templateUrl: 'html/changePassword.html',
+            controller: 'resetpasswordController',
+            // onEnter : function(){
+            //     console.log('inside table');
+            // }
+        })
         // .state('', {
         //     url: '/reminder',
         //     templateUrl: 'html/welcome.html',
@@ -67,7 +91,7 @@ App.config(function($stateProvider, $urlRouterProvider, $authProvider) {
         });
         $authProvider.google({
             clientId: '564021516839-4er0mlf724d67r6kf7j5lmkgp2dnq9e5.apps.googleusercontent.com',
-            responseType:'token',
+            // responseType:'token',
             // url: '/auth/google',
             // authorizationEndpoint: 'https://accounts.google.com/o/oauth2/auth',
             // redirectUri: window.location.origin || window.location.protocol + '//' + window.location.host,

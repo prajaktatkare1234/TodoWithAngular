@@ -40,12 +40,15 @@ var userSchema = Schema({
       }
 
     },
-    facebook:{
+    social:{
       displayName: String,
       picture: String,
       facebook: String,
-      fbemail:String 
+      fbemail:String ,
+      google: String,
+      gmail:String
     }
+
 
 
 
@@ -105,6 +108,25 @@ userSchema.statics.profile=function(req,cb){
  //     res.send({message:"error"});
  //   }
  // })
+}
+userSchema.statics.resetPassword=function(req,cb){
+    console.log("hjgsdf",req.email);
+
+  this.findOne({'local.email':req.email},cb);
+
+}
+userSchema.statics.changePassword=function(req,email,cb){
+console.log("in change password dksajldksgkldfgjfkdl",email);
+  var encrypt = encrypt_data(req.password);
+  console.log(encrypt);
+
+  this.update({
+    'local.email': email
+  }, {
+      $set: {
+      'local.password':encrypt
+      }
+  }, cb);
 }
 
 var User = mongoose.model('User', userSchema);

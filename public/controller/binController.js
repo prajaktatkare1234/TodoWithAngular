@@ -1,8 +1,8 @@
-App.controller('archiveController', ['$scope', '$controller', function($scope, $controller){
+App.controller('binController', ['$scope', '$controller', function($scope, $controller){
   $controller('welcomeController', {$scope: $scope})
   //inside scope you the controllerOne scope will available
-  $scope.input_div=false;
-  $scope.keep="Archive";
+  $scope.bin_view=false;
+  $scope.keep="Bin";
   console.log($scope.input_div);
   $scope.archive_style={
     "background-color":"grey"

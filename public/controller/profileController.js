@@ -24,7 +24,8 @@ App.controller('profileController', function($scope,$uibModalInstance,$rootScope
     image_object={
       big_image:$scope.myImage,
       croped_image:$scope.myCroppedImage,
-      name:$rootScope.user_data.name
+      name:$rootScope.user_data.local.name,
+
     }
 
   var url="/profilePic";

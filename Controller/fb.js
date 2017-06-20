@@ -1,5 +1,5 @@
+
 var express = require('express');
-// var app = express();
 var router = express.Router();
 var User = require('../Model/index.js');
 var config=require('../Config/index.js');
@@ -7,17 +7,9 @@ var conf = require('../Config/config.js');
 
 var winston=require('winston');
 
-// var path = require('path');
-// var qs = require('querystring');
-
 var async = require('async');
 var bcrypt = require('bcryptjs');
 var bodyParser = require('body-parser');
-// var colors = require('colors');
-// var cors = require('cors');
-// var express = require('express');
-// var logger = require('morgan');
-// var jwt = require('jwt-simple');
 var jwt = require('jsonwebtoken');
 
 var moment = require('moment');
@@ -64,11 +56,14 @@ router.post('/', function(req, res) {
 
         // Step 2. Retrieve profile information about the current user.
         request.get({
+
             url: graphApiUrl,
             qs: accessToken,
             json: true
         }, function(err, response, profile) {
             if (response.statusCode !== 200) {
+
+
                 return res.status(500).send({
                     message: profile.error.message
                 });
@@ -77,7 +72,7 @@ router.post('/', function(req, res) {
             if (req.header('Authorization')) {
                   console.log("in Authorization");
                 User.findOne({
-                    'facebook.facebook': profile.id
+                    'social.facebook': profile.id
                 }, function(err, existingUser) {
                     if (existingUser) {
                       var token = createJWT(existingUser._id);
@@ -92,16 +87,16 @@ router.post('/', function(req, res) {
                     console.log("tokendggadgd",token);
                     var payload =     jwt.verify(token, conf.TOKEN_SECRET)
                     console.log("payload",payload);
-                    User.findById(payload.sub, function(err, user) {
+                    User.findById(payload, function(err, user) {
                         if (!user) {
                             return res.status(400).send({
                                 message: 'User not found'
                             });
                         }
-                        user.facebook.facebook = profile.id;
-                        user.facebook.picture = user.picture || 'https://graph.facebook.com/v2.3/' + profile.id + '/picture?type=large';
-                        user.facebook.displayName = user.displayName || profile.name;
-                        user.facebook.fbemail=profile.email;
+                        user.social.facebook = profile.id;
+                        user.social.picture = user.picture || 'https://graph.facebook.com/v2.3/' + profile.id + '/picture?type=large';
+                        user.social.displayName = user.displayName || profile.name;
+                        user.social.fbemail=profile.email;
                         var token = createJWT(user._id);
                         console.log("token",token);
                         res.cookie("cookie",token);
@@ -121,7 +116,7 @@ router.post('/', function(req, res) {
 
                 // Step 3. Create a new user account or return an existing one.
                 User.findOne({
-                    'facebook.facebook': profile.id
+                    'social.facebook': profile.id
                 }, function(err, existingUser) {
                     if (existingUser) {
                         // var token = createJWT(existingUser);
@@ -133,10 +128,10 @@ router.post('/', function(req, res) {
                         });
                     }
                     var user = new User();
-                    user.facebook.facebook = profile.id;
-                    user.facebook.picture = 'https://graph.facebook.com/' + profile.id + '/picture?type=large';
-                    user.facebook.displayName = profile.name;
-                    user.facebook.fbemail=profile.email;
+                    user.social.facebook = profile.id;
+                    user.social.picture = 'https://graph.facebook.com/' + profile.id + '/picture?type=large';
+                    user.social.displayName = profile.name;
+                    user.social.fbemail=profile.email;
                     console.log("saving in else");
                     var token = createJWT(user._id);
                         console.log("token",token);

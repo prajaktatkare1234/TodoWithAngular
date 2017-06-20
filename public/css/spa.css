@@ -34,18 +34,35 @@
   font-size: 14px;
 }
 #b1{
-  /*font-family: "Roboto", sans-serif;*/
-  /*text-transform: uppercase;*/
   outline: 0;
   background: #fb0;
-  /*width: 100%;*/
+  width: 100%;
   border: 0;
   padding: 15px;
   color: #FFFFFF;
   font-size: 14px;
 
 }
+#fbBtn{
+  outline: 0;
+  background:#3e5c9a;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
 
+}
+#googleBtn{
+  outline: 0;
+  background: #b92815;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+
+}
 .form .message {
   margin: 15px 0 0;
   color: #b3b3b3;

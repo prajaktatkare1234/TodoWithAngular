@@ -69,10 +69,9 @@
                         <img style="width:30px;height:30px; margin-top:-5px; " src="image/menu.svg" ng-click="sidebar=!sidebar;menu()"></img>
                     </a>
                     <a id="home" class="active">
-                        <img ng-show="input_div && reminder_div"id="google" src="image/google.svg" />
-                        <span ng-show="input_div && reminder_div"style="padding-left:10px;padding-right:20px;font-size:20;">Keep</span>
-                        <span ng-show="!input_div" style="padding-right:20px;font-size:25px">Archive</span>
-                          <span ng-show="!reminder_div" style="padding-right:20px;font-size:25px">Reminder</span>
+                        <img ng-show="input_div && reminder_div && bin_view"id="google" src="image/google.svg" />
+                      
+                            <span  style="padding-right:20px;font-size:25px">{{keep}}</span>
                     </a>
                     <input ng-style="search_archive" type="text" id="search" ng-model="search"></input>
                 </div>
@@ -96,15 +95,15 @@
 
                         <li >
                             <a ng-style="archive_style" style="background-color:#ffbb00;" class="dropdown-toggle" data-toggle="dropdown">
-                                <img id="drop_menu" ng-src="{{user_data.local.profile_pic || user_data.facebook.picture}}" alt="{{user_data.name.charAt(0) | uppercase}}">
+                                <img id="drop_menu" ng-src="{{user_data.local.profile_pic || user_data.social.picture}}" alt="{{user_data.name.charAt(0) | uppercase}}">
                                 </img>
                             </a>
                             <div id="drop_account" class="dropdown-menu">
-                                <img id="login-dp" class="circular--square" ng-src="{{user_data.local.profile_pic || user_data.facebook.picture}}" alt="{{user_data.name.charAt(0) | uppercase}}" />
+                                <img id="login-dp" class="circular--square" ng-src="{{user_data.local.profile_pic || user_data.social.picture}}" alt="{{user_data.name.charAt(0) | uppercase}}" />
                                 <a style="text-decoration:none;" ng-click="profile_pic()"><b>Change profile pic</b></a>
                                 <div class="btn-group">
-                                    <span style="padding:4px;"><b>{{user_data.local.name || user_data.facebook.displayName}}</b></span><br>
-                                    <span style="padding:4px;"><b>{{user_data.email || user_data.facebook.fbemail}}</b></span>
+                                    <span style="padding:4px;"><b>{{user_data.local.name || user_data.social.displayName}}</b></span><br>
+                                    <span style="padding:4px;"><b>{{user_data.local.email || user_data.social.fbemail || user_data.social.gmail}}</b></span>
                                 </div>
                                 <div style="padding:14px">
                                     <button class="btn-group" style="background-color:white;" type="button" value="signout" ng-click="logout()">Sign out
@@ -145,6 +144,11 @@
                         <img src="image/archive.svg" id="archive" ui-sref="archive"></img>
                         <span style="padding-left:30px;" >Archive</span></a>
                 </li>
+                <li class="sidebar-brand">
+                    <a ui-sref="bin">
+                        <img src="image/del.svg" id="bin" ui-sref="bin"></img>
+                        <span style="padding-left:30px;" >Bin</span></a>
+                </li>
 
                 </ul>
             </div>
@@ -155,7 +159,7 @@
             <div id="page-content-wrapper" ng-style="content">
                 <div class="container-fluid" id="r1">
                     <!-- div1 and div2 for input -->
-                    <div ng-show="input_div && reminder_div" class="row">
+                    <div ng-show="input_div && reminder_div && bin_view" class="row">
                         <div class="col-lg-4 col-md-3 col-sm-3"> </div>
                         <div class="col-lg-4 col-sm-6  col-xs-12" id="r2">
                             <div class="row" id="r3">
@@ -181,10 +185,12 @@
                     <div id="row_for_views" class="row">
                         <div class="col-lg-2 col-md-2 col-sm-2"> </div>
                         <div id="inner_div_for_views" class="col-lg-8 col-md-8 col-sm-8">
-                            <div ng-show="input_div && reminder_div" ng-include="'html/pinup.html'"></div>
-                            <div ng-show="input_div && reminder_div" ng-include="'html/view.html'"></div>
+                            <div ng-show="input_div && reminder_div && bin_view" ng-include="'html/pinup.html'"></div>
+                            <div ng-show="input_div && reminder_div && bin_view" ng-include="'html/view.html'"></div>
                             <div ng-show="!input_div" ng-include="'html/archive.html'"></div>
                             <div ng-show="!reminder_div" ng-include="'html/reminder.html'"></div>
+                            <div ng-show="!bin_view" ng-include="'html/bin.html'"></div>
+                        </div>
                         </div>
                     </div>
 

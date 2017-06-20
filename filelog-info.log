@@ -629,3 +629,1568 @@
 {"level":"info","message":"user info ","timestamp":"2017-06-16T13:58:51.953Z"}
 {"level":"info","message":"Getting card data","timestamp":"2017-06-16T13:58:51.956Z"}
 {"level":"info","message":"logged out Successfully","timestamp":"2017-06-16T13:59:43.388Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T03:36:22.081Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T03:36:22.092Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-17T03:36:33.729Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T03:36:33.743Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-17T03:36:35.999Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T03:36:36.021Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-17T03:36:37.582Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T03:36:37.593Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-17T03:36:39.632Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T03:36:39.646Z"}
+{"level":"info","message":"Giving background color to card","timestamp":"2017-06-17T03:36:47.762Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T03:36:47.764Z"}
+{"level":"info","message":"logged out Successfully","timestamp":"2017-06-17T04:00:10.881Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T04:06:17.620Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T04:06:17.641Z"}
+{"level":"info","message":"logged out Successfully","timestamp":"2017-06-17T04:06:20.168Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-17T04:39:11.830Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T04:39:11.834Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-17T04:39:37.634Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T04:39:37.639Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-17T04:41:17.808Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T04:41:17.811Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-17T04:41:20.545Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T04:41:20.556Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-17T04:41:23.746Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T04:41:23.753Z"}
+{"level":"info","message":"logged out Successfully","timestamp":"2017-06-17T04:46:14.875Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-17T04:46:25.298Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T04:46:25.299Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-17T04:49:04.060Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T04:49:04.068Z"}
+{"level":"info","message":"logged out Successfully","timestamp":"2017-06-17T04:49:06.881Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-17T04:58:25.396Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T04:58:25.409Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-17T05:02:49.503Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T05:02:49.515Z"}
+{"level":"info","message":"logged out Successfully","timestamp":"2017-06-17T05:02:53.246Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-17T05:03:02.521Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T05:03:02.529Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-17T05:04:49.475Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T05:04:49.484Z"}
+{"level":"info","message":"logged out Successfully","timestamp":"2017-06-17T05:04:53.049Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-17T05:04:58.280Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T05:04:58.281Z"}
+{"level":"info","message":"logged out Successfully","timestamp":"2017-06-17T05:05:24.382Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T05:05:30.116Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T05:05:30.124Z"}
+{"level":"info","message":"logged out Successfully","timestamp":"2017-06-17T05:15:09.947Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-17T05:15:29.544Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T05:15:29.546Z"}
+{"level":"info","message":"logged out Successfully","timestamp":"2017-06-17T05:15:54.979Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-17T05:16:05.260Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T05:16:05.268Z"}
+{"level":"info","message":"logged out Successfully","timestamp":"2017-06-17T05:16:18.731Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-17T05:18:01.337Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T05:18:01.341Z"}
+{"level":"info","message":"logged out Successfully","timestamp":"2017-06-17T05:18:13.546Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-17T05:18:20.212Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T05:18:20.212Z"}
+{"level":"info","message":"logged out Successfully","timestamp":"2017-06-17T05:18:37.393Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T05:18:55.599Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T05:18:55.600Z"}
+{"level":"info","message":"logged out Successfully","timestamp":"2017-06-17T05:19:14.489Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-17T05:19:20.156Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T05:19:20.160Z"}
+{"level":"info","message":"logged out Successfully","timestamp":"2017-06-17T05:19:37.612Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-17T05:20:04.702Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T05:20:04.703Z"}
+{"level":"info","message":"logged out Successfully","timestamp":"2017-06-17T05:20:26.047Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-17T05:22:22.957Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T05:22:22.963Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-17T05:23:29.147Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T05:23:29.155Z"}
+{"level":"info","message":"logged out Successfully","timestamp":"2017-06-17T05:23:32.011Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-17T05:25:08.750Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T05:25:08.759Z"}
+{"level":"info","message":"logged out Successfully","timestamp":"2017-06-17T05:25:19.630Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T05:25:35.871Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T05:25:35.872Z"}
+{"level":"info","message":"logged out Successfully","timestamp":"2017-06-17T05:25:43.270Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T05:25:52.321Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T05:25:52.323Z"}
+{"level":"info","message":"logged out Successfully","timestamp":"2017-06-17T05:26:37.158Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T05:27:27.602Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T05:27:27.602Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T05:28:07.820Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T05:28:07.822Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T05:29:31.878Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T05:29:31.879Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-17T05:29:43.255Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T05:29:43.257Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-17T05:29:48.434Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T05:29:48.435Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-17T05:29:53.356Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T05:29:53.358Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-17T05:29:54.871Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T05:29:54.883Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-17T05:30:01.003Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T05:30:01.006Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T05:37:41.015Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T05:37:41.016Z"}
+{"level":"info","message":"logged out Successfully","timestamp":"2017-06-17T05:37:45.603Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T05:37:49.272Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T05:37:49.273Z"}
+{"level":"info","message":"logged out Successfully","timestamp":"2017-06-17T05:39:29.458Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T05:40:14.471Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T05:40:14.472Z"}
+{"level":"info","message":"logged out Successfully","timestamp":"2017-06-17T05:40:47.260Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T05:43:02.365Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T05:43:02.366Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-17T05:45:35.365Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T05:45:35.368Z"}
+{"level":"info","message":"Giving background color to card","timestamp":"2017-06-17T05:45:40.082Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T05:45:40.087Z"}
+{"level":"info","message":"Giving background color to card","timestamp":"2017-06-17T05:45:43.723Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T05:45:43.725Z"}
+{"level":"info","message":"Giving background color to card","timestamp":"2017-06-17T05:45:46.547Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T05:45:46.551Z"}
+{"level":"info","message":"Giving background color to card","timestamp":"2017-06-17T05:45:49.578Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T05:45:49.580Z"}
+{"level":"info","message":"Giving background color to card","timestamp":"2017-06-17T05:45:52.449Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T05:45:52.465Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-17T06:00:28.031Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T06:00:28.041Z"}
+{"level":"info","message":"logged out Successfully","timestamp":"2017-06-17T06:04:24.365Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T06:04:30.684Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T06:04:30.688Z"}
+{"level":"info","message":"logged out Successfully","timestamp":"2017-06-17T06:05:14.746Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T06:05:25.415Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T06:05:25.418Z"}
+{"level":"info","message":"logged out Successfully","timestamp":"2017-06-17T06:06:07.248Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T06:10:32.453Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T06:10:32.454Z"}
+{"level":"info","message":"uploaded profile pic successfully","timestamp":"2017-06-17T06:11:55.064Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T06:12:01.201Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T06:12:01.203Z"}
+{"level":"info","message":"uploaded profile pic successfully","timestamp":"2017-06-17T06:12:17.152Z"}
+{"level":"info","message":"logged out Successfully","timestamp":"2017-06-17T06:13:07.507Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T06:18:44.965Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T06:18:44.967Z"}
+{"level":"info","message":"logged out Successfully","timestamp":"2017-06-17T06:18:56.502Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T06:19:27.032Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T06:19:27.035Z"}
+{"level":"info","message":"logged out Successfully","timestamp":"2017-06-17T06:19:39.054Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T06:20:33.428Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T06:20:33.430Z"}
+{"level":"info","message":"logged out Successfully","timestamp":"2017-06-17T06:20:41.212Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T06:21:10.427Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T06:21:10.428Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T06:21:19.807Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T06:21:19.811Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T06:21:19.966Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T06:21:19.967Z"}
+{"level":"info","message":"logged out Successfully","timestamp":"2017-06-17T06:22:00.120Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T06:22:09.524Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T06:22:09.525Z"}
+{"level":"info","message":"logged out Successfully","timestamp":"2017-06-17T06:22:56.275Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T06:23:02.601Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T06:23:02.607Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T07:09:28.785Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T07:09:28.796Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T07:10:38.841Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T07:10:38.844Z"}
+{"level":"info","message":"logged out Successfully","timestamp":"2017-06-17T07:10:44.574Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T07:10:55.494Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T07:10:55.496Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T07:11:03.947Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T07:11:03.949Z"}
+{"level":"info","message":"logged out Successfully","timestamp":"2017-06-17T07:11:07.894Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T07:11:22.424Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T07:11:22.428Z"}
+{"level":"info","message":"logged out Successfully","timestamp":"2017-06-17T07:11:30.587Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T07:11:34.172Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T07:11:34.176Z"}
+{"level":"info","message":"logged out Successfully","timestamp":"2017-06-17T07:14:01.524Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T07:14:07.330Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T07:14:07.332Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-17T07:14:25.393Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T07:14:25.397Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-17T07:14:36.486Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T07:14:36.491Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-17T07:14:38.406Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T07:14:38.416Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T07:15:29.318Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T07:15:29.322Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T07:15:54.466Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T07:15:54.467Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-17T07:17:05.768Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T07:17:05.769Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-17T07:17:12.918Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T07:17:12.919Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T07:22:01.810Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T07:22:01.812Z"}
+{"level":"info","message":"logged out Successfully","timestamp":"2017-06-17T07:22:05.521Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T07:22:11.335Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T07:22:11.338Z"}
+{"level":"info","message":"logged out Successfully","timestamp":"2017-06-17T07:22:31.133Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T07:22:38.043Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T07:22:38.045Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T07:25:47.062Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T07:25:47.063Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-17T07:29:53.750Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T07:29:53.758Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-17T07:29:58.113Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T07:29:58.114Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-17T07:30:02.473Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T07:30:02.482Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-17T07:30:07.387Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T07:30:07.389Z"}
+{"level":"info","message":"updated data card successfully","timestamp":"2017-06-17T07:30:14.401Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T07:30:14.421Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-17T07:30:21.946Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T07:30:21.952Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-17T07:30:29.875Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T07:30:29.876Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-17T07:30:35.729Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T07:30:35.731Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-17T07:30:38.287Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T07:30:38.301Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T07:30:40.724Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T07:30:40.732Z"}
+{"level":"info","message":"Giving background color to card","timestamp":"2017-06-17T07:30:45.467Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T07:30:45.469Z"}
+{"level":"info","message":"Giving background color to card","timestamp":"2017-06-17T07:30:47.509Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T07:30:47.516Z"}
+{"level":"info","message":"Giving background color to card","timestamp":"2017-06-17T07:30:49.351Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T07:30:49.354Z"}
+{"level":"info","message":"Giving background color to card","timestamp":"2017-06-17T07:30:51.323Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T07:30:51.325Z"}
+{"level":"info","message":"Giving background color to card","timestamp":"2017-06-17T07:30:54.704Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T07:30:54.708Z"}
+{"level":"info","message":"Giving background color to card","timestamp":"2017-06-17T07:30:57.127Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T07:30:57.140Z"}
+{"level":"info","message":"Giving background color to card","timestamp":"2017-06-17T07:30:59.345Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T07:30:59.349Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T07:33:29.406Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T07:33:29.408Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T07:45:20.459Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T07:45:20.460Z"}
+{"level":"info","message":"logged out Successfully","timestamp":"2017-06-17T07:45:25.743Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T07:45:47.277Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T07:45:47.278Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T07:55:51.449Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T07:55:51.452Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T07:55:52.095Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T07:55:52.097Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T07:55:52.692Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T07:55:52.693Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T07:55:52.994Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T07:55:52.996Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T07:55:53.351Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T07:55:53.352Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T07:55:53.998Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T07:55:54.017Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T07:55:54.311Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T07:55:54.313Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T07:55:55.089Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T07:55:55.090Z"}
+{"level":"info","message":"updated data card successfully","timestamp":"2017-06-17T09:35:01.839Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T09:35:01.853Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T09:35:03.354Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T09:35:03.355Z"}
+{"level":"info","message":"updated data card successfully","timestamp":"2017-06-17T09:41:42.844Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T09:41:42.862Z"}
+{"level":"info","message":"logged out Successfully","timestamp":"2017-06-17T09:42:08.804Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T09:51:34.726Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T09:51:34.728Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T09:51:46.140Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T09:51:46.142Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-17T09:53:00.991Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T09:53:01.005Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T09:53:25.209Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T09:53:25.210Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T09:53:29.732Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T09:53:29.733Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T09:53:30.032Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T09:53:30.037Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T09:53:34.200Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T09:53:34.202Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T09:53:34.529Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T09:53:34.533Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T09:53:38.990Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T09:53:38.991Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T09:53:39.298Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T09:53:39.299Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T09:53:43.864Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T09:53:43.865Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T09:53:44.163Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T09:53:44.167Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T09:57:11.697Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T09:57:11.699Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T09:57:12.006Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T09:57:12.012Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T09:57:13.579Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T09:57:13.585Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-17T09:57:16.124Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T09:57:16.134Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T09:57:19.809Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T09:57:19.811Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T09:57:20.114Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T09:57:20.117Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T09:57:51.575Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T09:57:51.583Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T09:57:53.585Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T09:57:53.599Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T09:57:56.704Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T09:57:56.710Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T09:58:00.309Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T09:58:00.320Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T09:58:04.223Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T09:58:04.228Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T09:58:08.954Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T09:58:08.956Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T09:58:13.410Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T09:58:13.416Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T09:58:16.830Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T09:58:16.834Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T09:58:19.586Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T09:58:19.587Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T10:10:09.419Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T10:10:09.429Z"}
+{"level":"info","message":"data card deleted Successfully","timestamp":"2017-06-17T10:10:14.035Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T10:10:14.036Z"}
+{"level":"info","message":"updated data card successfully","timestamp":"2017-06-17T10:10:31.434Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T10:10:31.454Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T10:10:35.991Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T10:10:35.997Z"}
+{"level":"info","message":"updated data card successfully","timestamp":"2017-06-17T10:12:04.618Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T10:12:04.650Z"}
+{"level":"info","message":"updated data card successfully","timestamp":"2017-06-17T10:12:08.250Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T10:12:08.279Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T10:14:01.792Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T10:14:01.800Z"}
+{"level":"info","message":"data card deleted Successfully","timestamp":"2017-06-17T10:14:06.794Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T10:14:06.799Z"}
+{"level":"info","message":"updated data card successfully","timestamp":"2017-06-17T10:14:11.921Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T10:14:11.938Z"}
+{"level":"info","message":"updated data card successfully","timestamp":"2017-06-17T10:14:14.879Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T10:14:14.898Z"}
+{"level":"info","message":"updated data card successfully","timestamp":"2017-06-17T10:14:17.824Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T10:14:17.843Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T10:18:15.481Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T10:18:15.485Z"}
+{"level":"info","message":"data card deleted Successfully","timestamp":"2017-06-17T10:18:20.029Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T10:18:20.035Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T10:18:48.010Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T10:18:48.012Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-17T10:18:52.472Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T10:18:52.480Z"}
+{"level":"info","message":"data card deleted Successfully","timestamp":"2017-06-17T10:18:57.539Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T10:18:57.542Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T10:18:59.533Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T10:18:59.537Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-17T10:19:05.623Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T10:19:05.626Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T10:19:56.133Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T10:19:56.137Z"}
+{"level":"info","message":"data card deleted Successfully","timestamp":"2017-06-17T10:20:25.956Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T10:20:25.961Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-17T10:20:31.573Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T10:20:31.577Z"}
+{"level":"info","message":"data card deleted Successfully","timestamp":"2017-06-17T10:20:33.809Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T10:20:33.815Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T10:20:36.768Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T10:20:36.771Z"}
+{"level":"info","message":"data card deleted Successfully","timestamp":"2017-06-17T10:23:07.192Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T10:23:07.195Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T10:23:11.669Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T10:23:11.673Z"}
+{"level":"info","message":"data card deleted Successfully","timestamp":"2017-06-17T10:23:16.126Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T10:23:16.128Z"}
+{"level":"info","message":"data card deleted Successfully","timestamp":"2017-06-17T10:23:17.972Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T10:23:17.988Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T10:23:21.403Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T10:23:21.405Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T10:23:29.681Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T10:23:29.682Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-17T11:01:18.710Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T11:01:18.715Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-17T11:01:22.453Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T11:01:22.464Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-17T11:01:24.644Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T11:01:24.654Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T11:01:27.538Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T11:01:27.544Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-17T11:09:37.436Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T11:09:37.438Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T11:12:00.040Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T11:12:00.041Z"}
+{"level":"info","message":"data card deleted Successfully","timestamp":"2017-06-17T11:12:02.599Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T11:12:02.602Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-17T11:12:08.631Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T11:12:08.640Z"}
+{"level":"info","message":"data card deleted Successfully","timestamp":"2017-06-17T11:15:05.159Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T11:15:05.161Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T11:16:42.837Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T11:16:42.845Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-17T11:16:46.385Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T11:16:46.387Z"}
+{"level":"info","message":"data card deleted Successfully","timestamp":"2017-06-17T11:16:48.659Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T11:16:48.671Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T11:20:01.649Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T11:20:01.658Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T11:20:16.368Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T11:20:16.378Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T11:20:34.039Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T11:20:34.049Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-17T12:27:16.354Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-17T12:27:16.362Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T03:32:20.284Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-19T03:32:20.309Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T03:32:29.735Z"}
+{"level":"info","message":"Giving background color to card","timestamp":"2017-06-19T03:32:29.784Z"}
+{"level":"info","message":"Giving background color to card","timestamp":"2017-06-19T03:32:32.370Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T03:32:32.381Z"}
+{"level":"info","message":"Giving background color to card","timestamp":"2017-06-19T03:32:35.242Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T03:32:35.246Z"}
+{"level":"info","message":"Giving background color to card","timestamp":"2017-06-19T03:32:37.615Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T03:32:37.627Z"}
+{"level":"info","message":"Giving background color to card","timestamp":"2017-06-19T03:32:39.832Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T03:32:39.846Z"}
+{"level":"info","message":"Giving background color to card","timestamp":"2017-06-19T03:32:42.451Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T03:32:42.453Z"}
+{"level":"info","message":"Giving background color to card","timestamp":"2017-06-19T03:32:45.040Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T03:32:45.044Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-19T03:57:37.054Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T03:57:37.070Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-19T03:57:40.039Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T03:57:40.055Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-19T03:57:42.597Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T03:57:42.598Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-19T03:57:45.143Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T03:57:45.162Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-19T03:57:46.774Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T03:57:46.789Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-19T03:57:48.822Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T03:57:48.837Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-19T03:57:50.380Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T03:57:50.393Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-19T03:57:51.749Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T03:57:51.761Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-19T03:57:53.684Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T03:57:53.698Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-19T03:57:54.788Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T03:57:54.803Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-19T03:57:55.972Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T03:57:55.997Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-19T03:57:57.732Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T03:57:57.743Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-19T03:57:58.779Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T03:57:58.797Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-19T03:58:02.728Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T03:58:02.733Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-19T03:58:04.916Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T03:58:04.931Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-19T03:58:06.931Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T03:58:06.945Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-19T03:58:08.372Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T03:58:08.383Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-19T03:58:12.028Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T03:58:12.039Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-19T03:58:15.699Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T03:58:15.713Z"}
+{"level":"info","message":"data card deleted Successfully","timestamp":"2017-06-19T03:58:23.086Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T03:58:23.090Z"}
+{"level":"info","message":"data card deleted Successfully","timestamp":"2017-06-19T03:58:25.891Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T03:58:25.897Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-19T03:58:27.355Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T03:58:27.367Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-19T03:58:28.716Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T03:58:28.728Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-19T03:58:31.124Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T03:58:31.137Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-19T03:58:32.715Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T03:58:32.728Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-19T03:58:34.739Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T03:58:34.750Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-19T03:58:37.396Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T03:58:37.408Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-19T03:58:40.587Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T03:58:40.598Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-19T03:58:43.134Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T03:58:43.142Z"}
+{"level":"info","message":"updated data card successfully","timestamp":"2017-06-19T03:58:46.642Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T03:58:46.662Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-19T03:58:51.303Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T03:58:51.304Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-19T03:58:53.357Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T03:58:53.376Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-19T03:58:54.571Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T03:58:54.583Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-19T03:58:57.243Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T03:58:57.256Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-19T03:59:01.610Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T03:59:01.624Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-19T03:59:04.683Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T03:59:04.695Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-19T03:59:05.988Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T03:59:06.000Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-19T03:59:08.043Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T03:59:08.055Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-19T03:59:59.810Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T03:59:59.812Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-19T04:00:04.124Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T04:00:04.143Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-19T04:00:05.314Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T04:00:05.337Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-19T04:00:06.226Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T04:00:06.239Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-19T04:00:06.906Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T04:00:06.921Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-19T04:00:07.643Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T04:00:07.653Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-19T04:00:09.066Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T04:00:09.080Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-19T04:00:10.538Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T04:00:10.549Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-19T04:00:11.755Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T04:00:11.765Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-19T04:00:13.626Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T04:00:13.638Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-19T04:00:15.370Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T04:00:15.382Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-19T04:00:17.099Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T04:00:17.109Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-19T04:00:36.027Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T04:00:36.038Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-19T04:00:38.218Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T04:00:38.231Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-19T04:01:40.452Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T04:01:40.453Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-19T04:01:42.669Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T04:01:42.687Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-19T04:01:44.257Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T04:01:44.269Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-19T04:01:45.145Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T04:01:45.157Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-19T04:01:47.145Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T04:01:47.160Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-19T04:01:48.675Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T04:01:48.687Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-19T04:01:50.234Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T04:01:50.244Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-19T04:01:51.473Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T04:01:51.492Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-19T04:01:53.466Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T04:01:53.480Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-19T04:01:55.273Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T04:01:55.285Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-19T04:01:57.548Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T04:01:57.550Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-19T04:03:04.669Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T04:03:04.676Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-19T04:03:08.194Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T04:03:08.195Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-19T04:14:40.307Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T04:14:40.316Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-19T04:18:02.295Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T04:18:02.298Z"}
+{"level":"info","message":"logged out Successfully","timestamp":"2017-06-19T04:40:46.147Z"}
+{"level":"info","message":"Registered successfully","timestamp":"2017-06-19T07:58:17.423Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2017-06-19T07:59:21.923Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-19T07:59:22.105Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T07:59:22.109Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-19T07:59:26.085Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T07:59:26.087Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-19T07:59:32.089Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T07:59:32.092Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-19T07:59:36.394Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T07:59:36.397Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-19T07:59:40.732Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T07:59:40.735Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-19T07:59:46.240Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T07:59:46.242Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-19T07:59:48.183Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T07:59:48.197Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-19T07:59:51.400Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T07:59:51.414Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-19T07:59:53.834Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T07:59:53.835Z"}
+{"level":"info","message":"Giving background color to card","timestamp":"2017-06-19T07:59:56.910Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T07:59:56.913Z"}
+{"level":"info","message":"Giving background color to card","timestamp":"2017-06-19T07:59:58.633Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T07:59:58.643Z"}
+{"level":"info","message":"Giving background color to card","timestamp":"2017-06-19T08:00:00.786Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T08:00:00.791Z"}
+{"level":"info","message":"Giving background color to card","timestamp":"2017-06-19T08:00:02.961Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T08:00:02.964Z"}
+{"level":"info","message":"uploaded profile pic successfully","timestamp":"2017-06-19T08:00:17.737Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-19T08:00:20.669Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T08:00:20.676Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-19T08:00:31.928Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T08:00:31.934Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-19T08:02:07.094Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T08:02:07.095Z"}
+{"level":"info","message":"logged out Successfully","timestamp":"2017-06-19T08:03:02.205Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-19T08:03:18.857Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T08:03:18.860Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-19T08:03:27.744Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T08:03:27.746Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-19T08:03:30.796Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T08:03:30.797Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-19T08:03:32.463Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T08:03:32.476Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-19T08:03:35.536Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T08:03:35.540Z"}
+{"level":"info","message":"logged out Successfully","timestamp":"2017-06-19T08:03:37.759Z"}
+{"level":"info","message":"Registered successfully","timestamp":"2017-06-19T08:04:02.969Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-19T08:04:06.793Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T08:04:06.795Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-19T08:04:11.362Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T08:04:11.366Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-19T08:04:15.358Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T08:04:15.359Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-19T08:04:16.758Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T08:04:16.772Z"}
+{"level":"info","message":"logged out Successfully","timestamp":"2017-06-19T08:04:20.645Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2017-06-19T08:05:01.571Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-19T08:05:01.732Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T08:05:01.733Z"}
+{"level":"info","message":"uploaded profile pic successfully","timestamp":"2017-06-19T08:05:12.867Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-19T08:05:17.381Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T08:05:17.382Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-19T08:05:22.057Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T08:05:22.063Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-19T08:08:11.496Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T08:08:11.504Z"}
+{"level":"info","message":"uploaded profile pic successfully","timestamp":"2017-06-19T08:08:18.700Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-19T08:08:20.765Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T08:08:20.768Z"}
+{"level":"info","message":"logged out Successfully","timestamp":"2017-06-19T08:08:51.859Z"}
+{"level":"info","message":"Registered successfully","timestamp":"2017-06-19T08:10:05.033Z"}
+{"level":"info","message":"Registered successfully","timestamp":"2017-06-19T08:13:18.536Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2017-06-19T08:13:32.055Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-19T08:13:32.222Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T08:13:32.236Z"}
+{"level":"info","message":"uploaded profile pic successfully","timestamp":"2017-06-19T08:13:40.766Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-19T08:13:47.496Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T08:13:47.499Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-19T08:13:52.606Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T08:13:52.612Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-19T09:35:08.149Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T09:35:08.152Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-19T09:35:14.763Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T09:35:14.766Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-19T09:35:17.081Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T09:35:17.096Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-19T09:35:22.548Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T09:35:22.551Z"}
+{"level":"info","message":"Giving background color to card","timestamp":"2017-06-19T09:35:27.445Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T09:35:27.448Z"}
+{"level":"info","message":"Giving background color to card","timestamp":"2017-06-19T09:35:29.164Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T09:35:29.165Z"}
+{"level":"info","message":"Giving background color to card","timestamp":"2017-06-19T09:35:34.526Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T09:35:34.533Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-19T09:36:39.532Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T09:36:39.537Z"}
+{"level":"info","message":"logged out Successfully","timestamp":"2017-06-19T09:36:51.349Z"}
+{"level":"info","message":"Registered successfully","timestamp":"2017-06-19T11:19:00.106Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-19T12:13:17.975Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T12:13:17.980Z"}
+{"level":"info","message":"logged out Successfully","timestamp":"2017-06-19T12:13:26.200Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-19T12:13:36.492Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T12:13:36.503Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-19T12:21:49.338Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T12:21:49.341Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-19T12:21:53.828Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T12:21:53.830Z"}
+{"level":"info","message":"logged out Successfully","timestamp":"2017-06-19T12:21:57.046Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-19T13:32:04.588Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T13:32:04.601Z"}
+{"level":"info","message":"logged out Successfully","timestamp":"2017-06-19T13:32:16.924Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-19T13:56:09.596Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T13:56:09.602Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-19T13:56:15.226Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T13:56:15.231Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-19T13:56:22.569Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T13:56:22.570Z"}
+{"level":"info","message":"logged out Successfully","timestamp":"2017-06-19T13:56:30.170Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-19T13:56:33.900Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T13:56:33.910Z"}
+{"level":"info","message":"logged out Successfully","timestamp":"2017-06-19T13:56:50.274Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-19T13:57:26.888Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-19T13:57:26.889Z"}
+{"level":"info","message":"logged out Successfully","timestamp":"2017-06-19T13:57:32.296Z"}
+{"level":"info","message":"Registered successfully","timestamp":"2017-06-19T13:58:47.326Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2017-06-20T03:33:45.511Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T03:33:45.793Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T03:33:45.799Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T03:33:50.840Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-20T03:33:50.889Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T03:33:53.409Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T03:33:53.411Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-20T03:33:57.562Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T03:33:57.564Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-20T03:34:02.026Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T03:34:02.028Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-20T03:34:04.302Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T03:34:04.317Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T03:34:07.016Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T03:34:07.017Z"}
+{"level":"info","message":"Giving background color to card","timestamp":"2017-06-20T03:34:10.427Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T03:34:10.428Z"}
+{"level":"info","message":"Giving background color to card","timestamp":"2017-06-20T03:34:12.921Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T03:34:12.922Z"}
+{"level":"info","message":"Giving background color to card","timestamp":"2017-06-20T03:34:18.906Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T03:34:18.908Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-20T03:34:26.968Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T03:34:26.972Z"}
+{"level":"info","message":"updated data card successfully","timestamp":"2017-06-20T03:34:49.377Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T03:34:49.395Z"}
+{"level":"info","message":"updated data card successfully","timestamp":"2017-06-20T03:34:54.334Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T03:34:54.350Z"}
+{"level":"info","message":"updated data card successfully","timestamp":"2017-06-20T03:34:58.965Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T03:34:58.982Z"}
+{"level":"info","message":"updated data card successfully","timestamp":"2017-06-20T03:35:39.943Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T03:35:39.969Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T03:45:09.539Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T03:45:09.549Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T03:45:14.179Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T03:45:14.187Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T03:45:18.626Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T03:45:18.635Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T03:45:34.530Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T03:45:34.534Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T03:45:37.664Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T03:45:37.665Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T03:45:44.069Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T03:45:44.069Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T03:45:44.673Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T03:45:44.678Z"}
+{"level":"info","message":"uploaded profile pic successfully","timestamp":"2017-06-20T03:45:57.714Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T03:46:00.486Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T03:46:00.487Z"}
+{"level":"info","message":"uploaded profile pic successfully","timestamp":"2017-06-20T03:46:18.173Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T03:46:20.205Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T03:46:20.206Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T03:47:58.374Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T03:47:58.376Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T03:52:58.889Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T03:52:58.897Z"}
+{"level":"info","message":"uploaded profile pic successfully","timestamp":"2017-06-20T03:53:05.885Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T03:53:08.211Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T03:53:08.213Z"}
+{"level":"info","message":"logged out Successfully","timestamp":"2017-06-20T03:53:35.566Z"}
+{"level":"info","message":"Registered successfully","timestamp":"2017-06-20T03:53:56.940Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2017-06-20T03:54:12.894Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T03:54:13.055Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T03:54:13.057Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T03:54:20.860Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T03:54:20.861Z"}
+{"level":"info","message":"uploaded profile pic successfully","timestamp":"2017-06-20T03:54:33.743Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T03:54:36.051Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T03:54:36.054Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-20T03:54:41.259Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T03:54:41.260Z"}
+{"level":"info","message":"updated data card successfully","timestamp":"2017-06-20T03:54:46.509Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T03:54:46.526Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-20T03:54:52.179Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T03:54:52.180Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-20T03:54:59.282Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T03:54:59.286Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-20T03:55:01.630Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T03:55:01.642Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T03:55:03.297Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T03:55:03.302Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-20T03:55:13.493Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T03:55:13.496Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T03:55:33.077Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T03:55:33.079Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:00:10.802Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:00:10.810Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:00:13.082Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:00:13.084Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:00:16.567Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:00:16.569Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:01:19.029Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:01:19.033Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:01:21.474Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:01:21.476Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:01:24.560Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:01:24.568Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:01:26.657Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:01:26.659Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:01:44.347Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:01:44.349Z"}
+{"level":"info","message":"data card deleted Successfully","timestamp":"2017-06-20T04:02:01.492Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:02:01.493Z"}
+{"level":"info","message":"data card deleted Successfully","timestamp":"2017-06-20T04:02:04.276Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:02:04.278Z"}
+{"level":"info","message":"data card deleted Successfully","timestamp":"2017-06-20T04:02:07.597Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:02:07.600Z"}
+{"level":"info","message":"data card deleted Successfully","timestamp":"2017-06-20T04:02:10.195Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:02:10.197Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:02:13.909Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:02:13.910Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:02:16.050Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:02:16.051Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:02:51.803Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:02:51.805Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:02:54.642Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:02:54.643Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-20T04:02:59.188Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:02:59.189Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-20T04:03:03.383Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:03:03.385Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:03:55.678Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:03:55.683Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:04:20.374Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:04:20.383Z"}
+{"level":"info","message":"data card deleted Successfully","timestamp":"2017-06-20T04:04:27.473Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:04:27.488Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:04:33.692Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:04:33.697Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:08:29.448Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:08:29.453Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:08:32.818Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:08:32.831Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:13:05.084Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:13:05.091Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-20T04:13:28.502Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:13:28.508Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-20T04:13:34.632Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:13:34.637Z"}
+{"level":"info","message":"data card deleted Successfully","timestamp":"2017-06-20T04:13:38.410Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:13:38.415Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:13:41.949Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:13:41.956Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:14:25.398Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:14:25.405Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:14:27.869Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:14:27.870Z"}
+{"level":"info","message":"data card deleted Successfully","timestamp":"2017-06-20T04:14:31.728Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:14:31.729Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:14:33.844Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:14:33.845Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:14:36.747Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:14:36.749Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:14:40.264Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:14:40.266Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:14:42.888Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:14:42.889Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:14:53.446Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:14:53.447Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:14:54.398Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:14:54.399Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:14:54.929Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:14:54.934Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:15:45.237Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:15:45.237Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:15:47.782Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:15:47.786Z"}
+{"level":"info","message":"data card deleted Successfully","timestamp":"2017-06-20T04:15:50.360Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:15:50.361Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:16:53.685Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:16:53.687Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-20T04:17:00.462Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:17:00.465Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:17:04.508Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:17:04.509Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:17:30.439Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:17:30.440Z"}
+{"level":"info","message":"data card deleted Successfully","timestamp":"2017-06-20T04:17:33.597Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:17:33.600Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:17:37.123Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:17:37.124Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:18:16.160Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:18:16.161Z"}
+{"level":"info","message":"data card deleted Successfully","timestamp":"2017-06-20T04:18:19.900Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:18:19.902Z"}
+{"level":"info","message":"data card deleted Successfully","timestamp":"2017-06-20T04:18:29.254Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:18:29.255Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-20T04:19:06.291Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:19:06.296Z"}
+{"level":"info","message":"data card deleted Successfully","timestamp":"2017-06-20T04:19:25.652Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:19:25.662Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:20:18.881Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:20:18.892Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-20T04:20:24.069Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:20:24.072Z"}
+{"level":"info","message":"data card deleted Successfully","timestamp":"2017-06-20T04:20:28.417Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:20:28.422Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:20:33.919Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:20:33.928Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:21:16.012Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:21:16.013Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:21:21.401Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:21:21.402Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:21:25.664Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:21:25.665Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:21:49.345Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:21:49.348Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-20T04:22:03.245Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:22:03.256Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:22:06.511Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:22:06.518Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:23:00.815Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:23:00.826Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:23:05.107Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:23:05.109Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:23:07.722Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:23:07.723Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:23:10.166Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:23:10.169Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-20T04:23:15.139Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:23:15.144Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-20T04:23:20.860Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:23:20.866Z"}
+{"level":"info","message":"data card deleted Successfully","timestamp":"2017-06-20T04:23:24.122Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:23:24.127Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:23:26.911Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:23:26.913Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:23:29.142Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:23:29.145Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:25:16.461Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:25:16.462Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:25:28.182Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:25:28.183Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:25:30.426Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:25:30.427Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-20T04:25:35.811Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:25:35.814Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:25:40.578Z"}
+{"level":"info","message":"data card deleted Successfully","timestamp":"2017-06-20T04:25:40.579Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:25:42.519Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:25:42.520Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:25:45.306Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:25:45.311Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:25:47.838Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:25:47.840Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:25:48.393Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:25:48.394Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:26:19.778Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:26:19.779Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:26:22.455Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:26:22.458Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-20T04:26:26.858Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:26:26.861Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-20T04:26:32.787Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:26:32.796Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:26:37.492Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:26:37.495Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:27:24.107Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:27:24.111Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:27:28.955Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:27:28.961Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:27:31.897Z"}
+{"level":"info","message":"data card deleted Successfully","timestamp":"2017-06-20T04:27:31.898Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:27:33.746Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:27:33.750Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:27:39.322Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:27:39.323Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:27:41.489Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:27:41.490Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:27:41.994Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:27:41.995Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:28:04.430Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:28:04.431Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:28:06.094Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:28:06.096Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:28:12.517Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:28:12.519Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-20T04:28:20.273Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:28:20.274Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-20T04:28:26.113Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:28:26.115Z"}
+{"level":"info","message":"data card deleted Successfully","timestamp":"2017-06-20T04:28:29.144Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:28:29.145Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:28:32.104Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:28:32.108Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:28:34.518Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:28:34.519Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:29:20.591Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:29:20.596Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:29:23.223Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:29:23.224Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-20T04:29:28.142Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:29:28.143Z"}
+{"level":"info","message":"data card deleted Successfully","timestamp":"2017-06-20T04:29:30.885Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:29:30.890Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:29:37.316Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:29:37.317Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:30:03.956Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:30:03.957Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:30:25.507Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:30:25.508Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:30:29.441Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:30:29.442Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:31:02.703Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:31:02.704Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:31:45.107Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:31:45.108Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:31:51.293Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:31:51.294Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:31:54.796Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:31:54.798Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:31:57.203Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:31:57.204Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:32:00.881Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:32:00.881Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:32:05.779Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:32:05.787Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-20T04:32:10.901Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:32:10.904Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:32:37.613Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:32:37.614Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:32:50.870Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:32:50.871Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:32:54.518Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:32:54.519Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-20T04:32:58.878Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:32:58.879Z"}
+{"level":"info","message":"data card deleted Successfully","timestamp":"2017-06-20T04:33:03.533Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:33:03.534Z"}
+{"level":"info","message":"data card deleted Successfully","timestamp":"2017-06-20T04:33:05.365Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:33:05.376Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:33:09.680Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:33:09.686Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:34:36.427Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:34:36.429Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:40:56.694Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:40:56.703Z"}
+{"level":"info","message":"data card deleted Successfully","timestamp":"2017-06-20T04:41:01.537Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:41:01.539Z"}
+{"level":"info","message":"data card deleted Successfully","timestamp":"2017-06-20T04:41:16.165Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:41:16.172Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:41:33.749Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:41:33.753Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-20T04:41:37.497Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:41:37.502Z"}
+{"level":"info","message":"data card deleted Successfully","timestamp":"2017-06-20T04:41:39.980Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:41:39.988Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:41:42.048Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:41:42.057Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:41:45.131Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:41:45.134Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-20T04:41:49.624Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:41:49.626Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-20T04:41:55.226Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:41:55.232Z"}
+{"level":"info","message":"data card deleted Successfully","timestamp":"2017-06-20T04:41:57.854Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:41:57.862Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:42:00.339Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:42:00.342Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:42:03.090Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:42:03.092Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:42:08.617Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:42:08.623Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-20T04:42:13.658Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:42:13.666Z"}
+{"level":"info","message":"data card deleted Successfully","timestamp":"2017-06-20T04:42:16.185Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:42:16.190Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:42:22.871Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:42:22.873Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:42:25.254Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:42:25.254Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:42:38.600Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:42:38.601Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:42:40.171Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:42:40.174Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-20T04:42:47.889Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:42:47.890Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:42:54.135Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:42:54.136Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-20T04:42:59.242Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:42:59.244Z"}
+{"level":"info","message":"data card deleted Successfully","timestamp":"2017-06-20T04:43:10.346Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:43:10.347Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:44:14.683Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:44:14.689Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-20T04:44:18.493Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:44:18.495Z"}
+{"level":"info","message":"data card deleted Successfully","timestamp":"2017-06-20T04:44:20.833Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:44:20.834Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:45:54.611Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:45:54.618Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-20T04:45:58.564Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:45:58.568Z"}
+{"level":"info","message":"data card deleted Successfully","timestamp":"2017-06-20T04:46:02.144Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:46:02.149Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:46:04.147Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:46:04.153Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:46:06.677Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:46:06.680Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:48:43.891Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:48:43.901Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:48:47.522Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:48:47.526Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:49:00.172Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:49:00.174Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-20T04:49:03.314Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:49:03.316Z"}
+{"level":"info","message":"data card deleted Successfully","timestamp":"2017-06-20T04:49:07.011Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:49:07.012Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:49:10.265Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:49:10.279Z"}
+{"level":"info","message":"data card deleted Successfully","timestamp":"2017-06-20T04:50:00.655Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:50:00.657Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:50:05.558Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:50:05.559Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:56:31.308Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:56:31.315Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:56:33.839Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:56:33.843Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-20T04:56:37.069Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:56:37.071Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-20T04:56:44.162Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:56:44.168Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:56:48.333Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:56:48.336Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:56:53.998Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:56:54.014Z"}
+{"level":"info","message":"data card deleted Successfully","timestamp":"2017-06-20T04:56:57.083Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:56:57.087Z"}
+{"level":"info","message":"data card deleted Successfully","timestamp":"2017-06-20T04:57:00.229Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:57:00.231Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:57:42.855Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:57:42.856Z"}
+{"level":"info","message":"data card deleted Successfully","timestamp":"2017-06-20T04:57:45.983Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:57:45.984Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:58:36.334Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:58:36.337Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T04:58:39.724Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T04:58:39.726Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T05:00:26.068Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:00:26.076Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T05:03:54.596Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:03:54.605Z"}
+{"level":"info","message":"data card deleted Successfully","timestamp":"2017-06-20T05:04:24.952Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:04:24.956Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T05:04:26.631Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:04:26.642Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T05:05:32.544Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:05:32.545Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-20T05:05:36.861Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:05:36.865Z"}
+{"level":"info","message":"data card deleted Successfully","timestamp":"2017-06-20T05:06:35.487Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:06:35.493Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-20T05:06:40.137Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:06:40.148Z"}
+{"level":"info","message":"data card deleted Successfully","timestamp":"2017-06-20T05:06:43.081Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:06:43.084Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T05:06:44.799Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:06:44.801Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T05:06:46.945Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:06:46.945Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T05:07:02.254Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:07:02.256Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T05:07:14.797Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:07:14.805Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-20T05:07:29.838Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:07:29.843Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-20T05:07:33.837Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:07:33.843Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-20T05:07:39.383Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:07:39.389Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-20T05:07:42.153Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:07:42.169Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T05:07:45.192Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:07:45.198Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T05:07:50.552Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:07:50.553Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T05:07:53.873Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:07:53.884Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T05:07:57.202Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:07:57.203Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T05:08:01.584Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:08:01.588Z"}
+{"level":"info","message":"data card deleted Successfully","timestamp":"2017-06-20T05:08:05.600Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:08:05.608Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T05:08:08.532Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:08:08.533Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T05:08:11.335Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:08:11.337Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T05:09:18.441Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:09:18.449Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T05:09:23.028Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:09:23.030Z"}
+{"level":"info","message":"data card deleted Successfully","timestamp":"2017-06-20T05:09:29.221Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:09:29.229Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T05:10:30.859Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:10:30.860Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T05:10:53.494Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:10:53.496Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T05:10:56.219Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:10:56.225Z"}
+{"level":"info","message":"data card deleted Successfully","timestamp":"2017-06-20T05:10:58.665Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:10:58.668Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T05:11:00.925Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:11:00.928Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T05:11:02.669Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:11:02.672Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T05:12:16.129Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:12:16.138Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T05:12:16.632Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:12:16.636Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T05:12:45.159Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:12:45.162Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-20T05:12:51.175Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:12:51.177Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T05:12:53.285Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:12:53.286Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-20T05:12:57.397Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:12:57.401Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-20T05:13:02.217Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:13:02.222Z"}
+{"level":"info","message":"data card deleted Successfully","timestamp":"2017-06-20T05:13:48.817Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:13:48.826Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T05:14:01.288Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:14:01.291Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T05:14:55.631Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:14:55.638Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T05:15:00.599Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:15:00.625Z"}
+{"level":"info","message":"data card deleted Successfully","timestamp":"2017-06-20T05:15:03.075Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:15:03.082Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T05:15:55.566Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:15:55.576Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T05:16:01.682Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:16:01.699Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T05:16:10.773Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:16:10.775Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-20T05:16:15.788Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:16:15.791Z"}
+{"level":"info","message":"data card deleted Successfully","timestamp":"2017-06-20T05:16:18.464Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:16:18.467Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T05:16:21.892Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:16:21.894Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T05:16:27.862Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:16:27.865Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-20T05:16:32.132Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:16:32.134Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T05:16:33.657Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:16:33.659Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T05:16:36.519Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:16:36.520Z"}
+{"level":"info","message":"data card deleted Successfully","timestamp":"2017-06-20T05:16:39.403Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:16:39.407Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T05:16:41.848Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:16:41.857Z"}
+{"level":"info","message":"data card deleted Successfully","timestamp":"2017-06-20T05:16:46.310Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:16:46.313Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T05:16:48.828Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:16:48.829Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T05:18:24.861Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:18:24.862Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T05:18:26.802Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:18:26.803Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T05:18:28.581Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:18:28.584Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T05:18:32.560Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:18:32.562Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-20T05:18:40.682Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:18:40.684Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-20T05:18:44.552Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:18:44.555Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-20T05:18:49.845Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:18:49.851Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-20T05:18:54.888Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:18:54.892Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-20T05:18:56.611Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:18:56.621Z"}
+{"level":"info","message":"Giving background color to card","timestamp":"2017-06-20T05:19:02.398Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:19:02.400Z"}
+{"level":"info","message":"Giving background color to card","timestamp":"2017-06-20T05:19:04.521Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:19:04.529Z"}
+{"level":"info","message":"Giving background color to card","timestamp":"2017-06-20T05:19:06.977Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:19:06.990Z"}
+{"level":"info","message":"Giving background color to card","timestamp":"2017-06-20T05:19:09.955Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:19:09.957Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-20T05:19:18.050Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:19:18.053Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-20T05:19:24.012Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:19:24.014Z"}
+{"level":"info","message":"Giving background color to card","timestamp":"2017-06-20T05:19:28.274Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:19:28.276Z"}
+{"level":"info","message":"updated data card successfully","timestamp":"2017-06-20T05:19:36.509Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:19:36.525Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-20T05:19:48.275Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:19:48.282Z"}
+{"level":"info","message":"Giving background color to card","timestamp":"2017-06-20T05:19:52.966Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:19:52.968Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-20T05:19:54.976Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:19:54.987Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T05:19:57.590Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:19:57.593Z"}
+{"level":"info","message":"data card deleted Successfully","timestamp":"2017-06-20T05:20:05.245Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:20:05.247Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T05:20:08.363Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:20:08.365Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T05:20:51.602Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:20:51.604Z"}
+{"level":"info","message":"data card deleted Successfully","timestamp":"2017-06-20T05:21:33.324Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:21:33.327Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T05:21:39.433Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:21:39.435Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T05:22:00.953Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:22:00.954Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T05:22:04.010Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:22:04.013Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T05:23:06.488Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:23:06.491Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T05:28:30.907Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:28:30.908Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T05:29:58.070Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:29:58.074Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T05:30:24.285Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:30:24.287Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T05:30:41.895Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:30:41.895Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T05:31:23.348Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:31:23.350Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T05:31:26.729Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:31:26.731Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T05:31:30.299Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:31:30.307Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T05:31:33.355Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:31:33.357Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T05:31:37.371Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:31:37.375Z"}
+{"level":"info","message":"reminder set Successfully","timestamp":"2017-06-20T05:31:42.496Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:31:42.498Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T05:31:45.128Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:31:45.130Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T05:32:18.110Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:32:18.112Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-20T05:35:30.007Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:35:30.008Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T05:35:33.208Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:35:33.210Z"}
+{"level":"info","message":"Giving background color to card","timestamp":"2017-06-20T05:35:40.644Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:35:40.649Z"}
+{"level":"info","message":"reminder set Successfully","timestamp":"2017-06-20T05:35:43.477Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:35:43.480Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T05:35:47.986Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:35:47.988Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T05:35:51.333Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:35:51.335Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-20T05:35:55.627Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:35:55.638Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T05:35:59.865Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:35:59.869Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:36:04.831Z"}
+{"level":"info","message":"data card deleted Successfully","timestamp":"2017-06-20T05:36:04.832Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T05:36:07.345Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:36:07.352Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T05:36:14.351Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:36:14.353Z"}
+{"level":"info","message":"data card deleted Successfully","timestamp":"2017-06-20T05:36:32.550Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:36:32.552Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T05:36:35.558Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:36:35.562Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-20T05:36:40.051Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:36:40.065Z"}
+{"level":"info","message":"data card deleted Successfully","timestamp":"2017-06-20T05:36:43.419Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T05:36:43.424Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T06:08:34.698Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T06:08:34.702Z"}
+{"level":"info","message":"logged out Successfully","timestamp":"2017-06-20T06:08:37.885Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T06:44:17.871Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T06:44:17.878Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-20T06:44:24.412Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T06:44:24.416Z"}
+{"level":"info","message":"logged out Successfully","timestamp":"2017-06-20T06:44:26.744Z"}
+{"level":"error","message":"Registration failed ","timestamp":"2017-06-20T07:14:36.863Z"}
+{"level":"error","message":"Registration failed ","timestamp":"2017-06-20T07:14:42.053Z"}
+{"level":"info","message":"Registered successfully","timestamp":"2017-06-20T07:15:38.087Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-20T09:57:21.809Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-20T09:57:21.816Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-20T09:57:31.927Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-20T09:57:31.928Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-20T09:57:32.708Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-20T09:57:32.708Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-20T10:38:24.146Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-20T10:38:24.150Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-20T10:39:25.561Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-20T10:39:25.563Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-20T10:39:53.015Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-20T10:39:53.023Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-20T10:40:42.068Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-20T10:40:42.070Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-20T10:42:26.283Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-20T10:42:26.292Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-20T10:43:08.021Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-20T10:43:08.024Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-20T10:44:02.376Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-20T10:44:02.386Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-20T10:44:42.627Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-20T10:44:42.633Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-20T10:47:09.918Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-20T10:47:09.926Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-20T10:47:46.808Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-20T10:47:46.818Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-20T10:50:16.483Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-20T10:50:16.486Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-20T10:52:48.095Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-20T10:52:48.103Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-20T10:53:11.679Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-20T10:53:11.689Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-20T10:54:49.687Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-20T10:54:49.699Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-20T10:56:01.469Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-20T10:56:01.474Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2017-06-20T10:56:27.837Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T10:56:28.022Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T10:56:28.023Z"}
+{"level":"info","message":"logged out Successfully","timestamp":"2017-06-20T10:57:09.705Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T11:06:21.436Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T11:06:21.439Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-20T11:06:31.586Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T11:06:31.589Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-20T11:06:38.816Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T11:06:38.818Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-20T11:06:46.140Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T11:06:46.141Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-20T11:09:00.493Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T11:09:00.496Z"}
+{"level":"info","message":"Giving background color to card","timestamp":"2017-06-20T11:09:04.459Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T11:09:04.462Z"}
+{"level":"info","message":"Giving background color to card","timestamp":"2017-06-20T11:09:07.399Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T11:09:07.400Z"}
+{"level":"info","message":"Giving background color to card","timestamp":"2017-06-20T11:09:09.985Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T11:09:09.988Z"}
+{"level":"info","message":"Giving background color to card","timestamp":"2017-06-20T11:09:13.770Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T11:09:13.773Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-20T11:09:17.152Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T11:09:17.165Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T11:09:19.441Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T11:09:19.444Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T11:13:01.332Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T11:13:01.333Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T11:13:01.440Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T11:13:01.440Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T11:13:03.947Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T11:13:03.950Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T11:13:04.075Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T11:13:04.096Z"}
+{"level":"info","message":"updated data card successfully","timestamp":"2017-06-20T11:16:09.721Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T11:16:09.735Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T11:16:13.002Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T11:16:13.005Z"}
+{"level":"info","message":"logged out Successfully","timestamp":"2017-06-20T11:17:18.693Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2017-06-20T11:17:37.615Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T11:17:37.774Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T11:17:37.775Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T11:17:47.145Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T11:17:47.146Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-20T11:22:26.793Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T11:22:26.794Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-20T11:22:35.598Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T11:22:35.601Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T11:23:43.213Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T11:23:43.215Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-20T11:23:50.700Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T11:23:50.701Z"}
+{"level":"info","message":"pinned data card","timestamp":"2017-06-20T11:23:53.458Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T11:23:53.471Z"}
+{"level":"info","message":"uploaded profile pic successfully","timestamp":"2017-06-20T11:24:06.957Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T11:24:09.298Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T11:24:09.299Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T11:28:40.586Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T11:28:40.588Z"}
+{"level":"info","message":"uploaded profile pic successfully","timestamp":"2017-06-20T11:28:52.951Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T11:28:57.540Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T11:28:57.541Z"}
+{"level":"info","message":"logged out Successfully","timestamp":"2017-06-20T11:50:02.637Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2017-06-20T12:47:52.298Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T12:47:52.523Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T12:47:52.526Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T12:47:58.095Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T12:47:58.106Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T12:48:00.526Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T12:48:00.527Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T12:48:16.532Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T12:48:16.534Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T12:48:18.331Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T12:48:18.334Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T12:48:20.580Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T12:48:20.580Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T12:48:22.631Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T12:48:22.633Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T12:48:25.257Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T12:48:25.258Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T12:48:27.579Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T12:48:27.588Z"}
+{"level":"info","message":"Giving background color to card","timestamp":"2017-06-20T12:49:09.970Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T12:49:09.972Z"}
+{"level":"info","message":"Giving background color to card","timestamp":"2017-06-20T12:49:11.790Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T12:49:11.793Z"}
+{"level":"info","message":"logged out Successfully","timestamp":"2017-06-20T12:49:44.817Z"}
+{"level":"info","message":"Registered successfully","timestamp":"2017-06-20T12:50:11.798Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-20T12:51:28.716Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-20T12:51:28.719Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2017-06-20T12:51:52.374Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T12:51:52.646Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T12:51:52.649Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-20T12:56:58.827Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-20T12:56:58.828Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2017-06-20T12:57:10.142Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T12:57:10.273Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T12:57:10.275Z"}
+{"level":"info","message":" data card saved Successfully","timestamp":"2017-06-20T12:57:17.714Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T12:57:17.716Z"}
+{"level":"info","message":"logged out Successfully","timestamp":"2017-06-20T12:57:37.754Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T12:59:36.006Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T12:59:36.014Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T12:59:36.178Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T12:59:36.184Z"}
+{"level":"info","message":"logged out Successfully","timestamp":"2017-06-20T12:59:39.783Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-20T13:01:21.056Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T13:01:21.057Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-20T13:01:24.609Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T13:01:24.610Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-20T13:01:30.003Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T13:01:30.005Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T13:01:30.536Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-20T13:01:30.537Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-20T13:01:30.952Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T13:01:30.952Z"}
+{"level":"info","message":"logged out Successfully","timestamp":"2017-06-20T13:02:00.600Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-20T13:02:04.813Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T13:02:04.820Z"}
+{"level":"info","message":"logged out Successfully","timestamp":"2017-06-20T13:02:08.030Z"}
+{"level":"info","message":"logged out Successfully","timestamp":"2017-06-20T13:02:46.614Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-20T13:03:04.754Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T13:03:04.755Z"}
+{"level":"info","message":"logged out Successfully","timestamp":"2017-06-20T13:03:15.968Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2017-06-20T13:03:22.314Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T13:03:22.473Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T13:03:22.476Z"}
+{"level":"info","message":"uploaded profile pic successfully","timestamp":"2017-06-20T13:03:41.494Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T13:03:43.111Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T13:03:43.113Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-20T13:04:13.540Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T13:04:13.541Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-20T13:04:46.336Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T13:04:46.336Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-20T13:04:48.099Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T13:04:48.100Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-20T13:04:57.748Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T13:04:57.753Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-20T13:05:00.925Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T13:05:00.927Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-20T13:05:03.523Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T13:05:03.524Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-20T13:05:15.996Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T13:05:15.997Z"}
+{"level":"info","message":"logged out Successfully","timestamp":"2017-06-20T13:05:34.704Z"}
+{"level":"info","message":"logged out Successfully","timestamp":"2017-06-20T13:05:35.335Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T13:05:58.681Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T13:05:58.682Z"}
+{"level":"info","message":"logged out Successfully","timestamp":"2017-06-20T13:06:27.655Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T13:07:15.788Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T13:07:15.789Z"}
+{"level":"info","message":"logged out Successfully","timestamp":"2017-06-20T13:07:26.902Z"}
+{"level":"info","message":"Registered successfully","timestamp":"2017-06-20T13:08:50.664Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2017-06-20T13:09:09.237Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T13:09:09.395Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T13:09:09.396Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T13:09:12.592Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T13:09:12.593Z"}
+{"level":"info","message":"uploaded profile pic successfully","timestamp":"2017-06-20T13:09:22.375Z"}
+{"level":"info","message":"user info ","timestamp":"2017-06-20T13:09:25.588Z"}
+{"level":"info","message":"Getting card data","timestamp":"2017-06-20T13:09:25.592Z"}
+{"level":"info","message":"logged out Successfully","timestamp":"2017-06-20T13:09:29.036Z"}

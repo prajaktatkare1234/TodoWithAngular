@@ -1,8 +1,8 @@
 <div ng-class="grid_show" class="row">
-<div style="margin-top:-30px;margin-left:16px;font-size:20px;"><b>Others</b></div>
+<div style="margin-top:-30px;margin-left:16px;font-size:20px;" ng-show="!pin"><b>Others</b></div>
 
 
-<div id="outerbox" style="margin-bottom:18px;" ng-if="!x.archive && !x.pinned " ng-repeat="x in data_info | filter:search as results track by $index" ng-class="view_change" testpackery  >
+<div id="outerbox" style="margin-bottom:18px;" ng-if="!x.archive && !x.pinned && x.isDeleted!==true" ng-repeat="x in data_info | filter:search as results track by $index" ng-class="view_change" testpackery  >
   <div  ng-class="innerbox" style="background-color:{{x.bgcolor}}" ng-mouseover="card_icon=true" ng-mouseleave="card_icon=false">
 
     <div ng-show="card_icon">

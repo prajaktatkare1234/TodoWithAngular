@@ -5,9 +5,11 @@ console.log("in welcomeController");
     $scope.pop = true;
     $scope.input_div=true;
     $scope.reminder_div=true;
+    $scope.bin_view=true;
     $scope.today="today";
     $scope.tomorrow="tomorrow";
     $scope.next="next";
+    $scope.keep="keep";
     $scope.callAtInterval=  function () {
      for(var j in $rootScope.data_info)
      {
@@ -41,19 +43,19 @@ console.log( $scope.input_div);
             if(data.data.status==true)
             { $rootScope.user_data=data.data.user_data;
               $rootScope.myImage=data.data.user_data.original_pic;
-              // var str=window.location.hash;
-              //   console.log(hash);
-              //   var hash=hash.split("/");
-              //     // console.log(hash);
-              //     if(hash[1]=="welcome")
-              //     {
-              //
+              var str=window.location.hash;
+                console.log(hash);
+                var hash=hash.split("/");
+                  // console.log(hash);
+                  if(hash[1]=="welcome")
+                  {
+
                    $state.go('welcome');
-              //     }
-              //     if(hash[1]=="archive")
-              //     {
-              //      $state.go('archive');
-              //     }
+                  }
+                  if(hash[1]=="archive")
+                  {
+                   $state.go('archive');
+                  }
 
             }
             else{
@@ -390,6 +392,13 @@ $scope.pinup=function(id,pin,archive)
                 var cards = [];
                 for (var i = data.data.data_info.length - 1; i >= 0; i--) {
                     cards[cards.length] = data.data.data_info[i];
+                    if(data.data.data_info[i].pinned)
+                    {
+                      $scope.pin=true;
+                    }
+                    else {
+                      $scope.pin=false;
+                    }
 
 
 
@@ -479,11 +488,14 @@ $scope.pinup=function(id,pin,archive)
 
 
     };
-    $scope.delete = function(id) {
-        console.log("xdfdgdrnggfhhgf");
+    $scope.delete = function(id,dele) {
+        console.log("xdfdgdrnggfhhgf",dele);
         var url="/deleteCard/" + id + "";
         console.log(url);
-        var obj = todo_service.App(url);
+        var object={
+          delete:dele
+        }
+        var obj = todo_service.App(url,object);
         obj.then(function(data) {
 
 

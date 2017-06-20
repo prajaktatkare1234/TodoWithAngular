@@ -1,24 +1,21 @@
-
-
-
 <div id="show" ng-class="grid_show"  class="row">
   <!-- <div style="margin-top:-20px;margin-left:15px;"><b>pinned</b></div> -->
 
 
 
-      <div id="outerbox" style="margin-bottom:18px;"ng-if="x.archive && !x.pinned && x.isDeleted!==true"  ng-repeat="x in data_info | filter:search as results track by $index" ng-class="view_change"   >
+      <div id="outerbox" style="margin-bottom:18px;" ng-if="x.isDeleted"  ng-repeat="x in data_info | filter:search as results track by $index" ng-class="view_change"   >
         <div  ng-class="innerbox" style="background-color:{{x.bgcolor}}" ng-mouseover="card_icon=true" ng-mouseleave="card_icon=false">
-          <div ng-show="card_icon">
+          <!-- <div ng-show="card_icon">
             <img   id="pin" src="image/pin.svg" ng-click="pinup(x._id,'true','false')" />
-          </div>
+          </div> -->
           <div ng-click="open(x)" id="title_div" ng-bind-html="x.title"></div>
           <div ng-click="open(x)" id="note_div" ng-bind-html="x.take_note"> </div>
             <div style="height:40px">
-              <div ng-show="card_icon">
+              <!-- <div ng-show="card_icon"> -->
 
                 <!-- shown On hover -->
                 <!-- reminder -->
-             <div class="btn-group" uib-dropdown dropdown-append-to-body="true">
+             <!-- <div class="btn-group" uib-dropdown dropdown-append-to-body="true">
                   <img  style="padding:4px" src="image/Reminder.svg" uib-dropdown-toggle ng-disabled="disabled"></img>
                   <ul id="picker" class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
                     <li role="menuitem"><a ng-click="remind(x._id,today)">Later today</a></li>
@@ -47,21 +44,21 @@
                     </li>
 
                   </ul>
-                </div>
+                </div> -->
 
                 <!-- paint -->
-                 <div class="btn-group" uib-dropdown dropdown-append-to-body="true">
+                 <!-- <div class="btn-group" uib-dropdown dropdown-append-to-body="true">
                   <img style="padding:4px" src="image/paint.svg" uib-dropdown-toggle ng-disabled="disabled"></img>
                   <div class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
                     <a ng-repeat="y in bgcolor">  <li class="btn-group" style="border-radius:50%;background-color:{{y.color}};border:none;height:25px;width:25px;" ng-click="select_color(x._id,y.color)">
 
                     </li></a>
                   </div>
-                </div>
+                </div> -->
 
-                <div class="btn-group" >
+                <!-- <div class="btn-group" >
                   <a ><img id="arc" src="image/un_archive.svg" ng-click="archive(x._id,'false')" /></a>
-                </div>
+                </div> -->
 
 
 
@@ -70,10 +67,10 @@
                   <img  id="arc" src="image/more.svg" uib-dropdown-toggle ng-disabled="disabled"> </img>
                   <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
                     <li role="menuitem">
-                      <a style="text-decoration:none;" ng-click="delete(x._id)">Delete note</a>
+                      <a style="text-decoration:none;" ng-click="delete(x._id,'delete')">Delete permanently</a>
                     </li>
                     <li role="menuitem">
-                      <a ng-click=copy(x)>Make a copy</a>
+                      <a ng-click=delete(x._id,'restore')>Restore</a>
                     </li>
                   </ul>
                 </div>
@@ -83,14 +80,14 @@
               </div>
 
               <!-- display reminder -->
-               <div>
+               <!-- <div>
                 <div ng-if="x.remind_at" style="border-top:2px dashed;border-top-color:#e8e8e8;padding-top:10px;">
                   <span>
                     <span>{{x.remind_at | date:' EEE dd-MMM, hh:mm a'}}</span>
                     <img id="arc" style="float:right;padding:2px;" src="image/cancel.svg"ng-click="delete_reminder(x._id)" </img>
                     </span>
                   </div>
-                </div>
+                </div> -->
 
 
             </div>
