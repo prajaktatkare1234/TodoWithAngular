@@ -1,6 +1,6 @@
 App.controller('binController', ['$scope', '$controller', function($scope, $controller){
   $controller('welcomeController', {$scope: $scope})
-  //inside scope you the controllerOne scope will available
+  
   $scope.bin_view=false;
   $scope.keep="Bin";
   console.log($scope.input_div);

@@ -2,8 +2,9 @@ var express = require('express');
 var app = express();
 var morgan=require('morgan');
 var winston=require('winston');
-var passport = require('passport');
+
 var nodemailer=require('nodemailer');
+
 
 
 
@@ -36,9 +37,6 @@ app.use(bodyParser.json({limit: '10mb'}));
 app.use(bodyParser.urlencoded({extended:true,limit: '10mb'}));
 app.use(express.static('./public'));
 app.use(validator());
-
-app.use(passport.initialize());
-app.use(passport.session());
 
 app.use(require('./Controller'));
 var server = app.listen(p, function() {

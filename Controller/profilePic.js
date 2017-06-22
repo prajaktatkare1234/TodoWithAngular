@@ -6,8 +6,8 @@ var winston=require('winston');
 
 
 router.post('/', function(req, res) {
-  // console.log(req.body);
-  console.log("ghfhgjfhgfhk");
+
+
   var save=function(pic_name,pic){
     fs.writeFile('public/profile_pic/'+pic_name, pic, {
       encoding: 'base64'
@@ -27,7 +27,7 @@ router.post('/', function(req, res) {
     save(crop,croped_image);
 
     var url= '/profile_pic/'+crop;
-  var  url_object={
+    var  url_object={
       profile_pic:'/profile_pic/'+crop,
       original_pic:'/profile_pic/'+original,
     }

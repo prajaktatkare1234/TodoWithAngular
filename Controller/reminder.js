@@ -6,7 +6,7 @@ var winston=require('winston');
 
 router.post('/:id', function(req, res) {
     var data_id=req.params.id;
-    console.log("asfsadf",req.body);
+  
     User.remind(data_id,req.body,function(err, result) {
 
 

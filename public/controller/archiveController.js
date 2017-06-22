@@ -1,6 +1,6 @@
 App.controller('archiveController', ['$scope', '$controller', function($scope, $controller){
   $controller('welcomeController', {$scope: $scope})
-  //inside scope you the controllerOne scope will available
+  
   $scope.input_div=false;
   $scope.keep="Archive";
   console.log($scope.input_div);

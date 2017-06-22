@@ -1,51 +1,49 @@
-App.controller('signinController', function($scope,$state,todo_service,$rootScope,$auth) {
+App.controller('signinController', function($scope, $state, todo_service, $rootScope, $auth) {
 
 
-    $rootScope.check=function(){
+    $rootScope.check = function() {
         console.log("inside check");
-           var url= "/userInfo/";
-        var obj = todo_service.App(url);
+        var url = "/userInfo/";
+        var action="POST";
+        var obj = todo_service.App(url,action);
         obj.then(function(data) {
-          if(data.data.status==true)
-          { $rootScope.user_data=data.data.user_data;
-            $rootScope.myImage=data.data.user_data.original_pic;
-            console.log("hgsajfsdaf",data.data.user_data);
-            $state.go('welcome');
+            if (data.data.status == true) {
+                $rootScope.user_data = data.data.user_data;
+                $rootScope.myImage = data.data.user_data.original_pic;
 
-          }
-          else{
-              $state.go('signin');
-          }
+                $state.go('welcome');
+
+            } else {
+                $state.go('signin');
+            }
         }).catch(function(error) {
 
         })
 
-      }
-      $scope.check();
+    }
+    $scope.check();
 
-      // $scope.authenticate = function(provider) {
-      //     $auth.authenticate(provider);
-      //   };
-      $scope.authenticate = function(provider) {
+
+    $scope.authenticate = function(provider) {
         $auth.authenticate(provider)
-       .then(function() {
-        //  toastr.success('You have successfully signed in with ' + provider + '!');
-              console.log("logged in");
-         $state.go('welcome');
+            .then(function() {
+                //  toastr.success('You have successfully signed in with ' + provider + '!');
+                console.log("logged in");
+                $state.go('welcome');
 
-       })
-       .catch(function(error) {
-         if (error.message) {
-           // Satellizer promise reject error.
-          //  toastr.error(error.message);
-         } else if (error.data) {
-           // HTTP response error from server
-          //  toastr.error(error.data.message, error.status);
-         } else {
-          //  toastr.error(error);
-         }
-       });
-   };
+            })
+            .catch(function(error) {
+                if (error.message) {
+                    // Satellizer promise reject error.
+                    //  toastr.error(error.message);
+                } else if (error.data) {
+                    // HTTP response error from server
+                    //  toastr.error(error.data.message, error.status);
+                } else {
+                    //  toastr.error(error);
+                }
+            });
+    };
 
 
 
@@ -59,24 +57,21 @@ App.controller('signinController', function($scope,$state,todo_service,$rootScop
             password: password
 
         }
-          var url= "/signIn";
-
-        var obj = todo_service.App(url,object);
+        var url = "/signIn";
+        var action="POST";
+        var obj = todo_service.App(url, action,object);
         obj.then(function(data) {
-          console.log(data.data.status,"sign_in");
-          if(data.data.status==true)
-          {
-            // console.log(data.data);
-            // $location.path('/welcome');
-            $state.go('welcome');
-        }
-          else{
-            console.log("ghfhjhj");
-              $state.go('signin');
-          }
+
+            if (data.data.status == true) {
+
+                $state.go('welcome');
+            } else {
+                console.log("ghfhjhj");
+                $state.go('signin');
+            }
 
         }).catch(function(error) {
 
         })
     }
-  });
+});

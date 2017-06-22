@@ -7,8 +7,8 @@ var winston=require('winston');
   User.profile(req.decode,function(err,data){
     if(data)
     {
-      console.log("in user",data);
-  winston.info("user info ");
+
+      winston.info("user info ");
     obj={
       user_id:data._id,
       name:data.name,
@@ -21,7 +21,7 @@ var winston=require('winston');
     }
     else
     {
-      console.log("in else of userInfo");
+
       winston.error("failed to get user info");
       res.send({message:"err","status":false})
     }

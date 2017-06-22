@@ -7,8 +7,6 @@ var config=require('../Config/index.js')
 var User = require('../Model/index.js');
 var winston=require('winston');
 
-// console.log("in controller");
-
 router.post('/', function(req, res) {
 var result1 = {};
  result1.status = false;
@@ -17,11 +15,11 @@ var result1 = {};
      req.check(config.validationSchema.sign_in);
      req.getValidationResult().then(function(isValid) {
        try {
-        //  console.log("hii");
+
          if (!isValid.isEmpty()) {
-          //  console.log("err");
+
            var errors = req.validationErrors()
-           // isValid = isValid.useFirstErrorOnly();
+
            throw errors[0].msg;
 
          }
@@ -41,7 +39,7 @@ var result1 = {};
         } else {
             if (result) {
               winston.info("logged in successfully");
-                // console.log("r", result);
+
                 var token = jwt.sign({
                     _id: result._id
                 }, conf.TOKEN_SECRET, {
@@ -76,7 +74,7 @@ var result1 = {};
       }
       res.send(result1);
       return;
-        // res.send({"message":e})
+        
     }
   });
 }catch (e) {

@@ -18,6 +18,7 @@ router.post('/', function(req, res) {
 
   if(req.body.updation!=="change")
   {
+
     console.log("old");
     var result1 = {};
    result1.status = false;
@@ -25,11 +26,11 @@ router.post('/', function(req, res) {
      req.check(config.validationSchema.sign_up);
      req.getValidationResult().then(function(isValid){
        try{
-        //  console.log("hii");
+
          if (!isValid.isEmpty()) {
-          //  console.log("err");
+        
            var errors = req.validationErrors()
-           // isValid = isValid.useFirstErrorOnly();
+
            throw errors[0].msg;
 
          }
@@ -63,7 +64,7 @@ router.post('/', function(req, res) {
            }
            res.send(result1);
            return;
-             // res.send({"message":e})
+
          }
 
 
@@ -80,19 +81,17 @@ router.post('/', function(req, res) {
 
   }
   else{
-    var token = req.headers.cookie;
-    token=token.substr(7);
-    console.log("token",token);
+    var token= req.body.token
   var email;
   jwt.verify(token, conf.TOKEN_SECRET,function(err,decoded){
-    // console.log("err",err,"decoded",decoded);
+
     email=decoded.email;
     console.log("check dhdsfkjghdfjkshgjkfdslghjfkd",email);
     console.log("in change password",req.body);
     User.changePassword(req.body,email,function(err,data){
       if(data)
       {
-
+        res.clearCookie('cookie');
         res.send({"user_data":data,"status":true})
       }
       else

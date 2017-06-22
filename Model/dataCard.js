@@ -29,7 +29,7 @@ var data_card_Schema = Schema({
     bgcolor:{
       type:String
     },
-    archive:{
+    isArchived:{
       type:Boolean
     },
     pinned:{
@@ -45,13 +45,13 @@ var data_card_Schema = Schema({
 });
 var data_card_detail;
 data_card_Schema.statics.save_data = function(req,d_no, cb) {
-  var d = new Date();
+  var date = new Date();
     data_card_detail = new this({
         d_no:d_no._id,
         title:req.title,
         take_note:req.take_note,
-        created:d,
-        updated:d,
+        created:date,
+        updated:date,
         bgcolor:req.bgcolor
 
     });
@@ -102,7 +102,7 @@ data_card_Schema.statics.mark_as_archived = function(data_id,req,cb) {
         _id: data_id
     }, {
         $set: {
-        archive:req.archive,
+        isArchived:req.archive,
         pinned:req.pinned
         }
     }, cb);
@@ -115,7 +115,7 @@ data_card_Schema.statics.pinned = function(data_id,req,cb) {
     }, {
         $set: {
         pinned:req.pin,
-        archive:req.archive
+        isArchived:req.archive
         }
     }, cb);
 };
@@ -151,7 +151,7 @@ else if(req.delete=='restore')
       isDeleted:false,
       pinned:false,
       reminder:false,
-      archive:true
+      isArchive:true
 
 
       }
@@ -178,7 +178,7 @@ else{
 
 };
 data_card_Schema.statics.get_data = function(req, cb) {
-
+console.log("get data",req);
     this.find({d_no:req._id},cb);
 };
 

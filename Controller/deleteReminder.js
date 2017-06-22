@@ -6,7 +6,7 @@ var winston=require('winston');
 
 router.post('/:id',function(req, res) {
     var data_id=req.params.id;
-    console.log("asfsadf",data_id);
+  
     User.delete_reminder(data_id, function(err, result) {
 
 

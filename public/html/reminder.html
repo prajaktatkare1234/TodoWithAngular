@@ -36,7 +36,7 @@
                               </span>
 
                             </div>
-                            <a style="padding-left:5px;"ng-click="remind(x._id,toDo.remainder)">Save</a>
+                            <a style="padding-left:65px;text-decoration:none;"ng-click="remind(x._id,toDo.remainder)">Save</a>
                             </a>
                         <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
                         <datetimepicker data-ng-model="toDo.remainder" data-datetimepicker-config="{ dropdownSelector: '#dropdown2' }"/>
@@ -54,15 +54,15 @@
                  <div class="btn-group" uib-dropdown dropdown-append-to-body="true">
                   <img style="padding:4px" src="image/paint.svg" uib-dropdown-toggle ng-disabled="disabled"></img>
                   <div class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
-                    <a ng-repeat="y in bgcolor"><  <li class="btn-group" style="border-radius:50%;background-color:{{y.color}};border:none;height:25px;width:25px;" ng-click="select_color(x._id,y.color)">
+                    <a ng-repeat="y in bgcolor"> <li class="btn-group" style="border-radius:50%;background-color:{{y.color}};border:none;height:25px;width:25px;" ng-click="select_color(x._id,y.color)">
 
                     </li></a>
                   </div>
                 </div>
 
                 <div class="btn-group" >
-                  <a ng-if="x.archive"><img id="arc" src="image/un_archive.svg" ng-click="archive(x._id,'false')" /></a>
-                  <a ng-if="!x.archive" ><img id="arc" src="image/archive.svg" ng-click="archive(x._id,'true')" /></a>
+                  <a ng-if="x.isArchived"><img id="arc" src="image/un_archive.svg" ng-click="archive(x._id,'false')" /></a>
+                  <a ng-if="!x.isArchived" ><img id="arc" src="image/archive.svg" ng-click="archive(x._id,'true')" /></a>
                 </div>
 
 

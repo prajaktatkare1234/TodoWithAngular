@@ -1,13 +1,12 @@
 var express = require('express');
 var router = express.Router();
 var User = require('../Model/dataCard.js');
-// console.log("in controller");
 var winston=require('winston');
 
 
 router.post('/:id',function(req, res) {
     var data_id=req.params.id;
-    console.log("asfsadf",data_id,req.body);
+  
     User.delete_data(data_id,req.body, function(err, result) {
 
 

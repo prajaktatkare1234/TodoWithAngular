@@ -7,7 +7,7 @@ var winston=require('winston');
 
 router.post('/', function(req, res) {
 
-    // console.log("req.decode", req.decode);
+  
     User.save_data(req.body, req.decode, function(err, result) {
 
 
@@ -22,7 +22,7 @@ router.post('/', function(req, res) {
             });
         } else {
             if (result) {
-                // console.log("r", result);
+
 
 
                 winston.info(" data card saved Successfully");

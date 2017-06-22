@@ -2,11 +2,11 @@
 
 
 <div id="show" ng-class="grid_show"  class="row">
-  <!-- <div style="margin-top:-20px;margin-left:15px;"><b>pinned</b></div> -->
 
 
 
-      <div id="outerbox" style="margin-bottom:18px;"ng-if="x.archive && !x.pinned && x.isDeleted!==true"  ng-repeat="x in data_info | filter:search as results track by $index" ng-class="view_change"   >
+
+      <div id="outerbox" style="margin-bottom:18px;"ng-if="x.isArchived && !x.pinned && x.isDeleted!==true"  ng-repeat="x in data_info | filter:search as results track by $index" ng-class="view_change"   >
         <div  ng-class="innerbox" style="background-color:{{x.bgcolor}}" ng-mouseover="card_icon=true" ng-mouseleave="card_icon=false">
           <div ng-show="card_icon">
             <img   id="pin" src="image/pin.svg" ng-click="pinup(x._id,'true','false')" />
@@ -35,7 +35,7 @@
                               </span>
 
                             </div>
-                            <a style="padding-left:5px;"ng-click="remind(x._id,toDo.remainder)">Save</a>
+                            <a style="padding-left:65px;text-decoration:none;"ng-click="remind(x._id,toDo.remainder)">Save</a>
                             </a>
                         <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
                         <datetimepicker data-ng-model="toDo.remainder" data-datetimepicker-config="{ dropdownSelector: '#dropdown2' }"/>

@@ -17,17 +17,13 @@ var mongoose = require('mongoose');
 var request = require('request');
 
 function createJWT(user) {
-    // var payload = {
-    //     _id: user,
-    //     // iat: moment().unix(),
-    //     // exp: moment().add(14, 'days').unix()
-    // };
+
     return jwt.sign({
         _id: user
     }, conf.TOKEN_SECRET, {
         expiresIn: 60 * 60 * 24
     });
-    // return jwt.encode(payload, conf.TOKEN_SECRET);
+
 }
 
 
@@ -68,7 +64,7 @@ router.post('/', function(req, res) {
                     message: profile.error.message
                 });
             }
-            console.log("kdxfnhdsjkfhdas");
+        
             if (req.header('Authorization')) {
                   console.log("in Authorization");
                 User.findOne({

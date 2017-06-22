@@ -9,7 +9,7 @@ App.controller('signupController', function($scope,$state,todo_service) {
         var email = $scope.email;
         var password = $scope.pass;
         var repass = $scope.repass;
-        // console.log(email);
+
 
 
         var object = {
@@ -18,13 +18,14 @@ App.controller('signupController', function($scope,$state,todo_service) {
             password: password
         }
           var url= "/signUp";
-        var obj = todo_service.App(url,object);
+            var action="POST";
+        var obj = todo_service.App(url,action,object);
         obj.then(function(data) {
           console.log(data);
           if(data.data.status==true)
 
           {
-            console.log("sdfjkadkjfdksf");
+            
             $state.go('signin');
           }
           else{

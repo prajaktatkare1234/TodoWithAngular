@@ -1,8 +1,6 @@
 var App = angular.module('App', ['ui.router', 'ngSanitize', 'ngStorage', 'ui.bootstrap', 'ui.bootstrap.datetimepicker', 'ngImgCrop', 'ngNotify', 'satellizer']);
 App.config(function($stateProvider, $urlRouterProvider, $authProvider) {
 
-    $urlRouterProvider.otherwise('/signin');
-
     $stateProvider.state('signin', {
             url: '/signin',
             templateUrl: 'html/signin.html',
@@ -19,96 +17,57 @@ App.config(function($stateProvider, $urlRouterProvider, $authProvider) {
             url: '/welcome',
             templateUrl: 'html/welcome.html',
             controller: 'welcomeController',
-            // onEnter : function(){
-            //     console.log('inside table');
-            // }
+
         })
         .state('archive', {
             url: '/archive',
             templateUrl: 'html/welcome.html',
             controller: 'archiveController',
-            // onEnter : function(){
-            //     console.log('inside table');
-            // }
+
         })
         .state('reminder', {
             url: '/reminder',
             templateUrl: 'html/welcome.html',
             controller: 'reminderController',
-            // onEnter : function(){
-            //     console.log('inside table');
-            // }
+
         })
         .state('bin', {
             url: '/bin',
             templateUrl: 'html/welcome.html',
             controller: 'binController',
-            // onEnter : function(){
-            //     console.log('inside table');
-            // }
+
         })
         .state('verifyEmail', {
             url: '/verifyEmail',
             templateUrl: 'html/verifyEmail.html',
             controller: 'resetpasswordController',
-            // onEnter : function(){
-            //     console.log('inside table');
-            // }
+          
         })
         .state('changePassword', {
-            url: '/changePassword',
+            url: '/changePassword/:token',
             templateUrl: 'html/changePassword.html',
             controller: 'resetpasswordController',
-            // onEnter : function(){
-            //     console.log('inside table');
-            // }
-        })
-        // .state('', {
-        //     url: '/reminder',
-        //     templateUrl: 'html/welcome.html',
-        //     controller: 'reminderController',
-        //     // onEnter : function(){
-        //     //     console.log('inside table');
-        //     // }
-        // })
+
+        });
+
+            $urlRouterProvider.otherwise('/signin');
+
+
         $authProvider.facebook({
             name: 'facebook',
             clientId: '1783193788658916'
-            // responseType:'token',
-            // url: '/auth/facebook',
-            // authorizationEndpoint: 'https://www.facebook.com/dialog/oauth',
-            // redirectUri: window.location.origin || window.location.protocol + '//' + window.location.host + '/',
-            // scope: 'email',
-            // scopeDelimiter: ',',
-            // requiredUrlParams: ['display', 'scope'],
-            // display: 'popup',
-            // type: '2.0',
-            // popupOptions: {
-            //     width: 481,
-            //     height: 269
-            // }
+
 
         });
         $authProvider.google({
             clientId: '564021516839-4er0mlf724d67r6kf7j5lmkgp2dnq9e5.apps.googleusercontent.com',
-            // responseType:'token',
-            // url: '/auth/google',
-            // authorizationEndpoint: 'https://accounts.google.com/o/oauth2/auth',
-            // redirectUri: window.location.origin || window.location.protocol + '//' + window.location.host,
-            // scope: ['profile', 'email'],
-            // scopePrefix: 'openid',
-            // scopeDelimiter: ' ',
-            // requiredUrlParams: ['scope'],
-            // optionalUrlParams: ['display'],
-            // display: 'popup',
-            // type: '2.0',
-            // popupOptions: { width: 452, height: 633 }
+
               });
-
-
-
-
 });
+
+
+
+
 App.directive('content', function($sce) {
     return {
         require: '?ngModel',
@@ -140,36 +99,6 @@ App.directive('content', function($sce) {
         }
     };
 });
-//   App.directive('content', [function() {
-//     return {
-//         require: '?ngModel',
-//         scope: {
-//         },
-//         link: function(scope, element, attrs, ctrl) {
-//             // view -> model (when div gets blur update the view value of the model)
-//             element.bind('blur', function() {
-//                 scope.$apply(function() {
-//                     ctrl.$setViewValue(element.html());
-//                 });
-//             });
-//
-//             // model -> view
-//             // ctrl.$render = function() {
-//             //     element.html(ctrl.$viewValue);
-//             // };
-//             //
-//             // // load init value from DOM
-//             // ctrl.$render();
-//
-//             // remove the attached events to element when destroying the scope
-//             scope.$on('$destroy', function() {
-//                 element.unbind('blur');
-//                 element.unbind('paste');
-//                 element.unbind('focus');
-//             });
-//         }
-//     };
-// }]);
 
 App.directive('testpackery', ['$rootScope', '$timeout',
     function($rootScope, $timeout) {

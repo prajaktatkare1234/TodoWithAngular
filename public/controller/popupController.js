@@ -6,7 +6,7 @@ App.controller('popupController', function($scope,$uibModalInstance,object,todo_
   $scope.id=object.id;
 
 
-  console.log("contr",object);
+
 $scope.update = function (id) {
 console.log(id);
 console.log("title",$scope.updated_title);
@@ -18,8 +18,8 @@ console.log("title",$scope.updated_title);
 
     }
    var url="/updateDatacard/" + id + "";
-
-    var obj = todo_service.App(url,updated_data,id);
+   var action="POST";
+    var obj = todo_service.App(url,action,updated_data,id);
     obj.then(function(data) {
       $scope.get_data();
 

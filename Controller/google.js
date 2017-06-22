@@ -9,7 +9,6 @@ var winston=require('winston');
 
 var async = require('async');
 var bcrypt = require('bcryptjs');
-// var bodyParser = require('body-parser');
 var jwt = require('jsonwebtoken');
 
 var moment = require('moment');
@@ -98,7 +97,7 @@ console.log("params",params);
                     });
                 });
             } else {
-              console.log("in else of google");
+
                 // Step 3b. Create a new user account or return an existing one.
                 User.findOne({
                     'social.google': profile.sub
@@ -111,7 +110,7 @@ console.log("params",params);
                         });
                     }
                     var user = new User();
-                    console.log("hjghjghjkgjhkg76tyh");
+                  
                     user.social.google = profile.sub;
                     user.social.picture = profile.picture.replace('sz=50', 'sz=200');
                     user.social.displayName = profile.name;

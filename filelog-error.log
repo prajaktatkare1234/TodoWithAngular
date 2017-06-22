@@ -147,3 +147,28 @@
 {"level":"error","message":"failed to get user info","timestamp":"2017-06-20T13:05:00.925Z"}
 {"level":"error","message":"failed to get user info","timestamp":"2017-06-20T13:05:03.523Z"}
 {"level":"error","message":"failed to get user info","timestamp":"2017-06-20T13:05:15.996Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-21T05:23:36.329Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-21T05:23:36.333Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-21T05:23:36.915Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-21T05:23:36.916Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-21T05:27:27.052Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-21T05:27:27.059Z"}
+{"level":"error","message":"failed to delete reminder","timestamp":"2017-06-21T11:21:45.356Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-21T12:05:13.650Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-21T12:05:13.656Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-21T12:08:52.102Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-21T12:08:52.107Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-21T12:29:30.216Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-21T12:29:30.217Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-21T12:36:20.600Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-21T12:36:20.608Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-21T12:55:52.282Z"}
+{"level":"error","message":"failed to get user info","timestamp":"2017-06-21T12:55:52.289Z"}
+{"level":"error","message":"failed to delete reminder","timestamp":"2017-06-22T11:06:04.677Z"}
+{"level":"error","message":"failed to delete reminder","timestamp":"2017-06-22T11:06:06.005Z"}
+{"level":"error","message":"failed to delete reminder","timestamp":"2017-06-22T11:23:40.864Z"}
+{"level":"error","message":"failed to delete reminder","timestamp":"2017-06-22T11:32:13.809Z"}
+{"level":"error","message":"failed to delete reminder","timestamp":"2017-06-22T11:53:42.130Z"}
+{"level":"error","message":"failed to delete reminder","timestamp":"2017-06-22T11:53:43.194Z"}
+{"level":"error","message":"failed to delete reminder","timestamp":"2017-06-22T12:27:54.254Z"}
+{"level":"error","message":"failed to delete reminder","timestamp":"2017-06-22T13:24:44.707Z"}
