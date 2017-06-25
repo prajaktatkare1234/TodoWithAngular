@@ -5,8 +5,9 @@ var winston=require('winston');
 
 
 router.post('/:id',function(req, res) {
+  try {
     var data_id=req.params.id;
-  
+
     User.delete_data(data_id,req.body, function(err, result) {
 
 
@@ -31,6 +32,17 @@ router.post('/:id',function(req, res) {
     }
 
   });
+
+} catch (error) {
+    res.send({
+              "status": true,
+              "message": error
+
+
+  });
+
+  }
+
 });
 
 

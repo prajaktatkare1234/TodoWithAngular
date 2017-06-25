@@ -14,7 +14,8 @@ console.log("title",$scope.updated_title);
     var updated_data={
       title:$scope.updated_title,
       take_note:$scope.updated_note,
-      _id:id
+      _id:id,
+      userId:object.d_no
 
     }
    var url="/updateDatacard/" + id + "";

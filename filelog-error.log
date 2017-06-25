@@ -172,3 +172,10 @@
 {"level":"error","message":"failed to delete reminder","timestamp":"2017-06-22T11:53:43.194Z"}
 {"level":"error","message":"failed to delete reminder","timestamp":"2017-06-22T12:27:54.254Z"}
 {"level":"error","message":"failed to delete reminder","timestamp":"2017-06-22T13:24:44.707Z"}
+{"level":"error","message":"failed to delete reminder","timestamp":"2017-06-24T13:06:52.596Z"}
+{"level":"error","message":"failed to delete reminder","timestamp":"2017-06-25T08:29:06.003Z"}
+{"level":"error","message":"failed to delete reminder","timestamp":"2017-06-25T10:08:32.875Z"}
+{"level":"error","message":"failed to delete reminder","timestamp":"2017-06-25T10:10:39.058Z"}
+{"level":"error","message":"failed to delete data card","timestamp":"2017-06-25T10:16:55.591Z"}
+{"level":"error","message":"failed to delete data card","timestamp":"2017-06-25T10:17:01.915Z"}
+{"level":"error","message":"failed to delete data card","timestamp":"2017-06-25T10:17:04.324Z"}

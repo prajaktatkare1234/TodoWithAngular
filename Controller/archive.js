@@ -1,8 +1,22 @@
+/*
+ * Archive and unarchive data card
+ * @path Controller/archive.js
+ * @file archive.js
+ * @Scripted by Prajakta Tatkare
+ */
+
+/*
+ * Module dependencies
+ */
+
 var express = require('express');
 var router = express.Router();
 var User = require('../Model/dataCard.js');
 
-router.post('/:id', function(req, res) {
+router.post('/:id', function(req, res)  /* Post call for archive.js */
+ {
+
+  try {
     var data_id=req.params.id;
 
     User.mark_as_archived(data_id,req.body,function(err, result) {
@@ -25,5 +39,17 @@ router.post('/:id', function(req, res) {
       })
     }
 });
+
+  } catch (error) {
+    res.send({
+              "status": true,
+              "message": "error",
+
+
+  })
+
+  }
+
+
 });
 module.exports = router;

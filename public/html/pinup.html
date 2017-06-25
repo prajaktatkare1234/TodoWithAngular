@@ -8,7 +8,7 @@
 <div id="outerbox" style="margin-bottom:18px;"ng-if="x.pinned && !x.isArchived && x.isDeleted!==true" ng-repeat="x in data_info | filter:search as results track by $index" ng-class="view_change"   >
 <div  ng-class="innerbox" style="background-color:{{x.bgcolor}}" ng-mouseover="card_icon=true" ng-mouseleave="card_icon=false">
   <div ng-show="card_icon">
-    <img   id="pin" src="image/unpin.svg" ng-click="pinup(x._id,'false','false')" />
+    <img   id="pin" src="image/unpin.svg" ng-click="pinup(x,'false','false')" />
   </div>
   <div ng-click="open(x)" id="title_div" ng-bind-html="x.title"></div>
   <div ng-click="open(x)" id="note_div" ng-bind-html="x.take_note"> </div>
@@ -22,9 +22,9 @@
         <img  style="padding:4px" src="image/Reminder.svg" uib-dropdown-toggle ng-disabled="disabled"></img>
 
         <ul id="picker" class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
-          <li role="menuitem"><a ng-click="remind(x._id,today)">Later today</a></li>
-          <li role="menuitem"><a ng-click="remind(x._id,tomorrow)">Tomorrow</a></li>
-          <li role="menuitem"><a ng-click="remind(x._id,next)">Next Week</a></li>
+          <li role="menuitem"><a ng-click="remind(x,today)">Later today</a></li>
+          <li role="menuitem"><a ng-click="remind(x,tomorrow)">Tomorrow</a></li>
+          <li role="menuitem"><a ng-click="remind(x,next)">Next Week</a></li>
           <li class="divider"></li>
           <li role="menuitem">
             <div class="dropdown" >
@@ -35,7 +35,7 @@
                     <i class="glyphicon glyphicon-calendar"></i>
                   </span>
                 </div>
-                <a style="padding-left:65px;text-decoration:none;"ng-click="remind(x._id,toDo.remainder)">Save</a>
+                <a style="padding-left:65px;text-decoration:none;"ng-click="remind(x,toDo.remainder)">Save</a>
               </a>
               <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
                 <datetimepicker data-ng-model="toDo.remainder" data-datetimepicker-config="{ dropdownSelector: '#dropdown2' }"/>
@@ -49,7 +49,7 @@
         <img style="padding:4px" src="image/paint.svg" uib-dropdown-toggle ng-disabled="disabled"></img>
         <div class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
           <a ng-repeat="y in bgcolor">
-            <li class="btn-group" style="border-radius:50%;background-color:{{y.color}};border:none;height:25px;width:25px;" ng-click="select_color(x._id,y.color)">
+            <li class="btn-group" style="border-radius:50%;background-color:{{y.color}};border:none;height:25px;width:25px;" ng-click="select_color(x,y.color)">
 
           </li>
         </a>
@@ -58,7 +58,7 @@
 
       <!-- paint -->
       <div class="btn-group" >
-        <a ><img id="arc" src="image/archive.svg" ng-click="archive(x._id,'true','false')" /></a>
+        <a ><img id="arc" src="image/archive.svg" ng-click="archive(x,'true','false')" /></a>
       </div>
 
       <!-- delete and copy -->
@@ -66,7 +66,7 @@
         <img  id="arc" src="image/more.svg" uib-dropdown-toggle ng-disabled="disabled"> </img>
         <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
           <li role="menuitem">
-            <a style="text-decoration:none;" ng-click="delete(x._id)">Delete note</a>
+            <a style="text-decoration:none;" ng-click="delete(x)">Delete note</a>
           </li>
           <li role="menuitem">
             <a ng-click=copy(x)>Make a copy</a>
@@ -85,7 +85,7 @@
     <div ng-if="x.remind_at" style="border-top:2px dashed;border-top-color:#e8e8e8;padding-top:10px;">
       <span>
         <span>{{x.remind_at | date:' EEE dd-MMM, hh:mm a'}}</span>
-        <img id="arc" style="float:right;padding:2px;" src="image/cancel.svg"ng-click="delete_reminder(x._id)" </img>
+        <img id="arc" style="float:right;padding:2px;" src="image/cancel.svg"ng-click="delete_reminder(x)" </img>
       </span>
     </div>
   </div>

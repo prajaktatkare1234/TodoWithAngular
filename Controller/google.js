@@ -26,8 +26,7 @@ function createJWT(user) {
 
 
 router.post('/', function(req, res) {
-
-
+  try {
     var accessTokenUrl = 'https://accounts.google.com/o/oauth2/token';
     var peopleApiUrl = 'https://www.googleapis.com/plus/v1/people/me/openIdConnect';
     var params = {
@@ -110,7 +109,7 @@ console.log("params",params);
                         });
                     }
                     var user = new User();
-                  
+
                     user.social.google = profile.sub;
                     user.social.picture = profile.picture.replace('sz=50', 'sz=200');
                     user.social.displayName = profile.name;
@@ -127,5 +126,17 @@ console.log("params",params);
             }
         });
     });
+
+  } catch (error) {
+    res.send({
+        "status": false,
+        "message": error
+
+    });
+
+  }
+
+
+
 });
 module.exports = router;

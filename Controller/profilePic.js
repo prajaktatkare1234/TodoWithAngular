@@ -6,8 +6,7 @@ var winston=require('winston');
 
 
 router.post('/', function(req, res) {
-
-
+try {
   var save=function(pic_name,pic){
     fs.writeFile('public/profile_pic/'+pic_name, pic, {
       encoding: 'base64'
@@ -66,6 +65,15 @@ router.post('/', function(req, res) {
 
 
     });
+
+
+} catch (error) {
+  res.send({
+      "status": false,
+      "message": error
+
+  });
+}
 
 });
 

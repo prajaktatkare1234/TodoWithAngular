@@ -15,19 +15,31 @@ var obj = todo_service.App(url,action,object);
 obj.then(function(data) {
   // console.log(data.data.status,);
   if(data.data.status==true)
+
   {
-    $window.alert("link for cahnging the password is send to the registered email");
+
+    $window.alert("link for changing the password is send to the registered email");
 
 
     console.log("registered  is Email");
-    // $state.go('welcome');
+
+//     $scope.goSomewhere = function($state) {
+//     $rootScope.token=data.data.token;
+//        $state.go(
+//          'changePassword',
+//          {
+//            token: data.data.token
+//           }
+//
+//
+// )}
+//   $scope.goSomewhere();
 }
   else{
       $window.alert("Email address is not registered");
 
       $state.go('verifyEmail');
-      // console.log($location.hash());
-      console.log("email is not registered");
+
   }
 
 }).catch(function(error) {
@@ -35,14 +47,12 @@ obj.then(function(data) {
 })
 };
 
-
-
 $scope.submit=function(){
-// console.log($state.go('changePassword'));
+
 var a=$state.href('changePassword', $state.params,{});
-console.log(a);
+// console.log(a);
     var hash=a.split("Password/");
-  console.log(hash);
+  // console.log(hash);
   var token=hash[1];
 
   var newPassword=$scope.newPass;
@@ -53,12 +63,15 @@ console.log(a);
   updation:"change",
   token:token
   }
-  console.log("changeObj",object);
-var obj = todo_service.App(url,object);
+  var action="POST";
+  // console.log("changeObj",object);
+var obj = todo_service.App(url,action,object);
 obj.then(function(data) {
 
   if(data.data.status==true)
   {
+    $window.alert("Password is changed successfully");
+
     console.log("password changed");
     $state.go('signin');
 }

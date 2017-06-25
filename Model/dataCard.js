@@ -1,10 +1,12 @@
 var mongoose = require('mongoose');
 // validators = require('mongoose-validators');
 var express = require('express');
-
+var logger=require("./logger.js")
+// console.log("datcard",logger);
 var Schema = mongoose.Schema;
 
 var data_card_Schema = Schema({
+
     d_no: {
         type: String
     },
@@ -38,7 +40,15 @@ var data_card_Schema = Schema({
     isDeleted:{
       type:Boolean,
       default:false
+    },
+    isCollaborated:{
+      type:Boolean,
+      default:false
+    },
+    collabWith:{
+      type:String
     }
+
 
 
 
@@ -57,9 +67,30 @@ data_card_Schema.statics.save_data = function(req,d_no, cb) {
     });
 
     data_card_detail.save(cb);
+    var loggerDetail= new logger({
+      userId:d_no._id,
+      message:"new card added"
+    });
+    loggerDetail.save();
+};
+
+data_card_Schema.statics.shareNote = function(req, cb) {
+  // var date = new Date();
+  console.log("userid",req.id);
+    data_card_detail = new this({
+        d_no:req.id,
+        title:req.title,
+        take_note:req.take_note,
+        isCollaborated:true,
+        collabWith:req.collabWith
+
+    });
+
+    data_card_detail.save(cb);
+
 };
 data_card_Schema.statics.update_data = function(data_id,req,cb) {
-  console.log(data_id,"datajkhjkhl");
+
   var d = new Date();
     this.update({
         _id: req._id,
@@ -71,9 +102,14 @@ data_card_Schema.statics.update_data = function(data_id,req,cb) {
             updated:d
         }
     }, cb);
+    var loggerDetail= new logger({
+      userId:req.userId,
+      message:" card updated"
+    });
+    loggerDetail.save();
 };
 data_card_Schema.statics.remind = function(data_id,req,cb) {
-  console.log(data_id,"datajkhjk",req);
+
   var d = new Date();
     this.update({
         _id: data_id
@@ -82,6 +118,11 @@ data_card_Schema.statics.remind = function(data_id,req,cb) {
         remind_at:req.remind_at
         }
     }, cb);
+    var loggerDetail= new logger({
+      userId:req.userId,
+      message:"reminder is set "
+    });
+    loggerDetail.save();
 };
 
 data_card_Schema.statics.select_color = function(data_id,req,cb) {
@@ -94,10 +135,26 @@ data_card_Schema.statics.select_color = function(data_id,req,cb) {
         bgcolor:req.bgcolor
         }
     }, cb);
+    var loggerDetail= new logger({
+      userId:req.userId,
+      message:" background color set"
+    });
+    loggerDetail.save();
 };
 data_card_Schema.statics.mark_as_archived = function(data_id,req,cb) {
-  // console.log(data_id,"datajkhjk",req);
+  console.log(data_id,"datajkhjk",req.archive);
   // var d = new Date();
+// var message;
+// console.log(req);
+if(req.archive=="true"){
+  // console.log("archive",req.archive);
+  message="card is archived";
+}
+else
+  {
+    // console.log("unarchive",req.archive);
+    message="card is unarchived";
+  }
     this.update({
         _id: data_id
     }, {
@@ -106,10 +163,27 @@ data_card_Schema.statics.mark_as_archived = function(data_id,req,cb) {
         pinned:req.pinned
         }
     }, cb);
+
+console.log("message",message);
+    var loggerDetail= new logger({
+      userId:req.userId,
+      "message":message
+    });
+    loggerDetail.save();
 };
 data_card_Schema.statics.pinned = function(data_id,req,cb) {
   // console.log(data_id,"datajkhjk",req);
-  console.log(req);
+  // console.log(req);
+  if(req.pin=="true"){
+    // console.log("archive",req.archive);
+    message="card is pinned";
+  }
+  else
+    {
+      // console.log("unarchive",req.archive);
+      message="card is unpinned";
+    }
+
     this.update({
         _id: data_id
     }, {
@@ -118,12 +192,18 @@ data_card_Schema.statics.pinned = function(data_id,req,cb) {
         isArchived:req.archive
         }
     }, cb);
+    var loggerDetail= new logger({
+      userId:req.userId,
+      "message":message
+    });
+    loggerDetail.save();
+// };
 };
 
 
 
 
-data_card_Schema.statics.delete_reminder = function(data_id, cb) {
+data_card_Schema.statics.delete_reminder = function(data_id,req, cb) {
     // console.log(req);
     this.update({
         _id: data_id
@@ -132,16 +212,25 @@ data_card_Schema.statics.delete_reminder = function(data_id, cb) {
         remind_at:""
         }
     }, cb);
+    var loggerDetail= new logger({
+      userId:req.userId,
+      "message":"reminder deleted"
+    });
+    loggerDetail.save();
+
 
 };
 data_card_Schema.statics.delete_data = function(data_id,req, cb) {
+  var message;
 if(req.delete=='delete')
 {
+  message="data deleted permanently";
   console.log("permanent delete");
    this.remove({_id:data_id},cb)
 }
 else if(req.delete=='restore')
 {
+  message="data card restored";
   console.log("restore");
   this.update({
       _id: data_id
@@ -159,6 +248,7 @@ else if(req.delete=='restore')
 
 }
 else{
+  message="data deleted";
 
   this.update({
       _id: data_id
@@ -172,8 +262,14 @@ else{
 
       }
   }, cb);
-        // this.remove({_id:data_id},cb)
+
+
 }
+var loggerDetail= new logger({
+  userId:req.userId,
+  "message":message
+});
+loggerDetail.save();
 
 
 };

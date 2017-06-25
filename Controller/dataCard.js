@@ -6,9 +6,10 @@ var winston=require('winston');
 
 
 router.post('/', function(req, res) {
-
-  
-    User.save_data(req.body, req.decode, function(err, result) {
+  try {
+    if(req.body.col!=="col")
+    {
+      User.save_data(req.body, req.decode, function(err, result) {
 
 
 
@@ -44,6 +45,55 @@ router.post('/', function(req, res) {
 
 
     });
+  }
+  else{
+    User.shareNote(req.body, function(err, result) {
+
+
+
+        if (err) {
+          // winston.error("login failed");
+            res.send({
+                "status": false,
+                "message": " failed to collaborate"
+
+            });
+        }
+            if (result) {
+              winston.info("successfully collaborated");
+
+
+
+
+                res.send({
+                    "status": true,
+                    // "message": "logged in Successfully",
+                    // "token": token,
+                    "result":result
+                })
+            } else {
+                res.send({
+                    "status": false,
+                    "message": "login failed"
+
+                });
+
+            }
+
+
+    });
+  }
+
+
+} catch (error) {
+    res.send({
+        "status": false,
+        "message":error
+
+    });
+
+  }
+
 
 });
 

@@ -4,18 +4,18 @@ var User = require('../Model/index.js');
 var nodemailer = require('nodemailer');
 var jwt = require('jsonwebtoken');
 var conf = require('../Config/config.js');
+  var winston = require('winston');
 
 
 
 
 router.put('/', function(req, res) {
-    console.log("req", req.body);
-    var winston = require('winston');
+  try {
     User.resetPassword(req.body, function(err, data) {
         if (data)
 
         {
-            console.log("dkgjfdkgljfdkl", data);
+            // console.log("dkgjfdkgljfdkl", data);
             var token = jwt.sign({
                 email: data.local.email
             }, conf.TOKEN_SECRET, {
@@ -50,6 +50,7 @@ router.put('/', function(req, res) {
 
                 html: '<p>click on the below link to change password</p>' +
                     '<a href="http://localhost:8081/#!/changePassword/' + token + '"> http://localhost:8081/#!/changePassword/"' + token + '</a>',
+                    // '<a href="http://localhost:8081/#!/changePassword/"> http://localhost:8081/#!/changePassword/"' + token + '</a>',
 
                 // Apple Watch specific HTML body
 
@@ -74,11 +75,12 @@ router.put('/', function(req, res) {
 
             });
 
-    
+
 
             res.send({
                 "Email": data.email,
-                "status": true
+                "status": true,
+                "token":token
             })
             //
 
@@ -93,6 +95,16 @@ router.put('/', function(req, res) {
         }
 
     });
+
+
+  } catch (error) {
+    res.send({
+        "message": error,
+        "status": false
+    })
+  }
+
+
 
 
 

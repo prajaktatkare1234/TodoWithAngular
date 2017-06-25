@@ -8,79 +8,134 @@ var User = require('../Model/index.js');
 var winston=require('winston');
 
 router.post('/', function(req, res) {
-var result1 = {};
- result1.status = false;
-  try {
+  // try {
 
-     req.check(config.validationSchema.sign_in);
-     req.getValidationResult().then(function(isValid) {
-       try {
+    // {
+      var result1 = {};
+     result1.status = false;
+      try {
+  if(req.body.col!=="col"){
+    req.check(config.validationSchema.sign_in);
+    req.getValidationResult().then(function(isValid) {
+      try {
 
-         if (!isValid.isEmpty()) {
+        if (!isValid.isEmpty()) {
 
-           var errors = req.validationErrors()
+          var errors = req.validationErrors()
 
-           throw errors[0].msg;
+          throw errors[0].msg;
 
-         }
-
-    User.login(req.body, function(err, result) {
-
-      console.log("loginsdfdsf",result);
-
-
-        if (err) {
-          winston.error("login failed");
-            res.send({
-                "status": false,
-                "message": "login failed"
-
-            });
-        } else {
-            if (result) {
-              winston.info("logged in successfully");
-
-                var token = jwt.sign({
-                    _id: result._id
-                }, conf.TOKEN_SECRET, {
-                    expiresIn: 60 * 60 * 24
-                });
-
-                res.cookie('cookie',token);
-                res.send({
-                    "status": true,
-                    "message": "logged in Successfully",
-                    "token": token,
-                    "result":result
-                })
-            } else {
-                res.send({
-                    "status": false,
-                    "message": "login failed"
-
-                });
-
-            }
         }
 
+   User.login(req.body, function(err, result) {
 
-    });
-  } catch (e) {
-    result1.message="sorry server error";
+     console.log("loginsdfdsf",result);
 
-      if (!config.checkSystemErrors(e)) {
-        result1.status = false;
-        result1.message = e;
-      }
-      res.send(result1);
-      return;
-        
-    }
-  });
-}catch (e) {
-  res.send({"message":e})
+
+       if (err) {
+         winston.error("login failed");
+           res.send({
+               "status": false,
+               "message": "login failed"
+
+           });
+       } else {
+           if (result) {
+             winston.info("logged in successfully");
+
+               var token = jwt.sign({
+                   _id: result._id
+               }, conf.TOKEN_SECRET, {
+                   expiresIn: 60 * 60 * 24
+               });
+
+               res.cookie('cookie',token);
+               res.send({
+                   "status": true,
+                   "message": "logged in Successfully",
+                   "token": token,
+                   "result":result
+               })
+           } else {
+               res.send({
+                   "status": false,
+                   "message": "login failed"
+
+               });
+
+           }
+       }
+
+
+   });
+ } catch (e) {
+   result1.message="sorry server error";
+
+     if (!config.checkSystemErrors(e)) {
+       result1.status = false;
+       result1.message = e;
+     }
+     res.send(result1);
+     return;
+
+   }
+ });
   }
-})
+  else{
+
+        User.shareEmail(req.body, function(err, result) {
+
+
+
+            if (err) {
+              // winston.error("login failed");
+                res.send({
+                    "status": false,
+                    "message": " failed to get users"
+
+                });
+            }
+                if (result) {
+                  winston.info("successfully fetched user");
+
+
+
+
+                    res.send({
+                        "status": true,
+                        // "message": "logged in Successfully",
+                        // "token": token,
+                        "result":result
+                    })
+                } else {
+                    res.send({
+                        "status": false,
+                        "message": "login failed"
+
+                    });
+
+                }
+
+
+        });
+  }
+
+
+    }catch (e) {
+      res.send({"message":e});
+      }
+  // }
+
+
+// } catch (error) {
+//     res.send({
+//         "status": false,
+//         "message": error
+//
+//
+//   }
+
+});
 
 
 

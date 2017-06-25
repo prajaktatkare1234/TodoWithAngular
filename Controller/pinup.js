@@ -4,6 +4,7 @@ var User = require('../Model/dataCard.js');
 var winston=require('winston');
 
 router.post('/:id', function(req, res) {
+  try {
     var data_id=req.params.id;
 
     User.pinned(data_id,req.body,function(err, result) {
@@ -28,5 +29,13 @@ router.post('/:id', function(req, res) {
       })
     }
 });
+  } catch (error) {
+    res.send({
+        "status": false,
+        "message": error
+
+    });
+
+  }
 });
 module.exports = router;

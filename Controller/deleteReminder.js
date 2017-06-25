@@ -5,9 +5,10 @@ var User = require('../Model/dataCard.js');
 var winston=require('winston');
 
 router.post('/:id',function(req, res) {
+  try {
     var data_id=req.params.id;
-  
-    User.delete_reminder(data_id, function(err, result) {
+
+    User.delete_reminder(data_id, req.body,function(err, result) {
 
 
       if(err){
@@ -31,5 +32,16 @@ router.post('/:id',function(req, res) {
     }
 
   });
+
+} catch (error) {
+    res.send({
+            "status": false,
+            "message": error
+
+
+  })
+
+  }
+
 });
 module.exports = router;

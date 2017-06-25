@@ -1,3 +1,13 @@
+/*
+ * userSchema
+ * @path model/index.js
+ * @file index.js
+ */
+
+/*
+ * Module dependencies
+ */
+
 var mongoose = require('mongoose');
 validators = require('mongoose-validators');
 var unique_val = require('mongoose-unique-validator');
@@ -9,7 +19,10 @@ var config = require('../Config/config.js');
 
 // console.log("in model");
 var Schema = mongoose.Schema;
-
+/**
+ * @schema userSchema
+ * @description user details
+ */
 var userSchema = Schema({
     local:{
       name: {
@@ -55,7 +68,10 @@ var userSchema = Schema({
 });
 
 
-
+/**
+ * Save user
+ * @api For user
+ */
 userSchema.statics.save_user = function(req, cb) {
     var pwd = req.body.password;
 
@@ -82,6 +98,13 @@ var encPass =encrypt_data(req.password)
         'local.password':encPass
     }, cb);
 }
+userSchema.statics.shareEmail = function(req, cb) {
+    this.findOne({
+        'local.email': req.email
+        // 'local.password':encPass
+    }, cb);
+}
+
 userSchema.statics.change_profile_pic = function(req,url,cb) {
   // console.log(data_id,"datajkhjk",req);
   // var d = new Date();
@@ -99,6 +122,21 @@ userSchema.statics.change_profile_pic = function(req,url,cb) {
 userSchema.statics.profile=function(req,cb){
     console.log("hjgsdf",req);
   this.findOne({_id:req._id},cb);
+  //{
+ //   if(user){
+ //       res.send({"user_detail":user});
+ //
+ //   }
+ //   else{
+ //     res.send({message:"error"});
+ //   }
+ // })
+}
+
+
+userSchema.statics.getallUser=function(req,cb){
+    // console.log("hjgsdf",req);
+  this.find({},cb);
   //{
  //   if(user){
  //       res.send({"user_detail":user});

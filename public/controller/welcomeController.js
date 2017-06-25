@@ -29,8 +29,10 @@
                   }
 
                   var str = window.location.hash;
-                  console.log(hash);
-                  var hash = hash.split("/");
+                  console.log(str);
+
+                  var hash = str.split("/");
+                    console.log(hash);
 
                   if (hash[1] == "welcome") {
 
@@ -39,6 +41,20 @@
                   if (hash[1] == "archive") {
                       $state.go('archive');
                   }
+                  if (hash[1] == "reminder") {
+                      $state.go('reminder');
+                  }
+                  if (hash[1] == "bin") {
+                      $state.go('bin');
+                  }
+                  if (hash[1] == "logger") {
+                    console.log("lohjsdjsajhsdhjkgh");
+                      $state.go('logger');
+                      $rootScope.logger(data.data.user_data._id)
+                  }
+
+
+
 
               } else {
 
@@ -93,16 +109,17 @@
           $state.reload();
       };
 
-      $scope.select_color = function(id, color) {
+      $scope.select_color = function(x, color) {
 
 
 
           var bg_color_object = {
-              bgcolor: color
+              bgcolor: color,
+              userId:x.d_no
           }
-          var url = "/bgColor/" + id + "";
+          var url = "/bgColor/" + x._id + "";
           var action="POST";
-          var obj = todo_service.App(url,action, bg_color_object);
+          var obj = todo_service.App(url,action,bg_color_object);
           obj.then(function(data) {
 
           }).catch(function(error) {
@@ -112,7 +129,33 @@
 
       };
 
-      $scope.facebookshare=function(todo){
+      $scope.collaborator=function(x){
+        // $scope.data=x;
+        var object={
+          title:x.title,
+          take_note:x.take_note,
+
+        }
+        var modalInstance = $uibModal.open({
+          // object=$scope.data;
+
+            templateUrl: '../html/collab.html',
+            controller: 'collabController',
+
+            resolve: {
+
+                object: function() {
+                    return object
+                }
+            }
+        });
+
+        modalInstance.result.catch(function(error) {
+            console.log(error);
+        })
+      }
+
+    $scope.facebookshare=function(todo){
 		console.log("facebook share")
 		FB.init({
 			appId : '1783193788658916',
@@ -145,8 +188,8 @@
 
 
 
-      $scope.remind = function(id, time) {
-          console.log(id, time, "hhgfgh");
+      $scope.remind = function(x, time) {
+          console.log(x._id, time, "hhgfgh");
           // $scope.id=x._id
           var date = new Date();
           console.log("remind");
@@ -173,9 +216,10 @@
               $scope.remind_at = new Date(time);
           }
           var remind_at_Object = {
-              remind_at: $scope.remind_at
+              remind_at: $scope.remind_at,
+              userId:x.d_no
           }
-          var url = "/reminder/" + id + "";
+          var url = "/reminder/" + x._id + "";
           var action="POST";
           var obj = todo_service.App(url, action,remind_at_Object);
           obj.then(function(data) {
@@ -225,7 +269,7 @@
               bgcolor: x.bgcolor
 
           }
-          console.log('opening pop up', $scope.data_info);
+          // console.log('opening pop up', $scope.data_info);
           var modalInstance = $uibModal.open({
 
               templateUrl: '../html/popup.html',
@@ -244,13 +288,14 @@
           })
       };
 
-      $scope.archive = function(id, archive, pin) {
+      $scope.archive = function(x, archive, pin) {
           var archive_obj = {
 
               archive: archive,
-              pinned: pin
+              pinned: pin,
+              userId:x.d_no
           }
-          var url = "/archive/" + id + "";
+          var url = "/archive/" + x._id + "";
               var action="POST";
           var obj = todo_service.App(url,action, archive_obj);
           obj.then(function(data) {
@@ -264,12 +309,13 @@
 
 
 
-      $scope.pinup = function(id, pin, archive) {
+      $scope.pinup = function(x, pin, archive) {
 
-          var url = "/pinup/" + id + "";
+          var url = "/pinup/" + x._id + "";
           var obj = {
               pin: pin,
-              archive: archive
+              archive: archive,
+              userId:x.d_no
           }
           var action="POST";
           var obj = todo_service.App(url,action, obj);
@@ -329,11 +375,14 @@
           $scope.get_data();
       };
 
-      $scope.delete_reminder = function(id) {
+      $scope.delete_reminder = function(x) {
 
-          var url = "/deleteReminder/" + id + "";
+          var url = "/deleteReminder/" + x._id + "";
             var action="POST";
-          var obj = todo_service.App(url,action);
+            var object={
+              userId:x.d_no
+            }
+          var obj = todo_service.App(url,action,object);
           obj.then(function(data) {
 
           }).catch(function(error) {
@@ -478,12 +527,13 @@
 
 
       };
-      $scope.delete = function(id, dele) {
+      $scope.delete = function(x, dele) {
 
-          var url = "/deleteCard/" + id + "";
-    var action="POST";
+          var url = "/deleteCard/" + x._id + "";
+          var action="POST";
           var object = {
-              delete: dele
+              delete: dele,
+              userId:x.d_no
           }
           var obj = todo_service.App(url,action, object);
           obj.then(function(data) {

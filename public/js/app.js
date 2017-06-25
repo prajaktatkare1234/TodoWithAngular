@@ -37,11 +37,17 @@ App.config(function($stateProvider, $urlRouterProvider, $authProvider) {
             controller: 'binController',
 
         })
+        .state('logger', {
+            url: '/logger',
+            templateUrl: 'html/welcome.html',
+            controller: 'loggerController',
+
+        })
         .state('verifyEmail', {
             url: '/verifyEmail',
             templateUrl: 'html/verifyEmail.html',
             controller: 'resetpasswordController',
-          
+
         })
         .state('changePassword', {
             url: '/changePassword/:token',

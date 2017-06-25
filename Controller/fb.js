@@ -23,11 +23,17 @@ function createJWT(user) {
     }, conf.TOKEN_SECRET, {
         expiresIn: 60 * 60 * 24
     });
+res.send({
+            "status": false,
+            "message": error
 
+
+  })
 }
 
 
 router.post('/', function(req, res) {
+  try {
     var fields = ['id', 'email', 'first_name', 'last_name', 'link', 'name'];
     var accessTokenUrl = 'https://graph.facebook.com/v2.5/oauth/access_token';
     var graphApiUrl = 'https://graph.facebook.com/v2.5/me?fields=' + fields.join(',');
@@ -64,7 +70,7 @@ router.post('/', function(req, res) {
                     message: profile.error.message
                 });
             }
-        
+
             if (req.header('Authorization')) {
                   console.log("in Authorization");
                 User.findOne({
@@ -131,7 +137,7 @@ router.post('/', function(req, res) {
                     console.log("saving in else");
                     var token = createJWT(user._id);
                         console.log("token",token);
-                    res.cookie("cookie",token);
+                    res.cookie("cookie",token);{}
                     console.log(user,"user");
                     user.save(function() {
 
@@ -143,5 +149,18 @@ router.post('/', function(req, res) {
             }
         });
     });
+
+  } catch (error) {
+    res.send({
+            "status": false,
+            "message": error
+
+
+  })
+
+
+  
+  }
+
 });
 module.exports = router;
