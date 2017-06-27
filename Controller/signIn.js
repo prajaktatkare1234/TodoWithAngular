@@ -1,3 +1,14 @@
+/*
+ * Sign in for user
+ * @path Controller/signIn.js
+ * @file signIn.js
+ * @Scripted by Prajakta Tatkare
+ */
+
+/*
+ * Module dependencies
+ */
+
 var express = require('express');
 var router = express.Router();
 var cookie=require('cookie-parser')
@@ -7,15 +18,14 @@ var config=require('../Config/index.js')
 var User = require('../Model/index.js');
 var winston=require('winston');
 
-router.post('/', function(req, res) {
-  // try {
+router.post('/', function(req, res) { // post call for api signIn.js
 
-    // {
       var result1 = {};
      result1.status = false;
       try {
-  if(req.body.col!=="col"){
+      // validating email and password
     req.check(config.validationSchema.sign_in);
+
     req.getValidationResult().then(function(isValid) {
       try {
 
@@ -29,7 +39,7 @@ router.post('/', function(req, res) {
 
    User.login(req.body, function(err, result) {
 
-     console.log("loginsdfdsf",result);
+
 
 
        if (err) {
@@ -42,13 +52,13 @@ router.post('/', function(req, res) {
        } else {
            if (result) {
              winston.info("logged in successfully");
-
+             //generating token from user id
                var token = jwt.sign({
                    _id: result._id
                }, conf.TOKEN_SECRET, {
                    expiresIn: 60 * 60 * 24
                });
-
+               // storing token in cookie
                res.cookie('cookie',token);
                res.send({
                    "status": true,
@@ -80,60 +90,13 @@ router.post('/', function(req, res) {
 
    }
  });
-  }
-  else{
 
-        User.shareEmail(req.body, function(err, result) {
-
-
-
-            if (err) {
-              // winston.error("login failed");
-                res.send({
-                    "status": false,
-                    "message": " failed to get users"
-
-                });
-            }
-                if (result) {
-                  winston.info("successfully fetched user");
-
-
-
-
-                    res.send({
-                        "status": true,
-                        // "message": "logged in Successfully",
-                        // "token": token,
-                        "result":result
-                    })
-                } else {
-                    res.send({
-                        "status": false,
-                        "message": "login failed"
-
-                    });
-
-                }
-
-
-        });
-  }
 
 
     }catch (e) {
       res.send({"message":e});
       }
-  // }
 
-
-// } catch (error) {
-//     res.send({
-//         "status": false,
-//         "message": error
-//
-//
-//   }
 
 });
 

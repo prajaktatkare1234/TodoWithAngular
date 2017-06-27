@@ -1,3 +1,14 @@
+/*
+ * Getting data cards
+ * @path Controller/getDatacard.js
+ * @file getDatacard.js
+ * @Scripted by Prajakta Tatkare
+ */
+
+/*
+ * Module dependencies
+ */
+
 var express = require('express');
 var router = express.Router();
 var winston=require('winston');
@@ -5,11 +16,12 @@ var User = require('../Model/dataCard.js');
 
 
 
-router.post('/', function(req, res) {
+router.post('/', function(req, res) { //post call for api getDatacard.js
   try {
-    req.decode.isDeleted=false;
-      User.get_data(req.decode, function(err, result) {
 
+    req.decode.isDeleted=false;
+      User.getData(req.decode, function(err, result) {
+  console.log("kfjdskljfasdk",result);
       if(result)
         {
 
@@ -19,7 +31,7 @@ router.post('/', function(req, res) {
         else
         {
           res.send({message:"err","status":false})
-          logger.error("error while getting data card");
+          // logger.error("error while getting data card");
         }
 
 

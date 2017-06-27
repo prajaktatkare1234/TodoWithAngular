@@ -268,6 +268,7 @@ div[placeholder]{
     border: 0;
     outline: none;
     word-wrap: break-word;
+      console.log("dfldskdflgkfdg",$rootScope.activeLogs );
 
 }
 

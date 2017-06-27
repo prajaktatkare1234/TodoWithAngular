@@ -1,3 +1,14 @@
+/*
+ * verifying email for changing password
+ * @path Controller/verifyEmail.js
+ * @file verifyEmail.js
+ * @Scripted by Prajakta Tatkare
+ */
+
+/*
+ * Module dependencies
+ */
+
 var express = require('express');
 router = express.Router();
 var User = require('../Model/index.js');
@@ -9,20 +20,20 @@ var conf = require('../Config/config.js');
 
 
 
-router.put('/', function(req, res) {
+router.put('/', function(req, res) { //post call for api verifyEmail.js
   try {
-    User.resetPassword(req.body, function(err, data) {
+    User.verifyEmail(req.body, function(err, data) {
         if (data)
 
         {
-            // console.log("dkgjfdkgljfdkl", data);
+          //generating token from email
             var token = jwt.sign({
                 email: data.local.email
             }, conf.TOKEN_SECRET, {
                 expiresIn: 60 * 60 * 24
             });
 
-            // create reusable transporter object using the default SMTP transport
+          //sending email to the user  with link to change password
             let transporter = nodemailer.createTransport({
                 service: 'Gmail',
                 auth: {
@@ -50,9 +61,9 @@ router.put('/', function(req, res) {
 
                 html: '<p>click on the below link to change password</p>' +
                     '<a href="http://localhost:8081/#!/changePassword/' + token + '"> http://localhost:8081/#!/changePassword/"' + token + '</a>',
-                    // '<a href="http://localhost:8081/#!/changePassword/"> http://localhost:8081/#!/changePassword/"' + token + '</a>',
 
-                // Apple Watch specific HTML body
+
+
 
 
 
@@ -61,14 +72,15 @@ router.put('/', function(req, res) {
             console.log('Sending Mail');
             transporter.sendMail(message, (error, info) => {
                 if (error) {
+                    winston.error("Error occurred while sending mail");
                     console.log('Error occurred');
                     console.log(error.message);
                     return;
                 }
 
-                // console.log("token",token);
 
 
+                winston.info("Eamil sent successfully");
                 console.log('Message sent successfully!');
                 console.log('Server responded with "%s"', info.response);
                 transporter.close();
@@ -86,7 +98,7 @@ router.put('/', function(req, res) {
 
 
         } else {
-            console.log("in else");
+
 
             res.send({
                 message: "err",
@@ -94,7 +106,8 @@ router.put('/', function(req, res) {
             })
         }
 
-    });
+    });console.log("in change password dksajldksgkldfgjfkdl",email);
+
 
 
   } catch (error) {

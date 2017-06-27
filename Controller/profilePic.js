@@ -1,3 +1,14 @@
+/*
+ * changing/uploading profilePic
+ * @path Controller/profilePic.js
+ * @file profilePic.js
+ * @Scripted by Prajakta Tatkare
+ */
+
+/*
+ * Module dependencies
+ */
+
 var express = require('express');
 var router = express.Router();
 var User = require('../Model/index.js');
@@ -5,8 +16,9 @@ var fs=require("fs");
 var winston=require('winston');
 
 
-router.post('/', function(req, res) {
+router.post('/', function(req, res) { //post call for api profilePic.js
 try {
+  // saving the image to public/profile_pic folder
   var save=function(pic_name,pic){
     fs.writeFile('public/profile_pic/'+pic_name, pic, {
       encoding: 'base64'
@@ -18,8 +30,11 @@ try {
       }
     });
   }
+  //coverting image from base64 to png
   var croped_image = req.body.croped_image.replace(/^data:image\/png;base64,/g, "");
+  //coverting image from base64 to jpeg or png
   var big_image=req.body.big_image.replace(/^data:image\/(png|jpeg);base64,/g, "");
+  //appending user name to the iamge name
   var crop=req.body.name+"_crop.png";
   var original=req.body.name+"_original.jpeg";
     save(original,big_image);
@@ -31,7 +46,7 @@ try {
       original_pic:'/profile_pic/'+original,
     }
     console.log(url);
-    User.change_profile_pic(req.body, url_object, function(err, result) {
+    User.changeProfilepic(req.body, url_object, function(err, result) {
 
 
 

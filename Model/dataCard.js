@@ -1,11 +1,23 @@
+/*
+ * dataSchema
+ * @path model/dataCard.js
+ * @file dataCard.js
+ */
+
+/*
+ * Module dependencies
+ */
 var mongoose = require('mongoose');
-// validators = require('mongoose-validators');
 var express = require('express');
 var logger=require("./logger.js")
-// console.log("datcard",logger);
-var Schema = mongoose.Schema;
 
-var data_card_Schema = Schema({
+var Schema = mongoose.Schema;
+/**
+ * @schema DataSchema
+ * @description data note contents
+ */
+
+var datacardSchema = Schema({
 
     d_no: {
         type: String
@@ -32,66 +44,67 @@ var data_card_Schema = Schema({
       type:String
     },
     isArchived:{
-      type:Boolean
+      type:Boolean,
+      default:false
     },
     pinned:{
-      type:Boolean
+      type:Boolean,
+      default:false
     },
     isDeleted:{
       type:Boolean,
       default:false
-    },
-    isCollaborated:{
-      type:Boolean,
-      default:false
-    },
-    collabWith:{
-      type:String
     }
 
 
 
 
+
 });
-var data_card_detail;
-data_card_Schema.statics.save_data = function(req,d_no, cb) {
-  var date = new Date();
+var datacardSchema;
+/**
+* Add data card
+* @param {String} userId
+* @return {Error} err
+* @return {data} data card
+* @api For user
+*/
+
+
+datacardSchema.statics.saveData = function(req,userId, cb) {
+  var currDate = new Date();
     data_card_detail = new this({
-        d_no:d_no._id,
+        d_no:userId._id,
         title:req.title,
         take_note:req.take_note,
-        created:date,
-        updated:date,
+        created:currDate,
+        updated:currDate,
         bgcolor:req.bgcolor
 
     });
-
     data_card_detail.save(cb);
+    // saving userId and activity message in loggerSchema
     var loggerDetail= new logger({
-      userId:d_no._id,
+      userId:userId._id,
       message:"new card added"
     });
     loggerDetail.save();
-};
 
-data_card_Schema.statics.shareNote = function(req, cb) {
-  // var date = new Date();
-  console.log("userid",req.id);
-    data_card_detail = new this({
-        d_no:req.id,
-        title:req.title,
-        take_note:req.take_note,
-        isCollaborated:true,
-        collabWith:req.collabWith
-
-    });
-
-    data_card_detail.save(cb);
 
 };
-data_card_Schema.statics.update_data = function(data_id,req,cb) {
 
-  var d = new Date();
+
+/**
+* Update data card
+* @param {String} dataId
+* @return {Error} err
+* @return {data} data card
+* @api For user
+*/
+
+datacardSchema.statics.updateData = function(dataId,req,cb) {
+
+  var currDate = new Date();
     this.update({
         _id: req._id,
         isDeleted:false
@@ -99,141 +112,188 @@ data_card_Schema.statics.update_data = function(data_id,req,cb) {
         $set: {
             take_note: req.take_note,
             title:req.title,
-            updated:d
+            updated:currDate
         }
     }, cb);
+      // saving userId and activity message in loggerSchema
     var loggerDetail= new logger({
       userId:req.userId,
       message:" card updated"
     });
     loggerDetail.save();
 };
-data_card_Schema.statics.remind = function(data_id,req,cb) {
 
-  var d = new Date();
-    this.update({
-        _id: data_id
-    }, {
-        $set: {
-        remind_at:req.remind_at
-        }
-    }, cb);
-    var loggerDetail= new logger({
-      userId:req.userId,
-      message:"reminder is set "
-    });
-    loggerDetail.save();
+/**
+* set Reminder
+* @param {String} dataId
+* @return {Error} err
+* @return {data} data card
+* @api For user
+*/
+
+datacardSchema.statics.remind = function(dataId,req,cb) {
+  // var currDate= new Date();
+  this.update({
+    _id: dataId
+  }, {
+    $set: {
+      remind_at:req.remind_at
+    }
+  }, cb);
+  // saving userId and activity message in loggerSchema
+  var loggerDetail= new logger({
+    userId:req.userId,
+    message:"reminder is set "
+  });
+  loggerDetail.save();
 };
 
-data_card_Schema.statics.select_color = function(data_id,req,cb) {
-  console.log(data_id,"datajkhjk",req);
-  // var d = new Date();
-    this.update({
-        _id: data_id
-    }, {
-        $set: {
-        bgcolor:req.bgcolor
-        }
-    }, cb);
-    var loggerDetail= new logger({
-      userId:req.userId,
-      message:" background color set"
-    });
-    loggerDetail.save();
+
+/**
+* set background color
+* @param {String} dataId
+* @return {Error} err
+* @return {data} data card
+* @api For user
+*/
+
+datacardSchema.statics.selectColor = function(dataId,req,cb) {
+  this.update({
+    _id: dataId
+  }, {
+    $set: {
+      bgcolor:req.bgcolor
+    }
+  }, cb);
+  // saving userId and activity message in loggerSchema
+  var loggerDetail= new logger({
+    userId:req.userId,
+    message:" background color set"
+  });
+  loggerDetail.save();
 };
-data_card_Schema.statics.mark_as_archived = function(data_id,req,cb) {
-  console.log(data_id,"datajkhjk",req.archive);
-  // var d = new Date();
-// var message;
-// console.log(req);
+
+
+/**
+* Archive data card
+* @param {String} dataId
+* @return {Error} err
+* @return {data} data card
+* @api For user
+*/
+
+
+datacardSchema.statics.archived = function(dataId,req,cb) {
+
 if(req.archive=="true"){
-  // console.log("archive",req.archive);
   message="card is archived";
 }
 else
   {
-    // console.log("unarchive",req.archive);
     message="card is unarchived";
+
   }
     this.update({
-        _id: data_id
+        _id: dataId
     }, {
         $set: {
         isArchived:req.archive,
         pinned:req.pinned
         }
     }, cb);
-
-console.log("message",message);
+  // saving userId and activity message in loggerSchema
     var loggerDetail= new logger({
       userId:req.userId,
       "message":message
     });
     loggerDetail.save();
 };
-data_card_Schema.statics.pinned = function(data_id,req,cb) {
-  // console.log(data_id,"datajkhjk",req);
-  // console.log(req);
+
+/**
+* Pin data card
+* @param {String} dataId
+* @return {Error} err
+* @return {data} data card
+* @api For user
+*/
+
+datacardSchema.statics.pinned = function(dataId,req,cb) {
   if(req.pin=="true"){
-    // console.log("archive",req.archive);
     message="card is pinned";
   }
   else
     {
-      // console.log("unarchive",req.archive);
       message="card is unpinned";
-    }
+      }
 
     this.update({
-        _id: data_id
+        _id: dataId
     }, {
         $set: {
         pinned:req.pin,
         isArchived:req.archive
         }
     }, cb);
+    // saving userId and activity message in loggerSchema
     var loggerDetail= new logger({
       userId:req.userId,
       "message":message
     });
     loggerDetail.save();
-// };
-};
+  };
 
 
 
 
-data_card_Schema.statics.delete_reminder = function(data_id,req, cb) {
-    // console.log(req);
+/**
+* Delete Reminder
+* @param {String} dataId
+* @return {Error} err
+* @return {data} data card
+* @api For user
+*/
+
+
+datacardSchema.statics.deleteReminder = function(dataId,req, cb) {
     this.update({
-        _id: data_id
+        _id: dataId
     }, {
         $unset: {
         remind_at:""
         }
     }, cb);
+    // saving userId and activity message in loggerSchema
     var loggerDetail= new logger({
       userId:req.userId,
       "message":"reminder deleted"
     });
     loggerDetail.save();
+  };
 
 
-};
-data_card_Schema.statics.delete_data = function(data_id,req, cb) {
+
+
+
+/**
+* Delete data card
+* @param {String} dataId
+* @return {Error} err
+* @return {data} data card
+* @api For user
+*/
+
+datacardSchema.statics.deleteData = function(dataId,req, cb) {
   var message;
 if(req.delete=='delete')
 {
   message="data deleted permanently";
-  console.log("permanent delete");
-   this.remove({_id:data_id},cb)
+   this.remove({_id:dataId},cb)
 }
 else if(req.delete=='restore')
 {
   message="data card restored";
-  console.log("restore");
   this.update({
-      _id: data_id
+      _id: dataId
 
   }, {
       $set: {
@@ -251,34 +311,39 @@ else{
   message="data deleted";
 
   this.update({
-      _id: data_id
+      _id: dataId
 
   }, {
       $set: {
       isDeleted:true,
       pinned:false,
       reminder:false
-
-
-      }
+    }
   }, cb);
-
-
 }
+// saving userId and activity message in loggerSchema
 var loggerDetail= new logger({
   userId:req.userId,
   "message":message
 });
 loggerDetail.save();
-
-
 };
-data_card_Schema.statics.get_data = function(req, cb) {
-console.log("get data",req);
+
+
+
+/**
+* Get data cards
+*
+* @return {Error} err
+* @return {data} data card
+* @api For user
+*/
+
+datacardSchema.statics.getData = function(req, cb) {
     this.find({d_no:req._id},cb);
 };
 
 
-var data_card = mongoose.model('data_card', data_card_Schema);
+var data_card = mongoose.model('data_card', datacardSchema);
 
 module.exports = data_card;

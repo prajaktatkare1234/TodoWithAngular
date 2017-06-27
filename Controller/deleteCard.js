@@ -1,14 +1,27 @@
+/*
+ * Adding data cards
+ * @path Controller/deleteCard.js
+ * @file deleteCard.js
+ * @Scripted by Prajakta Tatkare
+ */
+
+/*
+ * Module dependencies
+ */
+
+
+
 var express = require('express');
 var router = express.Router();
 var User = require('../Model/dataCard.js');
 var winston=require('winston');
 
 
-router.post('/:id',function(req, res) {
+router.post('/:id',function(req, res) {  // post call for api delete.js
   try {
-    var data_id=req.params.id;
+    var data_id=req.params.id; //fetching data card id from api url
 
-    User.delete_data(data_id,req.body, function(err, result) {
+    User.deleteData(data_id,req.body, function(err, result) {
 
 
       if(err){

@@ -6,6 +6,7 @@
       $scope.input_div = true;
       $scope.reminder_div = true;
       $scope.bin_view = true;
+      $scope.logger_view = true;
       $scope.today = "today";
       $scope.tomorrow = "tomorrow";
       $scope.next = "next";
@@ -34,37 +35,37 @@
                   var hash = str.split("/");
                     console.log(hash);
 
-                  if (hash[1] == "welcome") {
-
-                      $state.go('welcome');
-                  }
-                  if (hash[1] == "archive") {
-                      $state.go('archive');
-                  }
-                  if (hash[1] == "reminder") {
-                      $state.go('reminder');
-                  }
-                  if (hash[1] == "bin") {
-                      $state.go('bin');
-                  }
+                  // if (hash[1] == "welcome") {
+                  //
+                  //     $state.go('welcome');
+                  // }
+                  // if (hash[1] == "archive") {
+                  //     $state.go('archive');
+                  // }
+                  // if (hash[1] == "reminder") {
+                  //     $state.go('reminder');
+                  // }
+                  // if (hash[1] == "bin") {
+                  //     $state.go('bin');
+                  // }
                   if (hash[1] == "logger") {
-                    console.log("lohjsdjsajhsdhjkgh");
+
                       $state.go('logger');
                       $rootScope.logger(data.data.user_data._id)
                   }
 
+                } else {
+
+                }
+              }).catch(function(error) {
+
+              })
+
+            }
+            $scope.check();
 
 
 
-              } else {
-
-              }
-          }).catch(function(error) {
-
-          })
-
-      }
-      $scope.check();
 
 
 
@@ -113,13 +114,13 @@
 
 
 
-          var bg_color_object = {
+          var bgcolorObject = {
               bgcolor: color,
               userId:x.d_no
           }
           var url = "/bgColor/" + x._id + "";
           var action="POST";
-          var obj = todo_service.App(url,action,bg_color_object);
+          var obj = todo_service.App(url,action,bgcolorObject);
           obj.then(function(data) {
 
           }).catch(function(error) {
@@ -129,31 +130,7 @@
 
       };
 
-      $scope.collaborator=function(x){
-        // $scope.data=x;
-        var object={
-          title:x.title,
-          take_note:x.take_note,
 
-        }
-        var modalInstance = $uibModal.open({
-          // object=$scope.data;
-
-            templateUrl: '../html/collab.html',
-            controller: 'collabController',
-
-            resolve: {
-
-                object: function() {
-                    return object
-                }
-            }
-        });
-
-        modalInstance.result.catch(function(error) {
-            console.log(error);
-        })
-      }
 
     $scope.facebookshare=function(todo){
 		console.log("facebook share")
@@ -215,13 +192,13 @@
 
               $scope.remind_at = new Date(time);
           }
-          var remind_at_Object = {
+          var remindObject = {
               remind_at: $scope.remind_at,
               userId:x.d_no
           }
           var url = "/reminder/" + x._id + "";
           var action="POST";
-          var obj = todo_service.App(url, action,remind_at_Object);
+          var obj = todo_service.App(url, action,remindObject);
           obj.then(function(data) {
 
           }).catch(function(error) {
@@ -232,7 +209,7 @@
       };
 
       $scope.profile_pic = function() {
-          console.log("sadKDSFG");
+
 
           var modalInstance = $uibModal.open({
 
@@ -260,8 +237,8 @@
 
 
       $scope.open = function(x) {
-          console.log("x", x);
-          var Data_object = {
+
+          var dataObject = {
               title: x.title,
               note: x.take_note,
               id: x._id,
@@ -278,7 +255,7 @@
               resolve: {
 
                   object: function() {
-                      return Data_object;
+                      return dataObject;
                   }
               }
           });
@@ -289,7 +266,7 @@
       };
 
       $scope.archive = function(x, archive, pin) {
-          var archive_obj = {
+          var archiveObj = {
 
               archive: archive,
               pinned: pin,
@@ -297,7 +274,7 @@
           }
           var url = "/archive/" + x._id + "";
               var action="POST";
-          var obj = todo_service.App(url,action, archive_obj);
+          var obj = todo_service.App(url,action, archiveObj);
           obj.then(function(data) {
 
               $state.reload();

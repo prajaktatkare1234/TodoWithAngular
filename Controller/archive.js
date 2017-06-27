@@ -17,9 +17,10 @@ router.post('/:id', function(req, res)  /* Post call for archive.js */
  {
 
   try {
+    /* fetching data card id from  api url */
     var data_id=req.params.id;
-
-    User.mark_as_archived(data_id,req.body,function(err, result) {
+    /*call to archived function */
+    User.archived(data_id,req.body,function(err, result) {
 
 
       if(err){

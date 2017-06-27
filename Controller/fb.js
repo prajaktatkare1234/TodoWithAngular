@@ -1,23 +1,33 @@
+/*
+ * Connecting with facebook
+ * @path Controller/fb.js
+ * @file fb.js
+ * @Scripted by Prajakta Tatkare
+ */
+
+/*
+ * Module dependencies
+ */
 
 var express = require('express');
 var router = express.Router();
 var User = require('../Model/index.js');
 var config=require('../Config/index.js');
-var conf = require('../Config/config.js');
-
 var winston=require('winston');
-
+var conf = require('../Config/config.js');
 var async = require('async');
 var bcrypt = require('bcryptjs');
 var bodyParser = require('body-parser');
-var jwt = require('jsonwebtoken');
-
 var moment = require('moment');
 var mongoose = require('mongoose');
 var request = require('request');
+var jwt = require('jsonwebtoken');
+
+
+
 
 function createJWT(user) {
-
+//generated token from user id
     return jwt.sign({
         _id: user
     }, conf.TOKEN_SECRET, {
@@ -159,7 +169,7 @@ router.post('/', function(req, res) {
   })
 
 
-  
+
   }
 
 });

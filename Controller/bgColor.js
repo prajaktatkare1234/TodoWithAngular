@@ -1,5 +1,5 @@
 /*
- * backGroung color for data card
+ * backGround color for data card
  * @path Controller/bgColor.js
  * @file bgColor.js
  * @Scripted by Prajakta Tatkare
@@ -14,11 +14,12 @@ var router = express.Router();
 var User = require('../Model/dataCard.js');
 var winston=require('winston');
 
-router.post('/:id', function(req, res) {
+router.post('/:id', function(req, res) {  //post call for bgColor.js
   try {
+    //fetching data card id from api url
     var data_id=req.params.id;
-
-    User.select_color(data_id,req.body,function(err, result) {
+    // call to selectColor function
+    User.selectColor(data_id,req.body,function(err, result) {
 
 
       if(err){

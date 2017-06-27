@@ -1,11 +1,22 @@
+/*
+ * pin and unpin data cards
+ * @path Controller/pinup.js
+ * @file pinup.js
+ * @Scripted by Prajakta Tatkare
+ */
+
+/*
+ * Module dependencies
+ */
+
 var express = require('express');
 var router = express.Router();
 var User = require('../Model/dataCard.js');
 var winston=require('winston');
 
-router.post('/:id', function(req, res) {
+router.post('/:id', function(req, res) { //post call for api pinup.js
   try {
-    var data_id=req.params.id;
+    var data_id=req.params.id; //fetching user id from api url
 
     User.pinned(data_id,req.body,function(err, result) {
 

@@ -1,9 +1,13 @@
-<div id="outerbox" style="margin-bottom:18px;"  ng-repeat="y in activeLogs"  >
-  <div  ng-class="innerbox"  >
+<div id="outerbox"  style="margin-bottom:18px; margin-left:150px;width:50%;"  ng-repeat="y in activeLogs | orderBy:'time':true"  >
+  <div  style="text-align: -webkit-center;"ng-class="innerbox"  >
 
 
-          <div  ng-bind-html="y.message"></div>
-              <!-- <div   ng-bind-html="y.time"></div> -->
+          <div style="    font-size: 22px;
+              font-family: serif;
+
+              font-weight: bold;" ng-bind-html="y.message"></div>
+          <div style="float:right;" ng-bind-html="y.time  | date:'dd-MM hh:mm a'"></div>
+        </div>
 
 
 
@@ -12,5 +16,4 @@
 
 
 
-            </div>
 </div>

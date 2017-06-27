@@ -1,16 +1,27 @@
+/*
+ * getting user information
+ * @path Controller/userInfo.js
+ * @file userInfo.js
+ * @Scripted by Prajakta Tatkare
+ */
+
+/*
+ * Module dependencies
+ */
+
 var express=require('express');
 router=express.Router();
 var User = require('../Model/index.js');
 var winston=require('winston');
 
-router.post('/',function(req,res){
+router.post('/',function(req,res){ //post call for api userInfo.js
   try {
     User.profile(req.decode,function(err,data){
       if(data)
       {
 
         winston.info("user info ");
-      obj={
+        obj={
         user_id:data._id,
         name:data.name,
         email:data.email,

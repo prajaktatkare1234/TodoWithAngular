@@ -1,3 +1,13 @@
+/*
+ * Connecting with google
+ * @path Controller/google.js
+ * @file google.js
+ * @Scripted by Prajakta Tatkare
+ */
+
+/*
+ * Module dependencies
+ */
 
 var express = require('express');
 var router = express.Router();

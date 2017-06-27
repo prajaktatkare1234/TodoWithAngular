@@ -2,8 +2,17 @@ App.controller('loggerController', ['$scope','$rootScope','todo_service','$contr
   $controller('welcomeController', {$scope: $scope})
   $scope.logger_view=false;
   $scope.keep="Logger";
+  $scope.archive_style={
+    "background-color":"grey"
+
+  }
+  $scope.drop={
+    "background-color":"grey"
+  }
+  $scope.search_archive={
+    "background-color":"white"
+  }
   $rootScope.logger=function(userId){
-    // console.log("logger",userId);
     var url = "/getLoggers";
         var action="POST";
         var object={
@@ -18,23 +27,14 @@ App.controller('loggerController', ['$scope','$rootScope','todo_service','$contr
 
             var loggerCards = [];
 
-            for (var i = data.data.result.length - 1; i >= 0; i--) {
-
-                loggerCards[loggerCards.length] = data.data.result[i];
-                // if (data.data.data_info[i].pinned) {
-                //     $scope.pin = true;
-                // } else {
-                //     $scope.pin = false;
-                // }
-
-
-
+            for(i in data.data.result )
+            {
+              loggerCards[i]=data.data.result[i]
             }
 
 
 
             $rootScope.activeLogs = loggerCards;
-            console.log("dfldskdflgkfdg",$rootScope.activeLogs );
 
 
 
@@ -45,5 +45,5 @@ App.controller('loggerController', ['$scope','$rootScope','todo_service','$contr
   };
 
 
-  // }
+
 }]);

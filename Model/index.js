@@ -17,7 +17,6 @@ var crypto = require('crypto');
 var jwt = require('jsonwebtoken');
 var config = require('../Config/config.js');
 
-// console.log("in model");
 var Schema = mongoose.Schema;
 /**
  * @schema userSchema
@@ -69,103 +68,121 @@ var userSchema = Schema({
 
 
 /**
- * Save user
- * @api For user
- */
-userSchema.statics.save_user = function(req, cb) {
-    var pwd = req.body.password;
+* create new user
+* @return {Error} err
+* @return {User} user
+* @api For public
+*/
+userSchema.statics.saveUser = function(req, cb) {
+  var pwd = req.body.password;
 
-    var encrypt = encrypt_data(pwd);
-    var user_Detail = new this({
-        'local.name': req.body.name,
-        'local.email': req.body.email,
-        'local.password': encrypt
-    });
+  var encrypt = encrypt_data(pwd);
+  var user_Detail = new this({
+    'local.name': req.body.name,
+    'local.email': req.body.email,
+    'local.password': encrypt
+  });
 
 
-    user_Detail.save(cb);
+  user_Detail.save(cb);
 };
-function encrypt_data(pwd) {
+
+function encrypt_data(pwd) { //function to encrypt password
     var cipher = crypto.createCipher(config.algorithm, config.password)
     var crypted = cipher.update(pwd, 'utf8', 'hex')
     crypted += cipher.final('hex');
     return crypted;
 }
+
+
+/**
+ * Find User by its email and password
+ *
+ * @param {String} email and password
+ * @return {Error} err
+ * @return {User} user
+ * @api user
+ */
 userSchema.statics.login = function(req, cb) {
 var encPass =encrypt_data(req.password)
     this.findOne({
         'local.email': req.email,
         'local.password':encPass
     }, cb);
-}
-userSchema.statics.shareEmail = function(req, cb) {
-    this.findOne({
-        'local.email': req.email
-        // 'local.password':encPass
-    }, cb);
-}
-
-userSchema.statics.change_profile_pic = function(req,url,cb) {
-  // console.log(data_id,"datajkhjk",req);
-  // var d = new Date();
-    this.update({
-      'local.name': req.name
-    }, {
-        $set: {
-        'local.profile_pic':url.profile_pic,
-        'local.original_pic':url.original_pic
-
-        }
-    }, cb);
 };
 
-userSchema.statics.profile=function(req,cb){
-    console.log("hjgsdf",req);
-  this.findOne({_id:req._id},cb);
-  //{
- //   if(user){
- //       res.send({"user_detail":user});
- //
- //   }
- //   else{
- //     res.send({message:"error"});
- //   }
- // })
-}
+/**
+ * Setting profile pic for user
+ *
+ * @param {String} name
+ * @return {Error} err
+ * @return {User} user
+ * @api user
+ */
+ userSchema.statics.changeProfilepic = function(req,url,cb) {
+   this.update({
+     'local.name': req.name
+   }, {
+     $set: {
+       'local.profile_pic':url.profile_pic,
+       'local.original_pic':url.original_pic
 
+     }
+   }, cb);
+ };
 
-userSchema.statics.getallUser=function(req,cb){
-    // console.log("hjgsdf",req);
-  this.find({},cb);
-  //{
- //   if(user){
- //       res.send({"user_detail":user});
- //
- //   }
- //   else{
- //     res.send({message:"error"});
- //   }
- // })
-}
-userSchema.statics.resetPassword=function(req,cb){
-    console.log("hjgsdf",req.email);
+/**
+ * Find User by its id
+ *
+ * @param {String} id
+ * @return {Error} err
+ * @return {User} user
+ * @api user
+ */
+ userSchema.statics.profile=function(req,cb){
+
+   this.findOne({_id:req._id},cb);
+
+ };
+
+/**
+ * Find User by its email
+ *
+ * @param {String} email
+ * @return {Error} err
+ * @return {User} user
+ * @api user
+ */
+userSchema.statics.verifyEmail=function(req,cb){
 
   this.findOne({'local.email':req.email},cb);
 
-}
-userSchema.statics.changePassword=function(req,email,cb){
-console.log("in change password dksajldksgkldfgjfkdl",email);
-  var encrypt = encrypt_data(req.password);
-  console.log(encrypt);
+};
 
-  this.update({
-    'local.email': email
-  }, {
-      $set: {
-      'local.password':encrypt
-      }
-  }, cb);
-}
+/**
+ * Find User by its email and change password
+ *
+ * @param {String} email
+ * @return {Error} err
+ * @return {User} user
+ * @api user
+ */
+ userSchema.statics.changePassword=function(req,email,cb){
+   var encrypt = encrypt_data(req.password);
+   this.update({
+     'local.email': email
+   }, {
+     $set: {
+       'local.password':encrypt
+     }
+   }, cb);
+ };
+
+
+
+ /**
+  * @description Expose `User` Model
+  */
 
 var User = mongoose.model('User', userSchema);
 

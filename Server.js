@@ -5,25 +5,20 @@ var winston=require('winston');
 var nodemailer=require('nodemailer');
 
 
-
-
-
-
 winston.configure({
-   transports: [
-     new (winston.transports.File)({
-       name: 'info-file',
-       filename: 'filelog-info.log',
-       level: 'info'
-     }),
-     new (winston.transports.File)({
-       name: 'error-file',
-       filename: 'filelog-error.log',
-       level: 'error'
-     })
-   ]
- });
-
+  transports: [
+    new (winston.transports.File)({
+      name: 'info-file',
+      filename: 'filelog-info.log',
+      level: 'info'
+    }),
+    new (winston.transports.File)({
+      name: 'error-file',
+      filename: 'filelog-error.log',
+      level: 'error'
+    })
+  ]
+});
 
 var bodyParser = require('body-parser');
 var validator=require('express-validator');
@@ -39,7 +34,12 @@ app.use(validator());
 
 app.use(require('./Controller'));
 var server = app.listen(p, function() {
-    var host = server.address().address
-    var port = server.address().port
-    console.log("Example app listening at http://%s:%s", host, port)
+  var host = server.address().address
+  var port = server.address().port
+  console.log("Example app listening at http://%s:%s", host, port)
+
+
+
+
+
 });
