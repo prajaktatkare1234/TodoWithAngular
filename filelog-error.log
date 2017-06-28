@@ -180,3 +180,6 @@
 {"level":"error","message":"failed to delete data card","timestamp":"2017-06-25T10:17:01.915Z"}
 {"level":"error","message":"failed to delete data card","timestamp":"2017-06-25T10:17:04.324Z"}
 {"level":"error","message":"failed to delete reminder","timestamp":"2017-06-27T08:05:47.629Z"}
+{"level":"error","message":"failed to delete reminder","timestamp":"2017-06-28T07:10:44.436Z"}
+{"level":"error","message":"failed to delete reminder","timestamp":"2017-06-28T12:42:17.030Z"}
+{"level":"error","message":"failed to delete reminder","timestamp":"2017-06-28T13:17:51.897Z"}

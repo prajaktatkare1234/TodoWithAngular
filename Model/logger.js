@@ -27,6 +27,9 @@ var loggerSchema = Schema({
     },
     time:{
       type:Date
+    },
+    title:{
+      type:String
     }
 
   });

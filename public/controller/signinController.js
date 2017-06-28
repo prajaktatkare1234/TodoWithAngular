@@ -1,15 +1,15 @@
 App.controller('signinController', function($scope, $state, todo_service, $rootScope, $auth) {
 
+// function to check whether the user is already logged in or not
+    $scope.check = function() {
 
-    $rootScope.check = function() {
-        console.log("inside check");
         var url = "/userInfo/";
         var action="POST";
         var obj = todo_service.App(url,action);
         obj.then(function(data) {
             if (data.data.status == true) {
-                $rootScope.user_data = data.data.user_data;
-                $rootScope.myImage = data.data.user_data.original_pic;
+                // $rootScope.user_data = data.data.user_data;
+                // $rootScope.myImage = data.data.user_data.original_pic;
 
                 $state.go('welcome');
 
@@ -28,7 +28,7 @@ App.controller('signinController', function($scope, $state, todo_service, $rootS
         $auth.authenticate(provider)
             .then(function() {
                 //  toastr.success('You have successfully signed in with ' + provider + '!');
-                console.log("logged in");
+
                 $state.go('welcome');
 
             })
@@ -48,30 +48,28 @@ App.controller('signinController', function($scope, $state, todo_service, $rootS
 
 
     $scope.sign_in = function() {
-        var email_id = $scope.uname;
-        var password = $scope.pass;
-        console.log(email_id);
-        console.log(password);
-        var object = {
-            email: email_id,
-            password: password
 
+      var object = {
+        email: $scope.uname,
+        password: $scope.pass
+
+      }
+      var url = "/signIn";
+      var action="POST";
+      var obj = todo_service.App(url, action,object);
+      obj.then(function(data) {
+
+        if (data.data.status == true) {
+
+          $state.go('welcome');
+        } else {
+
+          $state.go('signin');
         }
-        var url = "/signIn";
-        var action="POST";
-        var obj = todo_service.App(url, action,object);
-        obj.then(function(data) {
 
-            if (data.data.status == true) {
+      }).catch(function(error) {
 
-                $state.go('welcome');
-            } else {
-                console.log("ghfhjhj");
-                $state.go('signin');
-            }
-
-        }).catch(function(error) {
-
-        })
+      })
     }
+
 });

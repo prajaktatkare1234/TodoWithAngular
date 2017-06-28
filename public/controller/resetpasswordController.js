@@ -1,90 +1,73 @@
-App.controller('resetpasswordController', function($scope,$state,todo_service,$rootScope,$auth,$window) {
-  $scope.regex_password = /[a-z]{5,8}$/;
+App.controller('resetpasswordController', function($scope, $state, todo_service, $rootScope, $window) {
+    $scope.regex_password = /[a-z]{5,8}$/;
 
-$scope.resetPassword=function(){
+    //fuction to check whether the enterd email is already registered or not
+    $scope.resetPassword = function() {
 
-var verifyEmail=$scope.verifyEmail;
-  var object={
-    email:verifyEmail
-  }
-console.log(object);
-  var url= "/verifyEmail";
-  var action="PUT";
-var obj = todo_service.App(url,action,object);
+        var verifyEmail = $scope.verifyEmail;
+        var object = {
+            email: verifyEmail
+        }
+        console.log(object);
+        var url = "/verifyEmail";
+        var action = "PUT";
+        var obj = todo_service.App(url, action, object);
 
-obj.then(function(data) {
-  // console.log(data.data.status,);
-  if(data.data.status==true)
+        obj.then(function(data) {
 
-  {
+            if (data.data.status == true)
 
-    $window.alert("link for changing the password is send to the registered email");
+            {
+
+                $window.alert("link for changing the password is send to the registered email");
+
+            } else {
+                $window.alert("Email address is not registered");
+
+                $state.go('verifyEmail');
+
+            }
+
+          }).catch(function(error) {
+            console.log(error);
+          })
+        };
 
 
-    console.log("registered  is Email");
 
-//     $scope.goSomewhere = function($state) {
-//     $rootScope.token=data.data.token;
-//        $state.go(
-//          'changePassword',
-//          {
-//            token: data.data.token
-//           }
-//
-//
-// )}
-//   $scope.goSomewhere();
-}
-  else{
-      $window.alert("Email address is not registered");
 
-      $state.go('verifyEmail');
+// function called for changing the password
+    $scope.submit = function() {
 
-  }
+        var a = $state.href('changePassword', $state.params, {});
+        var hash = a.split("Password/");
+        var token = hash[1];
 
-}).catch(function(error) {
+        var newPassword = $scope.newPass;
+        var url = "/signUp";
+        var object = {
+            password: $scope.newPass,
+            updation: "change",
+            token: token
+        }
+        var action = "POST";
+        var obj = todo_service.App(url, action, object);
+        obj.then(function(data) {
 
-})
-};
+            if (data.data.status == true) {
+                $window.alert("Password is changed successfully");
 
-$scope.submit=function(){
+                $state.go('signin');
+            } else {
 
-var a=$state.href('changePassword', $state.params,{});
-// console.log(a);
-    var hash=a.split("Password/");
-  // console.log(hash);
-  var token=hash[1];
+                $state.go('changePassword');
 
-  var newPassword=$scope.newPass;
-  var url= "/signUp";
-  // var email=email
-  var object={
-  password:$scope.newPass,
-  updation:"change",
-  token:token
-  }
-  var action="POST";
-  // console.log("changeObj",object);
-var obj = todo_service.App(url,action,object);
-obj.then(function(data) {
+            }
 
-  if(data.data.status==true)
-  {
-    $window.alert("Password is changed successfully");
+        }).catch(function(error) {
 
-    console.log("password changed");
-    $state.go('signin');
-}
-  else{
-
-      $state.go('changePassword');
-      // console.log("email is not registered");
-  }
-
-}).catch(function(error) {
-
-})
-};
+        })
+    };
 
 
 

@@ -1,4 +1,6 @@
+
 App.controller('popupController', function($scope,$uibModalInstance,object,todo_service) {
+  //storing in $scope so that it can be accessed in popup.html
   $scope.updated_title=object.title;
   $scope.updated_note=object.note;
   $scope.updated_date=object.updated;

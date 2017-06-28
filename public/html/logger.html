@@ -1,19 +1,21 @@
-<div id="outerbox"  style="margin-bottom:18px; margin-left:150px;width:50%;"  ng-repeat="y in activeLogs | orderBy:'time':true"  >
-  <div  style="text-align: -webkit-center;"ng-class="innerbox"  >
+
+<div ng-class="grid_show" class="row">
 
 
-          <div style="    font-size: 22px;
-              font-family: serif;
+<div style="margin-bottom:18px;" ng-repeat="y in activeLogs | orderBy:'time':true" ng-class="view_change"   >
+  <div  ng-class="innerbox" >
 
-              font-weight: bold;" ng-bind-html="y.message"></div>
-          <div style="float:right;" ng-bind-html="y.time  | date:'dd-MM hh:mm a'"></div>
-        </div>
+    <div style="font-size: 18px;font-family:serif;font-weight:bold;"class="">Title:  {{y.title}}
+      <div style="border-top: 2px dashed;">
 
+    </div>
+    <div style="font-size: 22px;font-family:serif;">{{y.message}}</div>
 
-
-
-
-
+    <div style="float:right;">{{y.time  | date:'dd-MM hh:mm a'}}</div>
 
 
+  </div>
+
+
+</div>
 </div>

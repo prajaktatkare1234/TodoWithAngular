@@ -1,9 +1,10 @@
 App.controller('reminderController', ['$scope', '$controller', function($scope, $controller){
   $controller('welcomeController', {$scope: $scope})
+  //using  reminderController inside welcomeController
 
-  $scope.reminder_div=false;
+  $scope.reminderDiv=true;
   $scope.keep="Reminder";
-  
+// changing the color of navigation bar
   $scope.archive_style={
     "background-color":"grey"
 

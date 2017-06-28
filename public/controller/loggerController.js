@@ -1,7 +1,10 @@
 App.controller('loggerController', ['$scope','$rootScope','todo_service','$controller', function($scope,$rootScope,todo_service,$controller){
   $controller('welcomeController', {$scope: $scope})
-  $scope.logger_view=false;
+//using  binController inside welcomeController
+  $scope.loggerDiv=true;
   $scope.keep="Logger";
+
+//changing color of navigation bar
   $scope.archive_style={
     "background-color":"grey"
 
@@ -12,6 +15,7 @@ App.controller('loggerController', ['$scope','$rootScope','todo_service','$contr
   $scope.search_archive={
     "background-color":"white"
   }
+
   $rootScope.logger=function(userId){
     var url = "/getLoggers";
         var action="POST";
@@ -21,9 +25,7 @@ App.controller('loggerController', ['$scope','$rootScope','todo_service','$contr
 
     var obj = todo_service.App(url,action,object);
     obj.then(function(data) {
-      console.log(data);
-        //
-        if (data.data.status == true) {
+        if (data.data.status == true) { //fetches data from logger schema
 
             var loggerCards = [];
 
@@ -35,11 +37,12 @@ App.controller('loggerController', ['$scope','$rootScope','todo_service','$contr
 
 
             $rootScope.activeLogs = loggerCards;
+          }
 
 
 
-        }
     }).catch(function(error) {
+      console.log(error);
 
     })
   };

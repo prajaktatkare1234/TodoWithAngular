@@ -106,8 +106,8 @@ router.put('/', function(req, res) { //post call for api verifyEmail.js
             })
         }
 
-    });console.log("in change password dksajldksgkldfgjfkdl",email);
-
+    });
+  
 
 
   } catch (error) {

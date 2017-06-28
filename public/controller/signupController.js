@@ -3,38 +3,33 @@ App.controller('signupController', function($scope,$state,todo_service) {
     $scope.regex_password = /[a-z]{5,8}$/;
 
 
-
+// function create new account
     $scope.sign_up = function() {
-        var name = $scope.name;
-        var email = $scope.email;
-        var password = $scope.pass;
-        var repass = $scope.repass;
 
+      var object = {
+        name: $scope.name,
+        email: $scope.email,
+        password: $scope.pass
+      }
+      var url= "/signUp";
+      var action="POST";
+      var obj = todo_service.App(url,action,object);
+      obj.then(function(data) {
 
+        if(data.data.status==true)
 
-        var object = {
-            name: name,
-            email: email,
-            password: password
+        {
+
+          $state.go('signin');
         }
-          var url= "/signUp";
-            var action="POST";
-        var obj = todo_service.App(url,action,object);
-        obj.then(function(data) {
-          console.log(data);
-          if(data.data.status==true)
+        else{
+          $state.go('signup');
+        }
 
-          {
-            
-            $state.go('signin');
-          }
-          else{
-            $state.go('signup');
-          }
+      }).catch(function(error) {
 
-        }).catch(function(error) {
-
-        })
+      })
     }
+
 
 });

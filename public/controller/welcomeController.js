@@ -3,10 +3,10 @@
       $scope.custom = true;
       $scope.sidebar = true;
       $scope.pop = true;
-      $scope.input_div = true;
-      $scope.reminder_div = true;
-      $scope.bin_view = true;
-      $scope.logger_view = true;
+      $scope.archiveDiv = false;
+      $scope.reminderDiv = false;
+      $scope.binview = false;
+      $scope.loggerDiv = false;
       $scope.today = "today";
       $scope.tomorrow = "tomorrow";
       $scope.next = "next";
@@ -16,13 +16,15 @@
       $rootScope.check = function() {
           console.log("inside check");
           var url = "/userInfo/";
-          var action="POST";
+          var action = "POST";
 
-          var obj = todo_service.App(url,action);
+          var obj = todo_service.App(url, action);
           obj.then(function(data) {
               console.log(data, "data");
               if (data.data.status == true) {
+                //giving access of user_data to all controllers
                   $rootScope.user_data = data.data.user_data;
+                  //if object key is local then picture inside local object is stored or picture inside social object in myImage
                   if (!('local' in data.data.user_data)) {
                       $rootScope.myImage = data.data.user_data.social.picture;
                   } else {
@@ -30,41 +32,27 @@
                   }
 
                   var str = window.location.hash;
-                  console.log(str);
+
 
                   var hash = str.split("/");
-                    console.log(hash);
 
-                  // if (hash[1] == "welcome") {
-                  //
-                  //     $state.go('welcome');
-                  // }
-                  // if (hash[1] == "archive") {
-                  //     $state.go('archive');
-                  // }
-                  // if (hash[1] == "reminder") {
-                  //     $state.go('reminder');
-                  // }
-                  // if (hash[1] == "bin") {
-                  //     $state.go('bin');
-                  // }
+
                   if (hash[1] == "logger") {
 
                       $state.go('logger');
+                      //calling logger function and passing userId in it as parameter
                       $rootScope.logger(data.data.user_data._id)
                   }
 
-                } else {
+              } else {
 
-                }
-              }).catch(function(error) {
+              }
+          }).catch(function(error) {
 
-              })
+          })
 
-            }
-            $scope.check();
-
-
+      }
+      $scope.check();
 
 
 
@@ -105,100 +93,107 @@
           }
       ]
 
-
+      // function to reload the page
       $scope.reload = function() {
           $state.reload();
       };
 
-      $scope.select_color = function(x, color) {
 
+      // function to select the background color of the card
+      $scope.select_color = function(data, color) {
 
+        var bgcolorObject = {
+          bgcolor: color,
+          userId: data.d_no,
+          title:data.title
+        }
+        var url = "/bgColor/" + data._id + "";
+        var action = "POST";
+        var obj = todo_service.App(url, action, bgcolorObject);
+        obj.then(function(data) {
+          console.log("background color set");
 
-          var bgcolorObject = {
-              bgcolor: color,
-              userId:x.d_no
-          }
-          var url = "/bgColor/" + x._id + "";
-          var action="POST";
-          var obj = todo_service.App(url,action,bgcolorObject);
-          obj.then(function(data) {
-
-          }).catch(function(error) {
-
-          })
-          $scope.get_data();
+        }).catch(function(error) {
+          console.log(error);
+        })
+        $scope.get_data();
 
       };
 
 
 
-    $scope.facebookshare=function(todo){
-		console.log("facebook share")
-		FB.init({
-			appId : '1783193788658916',
-			status: true,
-			xfbml : true
-		});
-		 FB.ui({
-	           method: 'share_open_graph',
-	           action_type: 'og.shares',
-	           action_properties: JSON.stringify({
-	               object : {
-	                  // your url to share
-	                  'og:title': todo.title,
-	                  'og:description': todo.take_note,
-	                  /*'og:image': 'http://example.com/link/to/your/image.jpg'*/
-	               }
-	           })
-	           },
-	           // callback
-	           function(response) {
-	           if (response && !response.error_message) {
-	               // then get post content
-	               alert('successfully posted. Status id : '+response.post_id);
-	           } else {
-	               alert('Something went error.');
-	           }
-	       });
 
-	};
+      //function for posting data card on facebook
+      $scope.facebookshare = function(todo) {
+          console.log("facebook share")
+          FB.init({
+              appId: '1783193788658916',
+              status: true,
+              xfbml: true
+          });
+          FB.ui({
+                  method: 'share_open_graph',
+                  action_type: 'og.shares',
+                  action_properties: JSON.stringify({
+                      object: {
+                          // your url to share
+                          'og:title': todo.title,
+                          'og:description': todo.take_note,
+                          /*'og:image': 'http://example.com/link/to/your/image.jpg'*/
+                      }
+                  })
+              },
+              // callback
+              function(response) {
+                  if (response && !response.error_message) {
+                      // then get post content
+                      alert('successfully posted. Status id : ' + response.post_id);
+                  } else {
+                      alert('Something went error.');
+                  }
+              });
+
+      };
 
 
-
+      //function to set reminder
       $scope.remind = function(x, time) {
-          console.log(x._id, time, "hhgfgh");
-          // $scope.id=x._id
-          var date = new Date();
-          console.log("remind");
+
+          var date = new Date();// current date
+
           $scope.time = time;
           if ($scope.time == "today") {
               var today_r = new Date(date);
+              //setting reminder for current date at 8 pm
               today_r.setHours(20, 00, 00)
               $scope.remind_at = new Date(today_r)
-              console.log($scope.remind_at, "today");
+
           } else if ($scope.time == "tomorrow") {
               var tomorrow_r = new Date(date);
               tomorrow_r.setDate(tomorrow_r.getDate() + 1);
+                //setting reminder for naxt date at 8 pm
               tomorrow_r.setHours(20, 00, 00)
               $scope.remind_at = new Date(tomorrow_r)
-              console.log($scope.remind_at, "tomorrow");
+
           } else if ($scope.time == "next") {
               var next_r = new Date(date);
+                //setting reminder for next week at 8 pm
               next_r.setDate(date.getDate() + 7);
               next_r.setHours(20, 00, 00)
               $scope.remind_at = new Date(next_r)
-              console.log($scope.remind_at, "next");
-          } else {
 
+          } else {
+              //setting reminder as selected from date picker
               $scope.remind_at = new Date(time);
           }
           var remindObject = {
               remind_at: $scope.remind_at,
-              userId:x.d_no
+              userId: x.d_no,
+              title:x.title
           }
           var url = "/reminder/" + x._id + "";
-          var action="POST";
-          var obj = todo_service.App(url, action,remindObject);
+          var action = "POST";
+          var obj = todo_service.App(url, action, remindObject);
           obj.then(function(data) {
 
           }).catch(function(error) {
@@ -208,6 +203,7 @@
 
       };
 
+      //function for opening a popup to change the profile pic
       $scope.profile_pic = function() {
 
 
@@ -235,7 +231,7 @@
 
 
 
-
+// function for opening a popup and updating the data inside data card
       $scope.open = function(x) {
 
           var dataObject = {
@@ -246,10 +242,10 @@
               bgcolor: x.bgcolor
 
           }
-          // console.log('opening pop up', $scope.data_info);
+
           var modalInstance = $uibModal.open({
 
-              templateUrl: '../html/popup.html',
+              templateUrl: '../html/popup.html',//popup for updating in data card
               controller: 'popupController',
 
               resolve: {
@@ -264,20 +260,21 @@
               console.log(error);
           })
       };
-
-      $scope.archive = function(x, archive, pin) {
+      // function to archive any data card
+      $scope.archive = function(data, archive, pin) {
           var archiveObj = {
 
               archive: archive,
               pinned: pin,
-              userId:x.d_no
+              userId: data.d_no,
+              title:data.title
           }
-          var url = "/archive/" + x._id + "";
-              var action="POST";
-          var obj = todo_service.App(url,action, archiveObj);
+          var url = "/archive/" + data._id + "";
+          var action = "POST";
+          var obj = todo_service.App(url, action, archiveObj);
           obj.then(function(data) {
 
-              $state.reload();
+                $scope.get_data();
 
           }).catch(function(error) {
 
@@ -285,17 +282,18 @@
       };
 
 
+//function to pin any data card
+      $scope.pinup = function(data, pin, archive) {
 
-      $scope.pinup = function(x, pin, archive) {
-
-          var url = "/pinup/" + x._id + "";
+          var url = "/pinup/" + data._id + "";
           var obj = {
               pin: pin,
               archive: archive,
-              userId:x.d_no
+              userId: data.d_no,
+              title:data.title
           }
-          var action="POST";
-          var obj = todo_service.App(url,action, obj);
+          var action = "POST";
+          var obj = todo_service.App(url, action, obj);
           obj.then(function(data) {
               $scope.get_data();
 
@@ -313,16 +311,16 @@
 
 
 
-
+// function to call api which clears the cookie
       $scope.logout = function() {
 
 
           var url = "/logout";
-              var action="POST";
-          var obj = todo_service.App(url,action);
+          var action = "POST";
+          var obj = todo_service.App(url, action);
           obj.then(function(data) {
               if (data.data.status == false) {
-                  console.log("logout");
+
                   $state.go('signin');
               }
           }).catch(function(error) {
@@ -339,81 +337,82 @@
 
       };
 
-
+// function to make an exact coy of any data card
       $scope.copy = function(x) {
           var url = "/dataCard";
-          var action="POST";
-          var obj = todo_service.App(url,action, x);
+          var action = "POST";
+          var obj = todo_service.App(url, action, x);
           obj.then(function(data) {
-
+            $scope.get_data();
           }).catch(function(error) {
 
           });
-          $scope.get_data();
-      };
 
+      };
+    //function to delete reminder
       $scope.delete_reminder = function(x) {
 
           var url = "/deleteReminder/" + x._id + "";
-            var action="POST";
-            var object={
-              userId:x.d_no
-            }
-          var obj = todo_service.App(url,action,object);
+          var action = "POST";
+          var object = {
+              userId: x.d_no,
+                  title:x.title
+          }
+          var obj = todo_service.App(url, action, object);
           obj.then(function(data) {
-
+            $scope.get_data();
           }).catch(function(error) {
 
           });
-          $scope.get_data();
+
       };
 
 
 
 
-
+//function to add a new data card
       $scope.save = function() {
 
           if ($scope.title == "" && $scope.take_note == "") {
               return;
           }
-          var title = $scope.title;
-          var take_note = $scope.take_note;
+
 
           var object = {
-              title: title,
-              take_note: take_note
+              title: $scope.title,
+              take_note: $scope.take_note
 
           }
           var url = "/dataCard";
-              var action="POST";
+          var action = "POST";
 
           $scope.title = null;
           $scope.take_note = null;
-          var obj = todo_service.App(url,action, object);
+          var obj = todo_service.App(url, action, object);
           obj.then(function(data) {
 
           }).catch(function(error) {
 
           })
           $scope.get_data();
-        };
+      };
 
 
 
 
 
-
+      //function to get all data cards
       $rootScope.get_data = function() {
 
           var url = "/getDatacard";
-              var action="POST";
-          var obj = todo_service.App(url,action);
+          var action = "POST";
+          var obj = todo_service.App(url, action);
           obj.then(function(data) {
 
               if (data.data.status == true) {
                   var cards = [];
                   for (var i = data.data.data_info.length - 1; i >= 0; i--) {
+                    //inserting the cards in reverse order inside the array
                       cards[cards.length] = data.data.data_info[i];
                       if (data.data.data_info[i].pinned) {
                           $scope.pin = true;
@@ -421,27 +420,27 @@
                           $scope.pin = false;
                       }
 
+                    }
+
+                    $rootScope.data_info = cards;
 
 
-                  }
-
-
-
-                  $rootScope.data_info = cards;
-
-
-                  if ($localStorage.view == "grid") {
+                    if ($localStorage.view == "grid") {
 
                       $scope.grid_view();
-                  } else {
+                    } else {
                       $scope.list_view();
+                    }
+
                   }
+                }).catch(function(error) {
 
-              }
-          }).catch(function(error) {
+                })
+              };
 
-          })
-      };
+
+
+
 
 
       $scope.menu = function() {
@@ -504,23 +503,25 @@
 
 
       };
-      $scope.delete = function(x, dele) {
+      // function to delete any data card
+      $scope.delete = function(data, dele) {
 
-          var url = "/deleteCard/" + x._id + "";
-          var action="POST";
+          var url = "/deleteCard/" + data._id + "";
+          var action = "POST";
           var object = {
               delete: dele,
-              userId:x.d_no
+              userId: data.d_no,
+              title:data.title
           }
-          var obj = todo_service.App(url,action, object);
+          var obj = todo_service.App(url, action, object);
           obj.then(function(data) {
-
+            $scope.get_data();
 
           }).catch(function(error) {
               console.log("err");
 
           })
-          $scope.get_data();
+
       };
 
       $scope.get_data();

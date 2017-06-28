@@ -1,9 +1,9 @@
 App.controller('binController', ['$scope', '$controller', function($scope, $controller){
   $controller('welcomeController', {$scope: $scope})
-  
-  $scope.bin_view=false;
+//using  binController inside welcomeController  $scope.bin_view=false;
   $scope.keep="Bin";
-  console.log($scope.input_div);
+  $scope.binDiv= true;
+//changing color of navigation bar
   $scope.archive_style={
     "background-color":"grey"
 

@@ -86,7 +86,8 @@ datacardSchema.statics.saveData = function(req,userId, cb) {
     // saving userId and activity message in loggerSchema
     var loggerDetail= new logger({
       userId:userId._id,
-      message:"new card added"
+      message:"new card added",
+      title:req.title
     });
     loggerDetail.save();
 
@@ -118,7 +119,8 @@ datacardSchema.statics.updateData = function(dataId,req,cb) {
       // saving userId and activity message in loggerSchema
     var loggerDetail= new logger({
       userId:req.userId,
-      message:" card updated"
+      message:" card updated",
+      title:req.title
     });
     loggerDetail.save();
 };
@@ -143,7 +145,9 @@ datacardSchema.statics.remind = function(dataId,req,cb) {
   // saving userId and activity message in loggerSchema
   var loggerDetail= new logger({
     userId:req.userId,
-    message:"reminder is set "
+    message:"reminder is set ",
+    title:req.title
+
   });
   loggerDetail.save();
 };
@@ -162,13 +166,15 @@ datacardSchema.statics.selectColor = function(dataId,req,cb) {
     _id: dataId
   }, {
     $set: {
-      bgcolor:req.bgcolor
+      bgcolor:req.bgcolor,
+
     }
   }, cb);
   // saving userId and activity message in loggerSchema
   var loggerDetail= new logger({
     userId:req.userId,
-    message:" background color set"
+    message:" background color set",
+    title:req.title
   });
   loggerDetail.save();
 };
@@ -204,7 +210,8 @@ else
   // saving userId and activity message in loggerSchema
     var loggerDetail= new logger({
       userId:req.userId,
-      "message":message
+      "message":message,
+      title:req.title
     });
     loggerDetail.save();
 };
@@ -237,7 +244,8 @@ datacardSchema.statics.pinned = function(dataId,req,cb) {
     // saving userId and activity message in loggerSchema
     var loggerDetail= new logger({
       userId:req.userId,
-      "message":message
+      "message":message,
+      title:req.title
     });
     loggerDetail.save();
   };
@@ -265,7 +273,8 @@ datacardSchema.statics.deleteReminder = function(dataId,req, cb) {
     // saving userId and activity message in loggerSchema
     var loggerDetail= new logger({
       userId:req.userId,
-      "message":"reminder deleted"
+      "message":"reminder deleted",
+      title:req.title
     });
     loggerDetail.save();
   };
@@ -324,7 +333,8 @@ else{
 // saving userId and activity message in loggerSchema
 var loggerDetail= new logger({
   userId:req.userId,
-  "message":message
+  "message":message,
+  title:req.title
 });
 loggerDetail.save();
 };
