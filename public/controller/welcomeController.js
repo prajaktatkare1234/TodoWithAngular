@@ -232,16 +232,8 @@
 
 
 // function for opening a popup and updating the data inside data card
-      $scope.open = function(x) {
+      $scope.open = function(data) {
 
-          var dataObject = {
-              title: x.title,
-              note: x.take_note,
-              id: x._id,
-              updated: x.updated,
-              bgcolor: x.bgcolor
-
-          }
 
           var modalInstance = $uibModal.open({
 
@@ -251,7 +243,7 @@
               resolve: {
 
                   object: function() {
-                      return dataObject;
+                      return data;
                   }
               }
           });
@@ -355,8 +347,8 @@
           var url = "/deleteReminder/" + x._id + "";
           var action = "POST";
           var object = {
-              userId: x.d_no,
-                  title:x.title
+            userId:x.d_no,
+            title:x.title
           }
           var obj = todo_service.App(url, action, object);
           obj.then(function(data) {
@@ -376,11 +368,9 @@
           if ($scope.title == "" && $scope.take_note == "") {
               return;
           }
-
-
           var object = {
-              title: $scope.title,
-              take_note: $scope.take_note
+            title:$scope.title,
+            take_note:$scope.take_note
 
           }
           var url = "/dataCard";
@@ -395,7 +385,9 @@
 
           })
           $scope.get_data();
-      };
+        };
+
+
 
 
 
@@ -492,7 +484,7 @@
           $scope.innerbox = "innerbox ";
           $scope.view_change = "col-sm-8 col-lg-4 col-xs-12 col-md-5 a";
           $scope.pin_view = "col-sm-8 col-lg-4 col-xs-12 col-md-4 a"
-          console.log("hghj");
+
           $scope.grid = {
               'display': 'none'
 
@@ -518,7 +510,7 @@
             $scope.get_data();
 
           }).catch(function(error) {
-              console.log("err");
+              console.log(errorr);
 
           })
 

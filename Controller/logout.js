@@ -20,6 +20,7 @@ router.post('/',function(req,res){ //post call for api logout.js
     res.send({"status":false,"message":"logged out"});
 
   } catch (error) {
+        winston.error(error);
     res.send({
         "status": false,
         "message": error

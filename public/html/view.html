@@ -6,9 +6,10 @@
   <div  ng-class="innerbox" style="background-color:{{x.bgcolor}}" ng-mouseover="card_icon=true" ng-mouseleave="card_icon=false">
 
     <div ng-show="card_icon">
-
+          <!-- pin -->
             <img   id="pin" src="image/pin.svg" ng-click="pinup(x,'true','false')" />
           </div>
+          <!-- title and content -->
           <div ng-click="open(x)" id="title_div" ng-bind-html="x.title"></div>
           <div ng-click="open(x)" id="note_div" ng-bind-html="x.take_note"> </div>
             <div style="height:40px">
@@ -24,6 +25,7 @@
                     <li role="menuitem"><a ng-click="remind(x,next)">Next Week</a></li>
                     <li class="divider"></li>
                     <li role="menuitem">
+                      <!-- datetimepicker -->
                       <div class="dropdown" >
                          <a class="dropdown-toggle" id="dropdown2" role="button" data-toggle="dropdown" >
                             <div class="input-group">
@@ -47,7 +49,7 @@
                   </ul>
                 </div>
 
-                <!-- paint -->
+                <!-- background-color selection -->
                  <div class="btn-group" uib-dropdown dropdown-append-to-body="true">
                   <img style="padding:4px" src="image/paint.svg" uib-dropdown-toggle ng-disabled="disabled"></img>
                   <div class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
@@ -57,10 +59,12 @@
                     </li></a>
                   </div>
                 </div>
-                <!-- <img ng-src="{{y.path}}" ng-click="select_color(x._id,y.color)" /> -->
+
+                <!-- archive -->
                 <div class="btn-group" >
                   <a ><img id="arc" src="image/archive.svg" ng-click="archive(x,'true','false')" /></a>
                 </div>
+                 <!-- post on facebook -->
                 <div class="btn-group" >
                   <a ><img id="arc" style="height:18px;width:18px;" src="image/icons8-Share.svg" ng-click="facebookshare(x)" /></a>
                 </div>

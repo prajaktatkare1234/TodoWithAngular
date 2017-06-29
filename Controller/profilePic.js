@@ -83,6 +83,7 @@ try {
 
 
 } catch (error) {
+      winston.error(error);
   res.send({
       "status": false,
       "message": error

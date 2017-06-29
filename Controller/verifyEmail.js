@@ -98,7 +98,7 @@ router.put('/', function(req, res) { //post call for api verifyEmail.js
 
 
         } else {
-
+          winston.error("Not a Registered Email");
 
             res.send({
                 message: "err",
@@ -107,10 +107,11 @@ router.put('/', function(req, res) { //post call for api verifyEmail.js
         }
 
     });
-  
+
 
 
   } catch (error) {
+        winston.error(error);
     res.send({
         "message": error,
         "status": false

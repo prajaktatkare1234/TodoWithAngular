@@ -41,6 +41,7 @@ router.post('/:id', function(req, res) { //post call for api pinup.js
     }
 });
   } catch (error) {
+        winston.error(error);
     res.send({
         "status": false,
         "message": error

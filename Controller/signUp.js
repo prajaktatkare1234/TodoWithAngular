@@ -65,6 +65,7 @@ router.post('/', function(req, res) { //post call for api signUp.js
 
          }
          catch (e) {
+               winston.error(e);
            result1.message="sorry server error";
 
              if (!config.checkSystemErrors(e)) {

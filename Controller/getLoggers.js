@@ -46,6 +46,7 @@ router.post('/', function(req, res) { //post call for api getLoggers.js
                     "result":result
                 })
             } else {
+                  winston.error("failed to get activities");
                 res.send({
                     "status": false,
                     "message": "login failed"
@@ -59,6 +60,7 @@ router.post('/', function(req, res) { //post call for api getLoggers.js
 
 
   } catch (error) {
+        winston.error(error);
     res.send({
         "status": false,
         "message": error

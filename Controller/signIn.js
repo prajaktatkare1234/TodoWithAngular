@@ -67,6 +67,7 @@ router.post('/', function(req, res) { // post call for api signIn.js
                    "result":result
                })
            } else {
+                 winston.error("Login failed");
                res.send({
                    "status": false,
                    "message": "login failed"
@@ -79,6 +80,7 @@ router.post('/', function(req, res) { // post call for api signIn.js
 
    });
  } catch (e) {
+       winston.error(e);
    result1.message="sorry server error";
 
      if (!config.checkSystemErrors(e)) {

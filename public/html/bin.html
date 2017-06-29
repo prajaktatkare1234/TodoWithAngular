@@ -4,15 +4,15 @@
 
       <div id="outerbox" style="margin-bottom:18px;" ng-if="x.isDeleted"  ng-repeat="x in data_info | filter:search as results track by $index" ng-class="view_change"   >
         <div  ng-class="innerbox" style="background-color:{{x.bgcolor}}" ng-mouseover="card_icon=true" ng-mouseleave="card_icon=false">
-
+          <!-- title and content -->
           <div ng-click="open(x)" id="title_div" ng-bind-html="x.title"></div>
           <div ng-click="open(x)" id="note_div" ng-bind-html="x.take_note"> </div>
-          
 
 
 
 
-                <!-- delete and copy -->
+
+                <!-- delete and restore -->
                  <div class="btn-group" uib-dropdown dropdown-append-to-body="true">
                   <img  id="arc" src="image/more.svg" uib-dropdown-toggle ng-disabled="disabled"> </img>
                   <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">

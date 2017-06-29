@@ -42,6 +42,7 @@ router.post('/',function(req,res){ //post call for api userInfo.js
 
 
   } catch (error) {
+        winston.error(error);
     res.send({message:error,"status":false})
   }
 

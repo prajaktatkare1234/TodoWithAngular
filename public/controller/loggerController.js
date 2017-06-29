@@ -25,7 +25,9 @@ App.controller('loggerController', ['$scope','$rootScope','todo_service','$contr
 
     var obj = todo_service.App(url,action,object);
     obj.then(function(data) {
-        if (data.data.status == true) { //fetches data from logger schema
+      console.log(data);
+        if (data.data.status == true) {
+          //fetches data from logger schema
 
             var loggerCards = [];
 
@@ -35,7 +37,7 @@ App.controller('loggerController', ['$scope','$rootScope','todo_service','$contr
             }
 
 
-
+            console.log(  $rootScope.activeLogs );
             $rootScope.activeLogs = loggerCards;
           }
 

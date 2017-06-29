@@ -16,20 +16,31 @@ var config = require("../Config/config.js");
 
 
 //middleware for authentication
+
+/**
+ * router - authenticate the use
+ *
+ * @param  {Object} function(req
+ * @param  {Object} res         Object having token
+ * @param  {String} next        passes the token to userInfo api
+ * @return {Object}             Object having success status as false
+ */
 router.use(function(req, res, next) {
   //fetching token stored in cookie
     var token = req.headers.cookie;
     try{
-      console.log("in authen api",token);
+
       token=token.substr(7);
       if (token) {
-          console.log("auth", token,config.TOKEN_SECRET);
+
+
           jwt.verify(token, config.TOKEN_SECRET, function(err, decode)  //decoding jwt token
 
           {
               if (err) {
-
+                  winston.error("Authentication failed");
                   return res.json({
+
                       success: false,
                       message: 'athentication failed'
                   });
@@ -41,8 +52,9 @@ router.use(function(req, res, next) {
               }
           });
       } else {
-
+          winston.error("token not found");
           return res.send({
+
               success: false,
               message: 'token not found'
           });
@@ -50,6 +62,7 @@ router.use(function(req, res, next) {
 
     }
     catch(e){
+          winston.error(e);
       return res.json({
         "success":false,
         "message":"login please"

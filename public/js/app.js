@@ -133,7 +133,7 @@ App.directive('testpackery', ['$rootScope', '$timeout',
 
 
                 } else {
-                    // console.log("else", element[0]);
+  
                     var draggable2 = new Draggabilly(element[0]);
                     $rootScope.packery.bindDraggabillyEvents(draggable2);
 

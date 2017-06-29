@@ -16,6 +16,8 @@ winston.configure({
       name: 'error-file',
       filename: 'filelog-error.log',
       level: 'error'
+      
+
     })
   ]
 });
@@ -36,7 +38,7 @@ app.use(require('./Controller'));
 var server = app.listen(p, function() {
   var host = server.address().address
   var port = server.address().port
-  console.log("Example app listening at http://%s:%s", host, port)
+  console.log("Todo App listening at http://%s:%s", host, port)
 
 
 

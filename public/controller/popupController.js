@@ -5,21 +5,22 @@ App.controller('popupController', function($scope,$uibModalInstance,object,todo_
   $scope.updated_note=object.note;
   $scope.updated_date=object.updated;
   $scope.updated_color=object.bgcolor;
-  $scope.id=object.id;
+  $scope.id=object._id;
+    $scope.userId=object.d_no;
 
 
 
 $scope.update = function (id) {
-console.log(id);
-console.log("title",$scope.updated_title);
+
 
     var updated_data={
       title:$scope.updated_title,
       take_note:$scope.updated_note,
       _id:id,
-      userId:object.d_no
+      userId:  $scope.userId
 
     }
+
    var url="/updateDatacard/" + id + "";
    var action="POST";
     var obj = todo_service.App(url,action,updated_data,id);

@@ -19,42 +19,48 @@
 
         <div class="form">
 
-
-            <form ng-controller="signinController" name="myForm" novalidate>
-                  
+          <form ng-controller="signinController" name="myForm" novalidate>
 
 
-<p>
-<input placeholder="Email" class="form-control" type="email" name="uname" ng-model="uname" required>
-<span style="color:red" ng-show="myForm.uname.$dirty && myForm.uname.$invalid">
-<span ng-show="myForm.uname.$error.required">Email is required.</span>
-<span ng-show="myForm.uname.$error.email">Invalid email address.</span>
-</span>
-</p>
-<p>
-<input placeholder="Password"class="form-control" type="password" name="pass" ng-model="pass" required>
-<span style="color:red" ng-show="myForm.pass.$dirty && myForm.pass.$invalid">
-<span ng-show="myForm.pass.$error.required">Password is required.</span>
-</span>
-</p>
+            <!-- Email -->
+            <p>
+              <input placeholder="Email" class="form-control" type="email" name="uname" ng-model="uname" required>
+              <span style="color:red" ng-show="myForm.uname.$dirty && myForm.uname.$invalid">
+                <span ng-show="myForm.uname.$error.required">Email is required.</span>
+                <span ng-show="myForm.uname.$error.email">Invalid email address.</span>
+              </span>
+            </p>
 
+            <!-- Password -->
+            <p>
+              <input placeholder="Password"class="form-control" type="password" name="pass" ng-model="pass" required>
+              <span style="color:red" ng-show="myForm.pass.$dirty && myForm.pass.$invalid">
+                <span ng-show="myForm.pass.$error.required">Password is required.</span>
+              </span>
+            </p>
 
-<p>
-<input id="b1" class="btn btn-success" type="submit" ng-click="sign_in()"
-ng-disabled="myForm.$invalid">
-</p>
+            <!-- Submit -->
+            <p>
+              <input id="b1" class="btn btn-success" type="submit" ng-click="sign_in()"
+              ng-disabled="myForm.$invalid">
+            </p>
 
-<p>
-<input id="fbBtn" class="btn " type="submit" value="Sign in with Facebook"  ng-click="authenticate('facebook')"/>
-</p>
-<p>
-<input id="googleBtn" class="btn" type="submit" value="Sign in with Google"  ng-click="authenticate('google')"/>
-</p>
+            <!-- facebook login -->
+            <p>
+              <input id="fbBtn" class="btn " type="submit" value="Sign in with Facebook"  ng-click="authenticate('facebook')"/>
+            </p>
 
-<div class="">
-  <a ui-sref="verifyEmail">Forgot Password?</a>
-    <p class="message">&nbsp&nbspNot registered? <a  ui-sref="signup">Create an account</a></p>
-</div>
+            <!-- google login -->
+            <p>
+              <input id="googleBtn" class="btn" type="submit" value="Sign in with Google"  ng-click="authenticate('google')"/>
+            </p>
 
-</form>
+            <!-- Forgot password -->
+            <div class="">
+              <a ui-sref="verifyEmail">Forgot Password?</a>
+              <p class="message">&nbsp&nbspNot registered? <a  ui-sref="signup">Create an account</a></p>
+            </div>
+
+          </form>
+
         </div>

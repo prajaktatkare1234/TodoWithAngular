@@ -8,10 +8,14 @@
 
       <div id="outerbox" style="margin-bottom:18px;"ng-if="x.isArchived && !x.pinned && x.isDeleted!==true"  ng-repeat="x in data_info | filter:search as results track by $index" ng-class="view_change"   >
         <div  ng-class="innerbox" style="background-color:{{x.bgcolor}}" ng-mouseover="card_icon=true" ng-mouseleave="card_icon=false">
+
           <div ng-show="card_icon">
+            <!-- pin -->
             <img   id="pin" src="image/pin.svg" ng-click="pinup(x,'true','false')" />
           </div>
+          <!-- title -->
           <div ng-click="open(x)" id="title_div" ng-bind-html="x.title"></div>
+          <!-- content -->
           <div ng-click="open(x)" id="note_div" ng-bind-html="x.take_note"> </div>
             <div style="height:40px">
               <div ng-show="card_icon">
@@ -25,6 +29,7 @@
                     <li role="menuitem"><a ng-click="remind(x,tomorrow)">Tomorrow</a></li>
                     <li role="menuitem"><a ng-click="remind(x,next)">Next Week</a></li>
                     <li class="divider"></li>
+                    <!-- datetimepicker -->
                     <li role="menuitem">
                       <div class="dropdown" >
                          <a class="dropdown-toggle" id="dropdown2" role="button" data-toggle="dropdown" >
@@ -59,6 +64,8 @@
                   </div>
                 </div>
 
+
+                <!-- unarchive -->
                 <div class="btn-group" >
                   <a ><img id="arc" src="image/un_archive.svg" ng-click="archive(x,'false')" /></a>
                 </div>

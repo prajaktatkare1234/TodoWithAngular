@@ -1,21 +1,24 @@
 
 <div ng-class="grid_show" class="row">
+<div class="col-lg-2 col-md-2 col-sm-2">
+
+</div>
+<div class="col-lg-8 col-md-8 col-sm-8">
 
 
-<div style="margin-bottom:18px;" ng-repeat="y in activeLogs | orderBy:'time':true" ng-class="view_change"   >
-  <div  ng-class="innerbox" >
+<div style="margin-bottom:18px;" ng-repeat="y in activeLogs | orderBy:'time':true"  >
+  <div id="loggerBox">
 
-    <div style="font-size: 18px;font-family:serif;font-weight:bold;"class="">Title:  {{y.title}}
-      <div style="border-top: 2px dashed;">
+    <div style="font-size: 18px;font-family:serif;font-weight:bold; background-color:grey;"class="">Title:  {{y.title}}  </div>
 
-    </div>
-    <div style="font-size: 22px;font-family:serif;">{{y.message}}</div>
+    <div style="font-size: 22px;margin-left:10px;font-family:serif;">{{y.message}}</div>
 
-    <div style="float:right;">{{y.time  | date:'dd-MM hh:mm a'}}</div>
+    <div style="float:right; margin-right:10px;">{{y.time  | date:'dd-MM hh:mm a'}}</div>
 
 
-  </div>
 
 
+</div>
+</div>
 </div>
 </div>

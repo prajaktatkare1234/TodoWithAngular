@@ -16,9 +16,25 @@ var User = require('../Model/dataCard.js');
 var winston=require('winston');
 
 
+/**
+ * router - Adds new data card
+ *
+ * @param  {type} '/'             description
+ * @param  {Object} function(req  Object having title,note
+ * @param  {Object} res           Object having data card detail
+ */
 router.post('/', function(req, res) {
   try {
 
+      /**
+       * User - UserSchema
+       *
+       * @param  {Object} req.body      Object having title and content
+       * @param  {String} req.decode    userId fetched from cookie is passed here from authenticate middleware
+       * @param  {Object} function(err  callback error
+       * @param  {Object} result        Object having data card detials
+       * @return {type}                 description
+       */
       User.saveData(req.body, req.decode, function(err, result) {   //post call for dataCard.js
 
 
@@ -59,6 +75,7 @@ router.post('/', function(req, res) {
 
 
 } catch (error) {
+      winston.error(error);
     res.send({
         "status": false,
         "message":error

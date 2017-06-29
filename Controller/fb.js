@@ -26,8 +26,13 @@ var jwt = require('jsonwebtoken');
 
 
 
+/**
+ * createJWT - generates jwt token from userId
+ *
+ * @param  {String} user id of the user
+ * @return {String}        token
+ */
 function createJWT(user) {
-//generated token from user id
     return jwt.sign({
         _id: user
     }, conf.TOKEN_SECRET, {
@@ -96,11 +101,12 @@ router.post('/', function(req, res) {
                     }
                     var token = req.header('Authorization').split(' ')[1];
 
-                    console.log("tokendggadgd",token);
+
                     var payload =     jwt.verify(token, conf.TOKEN_SECRET)
-                    console.log("payload",payload);
+
                     User.findById(payload, function(err, user) {
                         if (!user) {
+
                             return res.status(400).send({
                                 message: 'User not found'
                             });
@@ -161,6 +167,7 @@ router.post('/', function(req, res) {
     });
 
   } catch (error) {
+        winston.error(error);
     res.send({
             "status": false,
             "message": error

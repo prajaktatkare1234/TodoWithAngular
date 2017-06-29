@@ -17,10 +17,27 @@ var User = require('../Model/dataCard.js');
 var winston=require('winston');
 
 
+/**
+ * router - Deletes data card
+ *
+ * @param  {String} '/:id'          id of data card
+ * @param  {Object} function(req    Object having data card details
+ * @param  {Object} res             Object having status and message
+ * @return {type}                   description
+ */
 router.post('/:id',function(req, res) {  // post call for api delete.js
   try {
     var data_id=req.params.id; //fetching data card id from api url
 
+    /**
+     * User - description
+     *
+     * @param  {String} data_id      fetched data card id from api url
+     * @param  {Object} req.body     Object having data card details
+     * @param  {Object} function(err callback error
+     * @param  {Object} result       Object having status and message
+     * @return {type}                description     
+     */
     User.deleteData(data_id,req.body, function(err, result) {
 
 
@@ -47,6 +64,7 @@ router.post('/:id',function(req, res) {  // post call for api delete.js
   });
 
 } catch (error) {
+      winston.error(error);
     res.send({
               "status": true,
               "message": error

@@ -21,7 +21,7 @@ router.post('/', function(req, res) { //post call for api getDatacard.js
 
     req.decode.isDeleted=false;
       User.getData(req.decode, function(err, result) {
-  console.log("kfjdskljfasdk",result);
+
       if(result)
         {
 
@@ -30,8 +30,9 @@ router.post('/', function(req, res) { //post call for api getDatacard.js
         }
         else
         {
+              winston.error("failed to get data card");
           res.send({message:"err","status":false})
-          // logger.error("error while getting data card");
+
         }
 
 
@@ -41,6 +42,7 @@ router.post('/', function(req, res) { //post call for api getDatacard.js
       });
 
   } catch (error) {
+        winston.error(error);
     res.send({
         "status": false,
         "message": error

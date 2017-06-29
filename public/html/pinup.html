@@ -8,6 +8,7 @@
 <div id="outerbox" style="margin-bottom:18px;"ng-if="x.pinned && !x.isArchived && x.isDeleted!==true" ng-repeat="x in data_info | filter:search as results track by $index" ng-class="view_change"   >
 <div  ng-class="innerbox" style="background-color:{{x.bgcolor}}" ng-mouseover="card_icon=true" ng-mouseleave="card_icon=false">
   <div ng-show="card_icon">
+    <!-- pin -->
     <img   id="pin" src="image/unpin.svg" ng-click="pinup(x,'false','false')" />
   </div>
   <div ng-click="open(x)" id="title_div" ng-bind-html="x.title"></div>
@@ -27,6 +28,7 @@
           <li role="menuitem"><a ng-click="remind(x,next)">Next Week</a></li>
           <li class="divider"></li>
           <li role="menuitem">
+            <!-- datetimepicker -->
             <div class="dropdown" >
               <a class="dropdown-toggle" id="dropdown2" role="button" data-toggle="dropdown" >
                 <div class="input-group">
@@ -45,6 +47,7 @@
         </ul>
       </div>
 
+      <!-- background-color selection -->
       <div class="btn-group" uib-dropdown dropdown-append-to-body="true">
         <img style="padding:4px" src="image/paint.svg" uib-dropdown-toggle ng-disabled="disabled"></img>
         <div class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
@@ -56,7 +59,7 @@
         </div>
       </div>
 
-      <!-- paint -->
+      <!-- archive -->
       <div class="btn-group" >
         <a ><img id="arc" src="image/archive.svg" ng-click="archive(x,'true','false')" /></a>
       </div>

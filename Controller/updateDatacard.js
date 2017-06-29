@@ -42,6 +42,7 @@ router.post('/:id', function(req, res) { //post call for api updateDatacard.js
 });
 
   } catch (error) {
+        winston.error(error);
     res.send({
             "status": false,
             "message": error
